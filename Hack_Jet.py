@@ -64,7 +64,7 @@ tools_category()
 
 # All Tool Function in Class
 class Tool:
-    # Kali top10 tools function
+    # Kali top10 tools
     def nmap():
         os.system("sudo apt install -y nmap")
         kali_top10_tools()
@@ -114,7 +114,7 @@ class Tool:
 
         kali_top10_tools()
 
-    # Kali top 10 tools all in one function
+    # Kali top 10 tools all install fuction
     def kali_top10_tools():
         tools = [
             "nmap",
@@ -148,7 +148,7 @@ class Tool:
         for tool in tools:
             os.system(f"sudo apt -y install{tool}")
 
-    # Password cracking tools function
+    # Password cracking tools
     def cewl():
         os.system("sudo apt install -y cewl")
 
