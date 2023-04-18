@@ -20,6 +20,9 @@ class colors:
     def yellow_green(data):
         print(colr().hex("#a8c836", data, rgb_mode=True))
 
+    def dark_orange(data):
+        print(colr().hex("#cf301b", data, rgb_mode=True))
+
 
 # Main Banner
 banner = pyfiglet.figlet_format(" HACK JET")
@@ -60,6 +63,22 @@ def tools_category():
 
 
 tools_category()
+
+
+# Operators
+
+
+class Operators:
+    def back():
+        tools_category()
+
+        choices()
+
+    def exit():
+        os.system("exit")
+
+    def case_default():
+        colors.red("Invalid option")
 
 
 # All Tool Function in Class
@@ -114,7 +133,7 @@ class Tool:
 
         kali_top10_tools()
 
-    # Kali top 10 tools all install fuction
+    # Kali top 10 tools loop install fuction
     def kali_top10_tools():
         tools = [
             "nmap",
@@ -134,19 +153,45 @@ class Tool:
 
         kali_top10_tools()
 
-    def back():
-        tools_category()
+    # Social engineering tools
+    def backdoor_factory():
+        os.system("sudo apt install -y backdoor-factory")
 
-        choices()
+        social_engineering_tools()
 
-    def exit():
-        os.system("exit")
+    def beef_xss():
+        os.system("sudo apt install -y beef-xss")
 
+        social_engineering_tools()
+
+    def msfpc():
+        os.system("sudo apt install msfpc")
+
+        social_engineering_tools()
+
+    def veil():
+        os.system("sudo apt install veil")
+
+        social_engineering_tools()
+
+    def set():
+        os.system("sudo apt install set")
+
+        social_engineering_tools()
+
+    def maltego():
+        os.system("sudo apt install maltego")
+
+        social_engineering_tools()
+
+    # Social engineering tools loop install function
     def social_engineering_tools():
         tools = ["backdoor-factory", "beef-xss", "msfpc", "veil", "set", "maltego"]
 
         for tool in tools:
             os.system(f"sudo apt -y install{tool}")
+
+        social_engineering_tools()
 
     # Password cracking tools
     def cewl():
@@ -389,7 +434,7 @@ class Tool:
 
         password_cracking_tools()
 
-    # Password cracking tools all install function
+    # Password cracking tools loop install function
     def password_cracking_tools():
         tools = [
             "cewl",
@@ -451,7 +496,7 @@ class Tool:
 def kali_top10_tools():
     colors.red("\n   KALI TOP 10 TOOLS ")
     colors.green(
-        " \n \n [1] Nmap        [2] Aircrack-ng \n [3] John        [4] Sqlmap \n [5] Hydra       [6] Metasploit-framework \n [7] Responder   [8] Wireshark \n [9] Burpsuite   [10] Crackmapexec  \n [11] ALL        [12] Back "
+        " \n \n [1]  Nmap        [2]  Aircrack-ng \n [3]  John        [4]  Sqlmap \n [5]  Hydra       [6]  Metasploit-framework \n [7]  Responder   [8]  Wireshark \n [9]  Burpsuite   [10] Crackmapexec  \n [11] ALL         [12] Back "
     )
     colors.gnome_green("\n \nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#2ed1b4", "> ", rgb_mode=True))
@@ -468,20 +513,48 @@ def kali_top10_tools():
         9: Tool.burpsuite,
         10: Tool.crackmapexec,
         11: Tool.kali_top10_tools,
-        12: Tool.back,
+        12: Operators.back,
     }
+    try:
+        switch_case = switch.get(int(choice), Operators.case_default)
+        switch_case()
+    except ValueError:
+        Operators.case_default()
 
-    switch_case = switch.get(
-        int(choice),
+
+# Social engineering tools call function
+def social_engineering_tools():
+    colors.red("\n  SOCIAL ENGINEERING TOOLS ")
+    colors.dark_orange(
+        " \n \n [1] set                 [2] veil \n [3] msfpc               [4] Beef-xss \n [5] Backdoor-factory    [6] All \n [7] Back   "
     )
-    switch_case()
+    colors.gnome_green("\n \nEnter The Tool Number To  install ??")
+    choice = input(colr().hex("#2ed1b4", "> ", rgb_mode=True))
+
+    switch = {
+        1: Tool.set,
+        2: Tool.veil,
+        3: Tool.msfpc,
+        4: Tool.beef_xss,
+        5: Tool.backdoor_factory,
+        6: Tool.social_engineering_tools,
+        7: Operators.back,
+    }
+    try:
+        switch_case = switch.get(
+            int(choice),
+            Operators.case_default,
+        )
+        switch_case()
+    except ValueError:
+        Operators.case_default()
 
 
 # Passwords cracking tools call function
 def password_cracking_tools():
     colors.gnome_green("\n  PASSWORDS CRACKING TOOLS")
     colors.yellow_green(
-        " \n \n [1]Cewl                	[2]Chntpw \n [3]Cisco-auditing-tool 	[4]Cmospwd \n [5]Crackle 			[6]Creddump7 \n [7]Crunch 			[8]Fcrackzip \n [9]Freerdp2-x11 		[10]Gpp-decrypt \n [11]Hash-identifier 		[12]Hashcat \n [13]Hashcat-utils 		[14]Hashid \n [15]Hydra 			[16]Hydra-gtk \n [17]John 			[18]Johnny \n [19]Truecrack 		        [20]Oclgausscrack \n [21]Maskprocessor 		[22]Medusa \n [23]Mimikatz 			[24]Ncrack \n [25]Onesixtyone 		[26]Ophcrack \n [27]Ophcrack-cli 		[28]Pack \n [29]Passing-the-hash 		[30]Patator \n [31]Pdfcrack 			[32]Pipal \n [33]Polenum 			[34]Rainbowcrack \n [35]Rarcrack 			[36]Rcracki-mt \n [37]Rsmangler 			[38]Samdump2 \n [39]Seclists 			[40]Sipcrack \n [41]Sipvicious 		[42]Smbmap \n [43]Sqldict 			[44]Statsprocessor 	\n [45]Sucrack 			[46]Thc-pptp-bruter  \n [47]Twofi  		        [48]Wordlists   \n [49]All 		        [50]back "
+        " \n \n [1]  Cewl                	[2]  Chntpw \n [3]  Cisco-auditing-tool 	[4]  Cmospwd \n [5]  Crackle 			[6]  Creddump7 \n [7]  Crunch 			[8]  Fcrackzip \n [9]  Freerdp2-x11 		[10] Gpp-decrypt \n [11] Hash-identifier 		[12] Hashcat \n [13] Hashcat-utils 		[14] Hashid \n [15] Hydra 			[16] Hydra-gtk \n [17] John 			[18] Johnny \n [19] Truecrack 		[20] Oclgausscrack \n [21] Maskprocessor 		[22] Medusa \n [23] Mimikatz 			[24] Ncrack \n [25] Onesixtyone 		[26] Ophcrack \n [27] Ophcrack-cli 		[28] Pack \n [29] Passing-the-hash 		[30] Patator \n [31] Pdfcrack 			[32] Pipal \n [33] Polenum 			[34] Rainbowcrack \n [35] Rarcrack 			[36] Rcracki-mt \n [37] Rsmangler 	        [38] Samdump2 \n [39] Seclists 			[40] Sipcrack \n [41] Sipvicious 		[42] Smbmap \n [43] Sqldict 			[44] Statsprocessor 	\n [45] Sucrack 			[46] Thc-pptp-bruter  \n [47] Twofi  		        [48] Wordlists   \n [49] All 		        [50] back "
     )
     colors.gnome_green("\n \nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#2ed1b4", "> ", rgb_mode=True))
@@ -536,27 +609,30 @@ def password_cracking_tools():
         47: Tool.twofi,
         48: Tool.wordlists,
         49: Tool.password_cracking_tools,
-        50: Tool.back,
+        50: Operators.back,
     }
-    switch_case = switch.get(
-        int(choice),
-    )
-    switch_case()
+    try:
+        switch_case = switch.get(int(choice), Operators.case_default)
+        switch_case()
+    except ValueError:
+        Operators.case_default()
 
 
 # Main Entry Choices ?
 def choices():
     colors.green("\n \nEnter which one to install ??")
-    choice = int(input(colr().hex("#00ff8d", "> ", rgb_mode=True)))
+    choice = input(colr().hex("#00ff8d", "> ", rgb_mode=True))
     switch = {
         1: kali_top10_tools,
-        # 2: social_engineering_tools,
+        2: social_engineering_tools,
         # 3: information_gathering_tools,
         4: password_cracking_tools,
     }
-
-    switch_case = switch.get(choice)
-    switch_case()
+    try:
+        switch_case = switch.get(int(choice), Operators.case_default)
+        switch_case()
+    except ValueError:
+        Operators.case_default()
 
 
 choices()
