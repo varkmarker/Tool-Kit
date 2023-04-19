@@ -23,6 +23,9 @@ class colors:
     def dark_orange(data):
         print(colr().hex("#cf301b", data, rgb_mode=True))
 
+    def light_gnome(data):
+        print(colr().hex("#00ffc4", data, rgb_mode=True))
+
 
 # Main Banner
 banner = pyfiglet.figlet_format(" HACK JET")
@@ -192,6 +195,304 @@ class Tool:
             os.system(f"sudo apt -y install{tool}")
 
         social_engineering_tools()
+
+    # Information gathering tools
+    def Otrace():
+        os.system("sudo apt install -y 0trace")
+
+        information_gathering_tools()
+
+    def braa():
+        os.system("sudo apt install -y braa")
+
+        information_gathering_tools()
+
+    def dnsenum():
+        os.system("sudo apt install -y dnsenum")
+
+        information_gathering_tools()
+
+    def dnsrecon():
+        os.system("sudo apt install -y dnsrecon")
+
+        information_gathering_tools()
+
+    def dnswalk():
+        os.system("sudo apt install -y dnswalk")
+
+        information_gathering_tools()
+
+    def fierce():
+        os.system("sudo apt install -y fierce")
+
+        information_gathering_tools()
+
+    def fping():
+        os.system("sudo apt install -y fping")
+
+        information_gathering_tools()
+
+    def ftester():
+        os.system("sudo apt install -y ftester")
+
+        information_gathering_tools()
+
+    def ike_scan():
+        os.system("sudo apt install -y ike-scan")
+
+        information_gathering_tools()
+
+    def irpas():
+        os.system("sudo apt install -y irpas")
+
+        information_gathering_tools()
+
+    def legion():
+        os.system("sudo apt install -y legion")
+
+        information_gathering_tools()
+
+    def masscan():
+        os.system("sudo apt install -y masscan")
+
+        information_gathering_tools()
+
+    def nbtscan():
+        os.system("sudo apt install -y nbtscan")
+
+        information_gathering_tools()
+
+    def netdiscover():
+        os.system("sudo apt install -y netdiscover")
+
+        information_gathering_tools()
+
+    def nmap():
+        os.system("sudo apt install -y nmap")
+
+        information_gathering_tools()
+
+    def p0f():
+        os.system("sudo apt install -y p0f")
+
+        information_gathering_tools()
+
+    def recon_ng():
+        os.system("sudo apt install -y recon-ng")
+
+        information_gathering_tools()
+
+    def smtp_user_enum():
+        os.system("sudo apt install -y smtp-user-enum")
+
+        information_gathering_tools()
+
+    def ssldump():
+        os.system("sudo apt install -y ssldump")
+
+        information_gathering_tools()
+
+    def sslscan():
+        os.system("sudo apt install -y sslscan")
+
+        information_gathering_tools()
+
+    def swaks():
+        os.system("sudo apt install -y swaks")
+
+        information_gathering_tools()
+
+    def theharvester():
+        os.system("sudo apt install -y theharvester")
+
+        information_gathering_tools()
+
+    def twofi():
+        os.system("sudo apt install -y twofi")
+
+        information_gathering_tools()
+
+    def urlcrazy():
+        os.system("sudo apt install -y urlcrazy")
+
+        information_gathering_tools()
+
+    def arping():
+        os.system("sudo apt install -y arping ")
+
+        information_gathering_tools()
+
+    def dmitry():
+        os.system("sudo apt install -y dmitry")
+
+        information_gathering_tools()
+
+    def dnsmap():
+        os.system("sudo apt install -y dnsmap")
+
+        information_gathering_tools()
+
+    def dnstracer():
+        os.system("sudo apt install -y dnstracer")
+
+        information_gathering_tools()
+
+    def enum4linux():
+        os.system("sudo apt install -y enum4linux")
+
+        information_gathering_tools()
+
+    def firewalk():
+        os.system("sudo apt install -y firewalk")
+
+        information_gathering_tools()
+
+    def fragrouter():
+        os.system("sudo apt install -y fragrouter")
+
+        information_gathering_tools()
+
+    def hping3():
+        os.system("sudo apt install -y hping3")
+
+        information_gathering_tools()
+
+    def intrace():
+        os.system("sudo apt install -y intrace")
+
+        information_gathering_tools()
+
+    def lbd():
+        os.system("sudo apt install -y lbd")
+
+        information_gathering_tools()
+
+    def maltego():
+        os.system("sudo apt install -y maltego")
+
+        information_gathering_tools()
+
+    def metagoofil():
+        os.system("sudo apt install -y metagoofil")
+
+        information_gathering_tools()
+
+    def ncat():
+        os.system("sudo apt install -y ncat")
+
+        information_gathering_tools()
+
+    def netmask():
+        os.system("sudo apt install -y netmask")
+
+        information_gathering_tools()
+
+    def onesixtyone():
+        os.system("sudo apt install -y onesixtyone")
+
+        information_gathering_tools()
+
+    def qsslcaudit():
+        os.system("sudo apt install -y qsslcaudit")
+
+        information_gathering_tools()
+
+    def smbmap():
+        os.system("sudo apt install -y smbmap")
+
+        information_gathering_tools()
+
+    def snmpcheck():
+        os.system("sudo apt install -y snmpcheck")
+
+        information_gathering_tools()
+
+    def sslh():
+        os.system("sudo apt install -y sslh")
+
+        information_gathering_tools()
+
+    def sslyze():
+        os.system("sudo apt install -y sslyze")
+
+        information_gathering_tools()
+
+    def thc_ipv6():
+        os.system("sudo apt install -y thc-ipv6")
+
+        information_gathering_tools()
+
+    def tlssled():
+        os.system("sudo apt install -y tlssled")
+
+        information_gathering_tools()
+
+    def unicornscan():
+        os.system("sudo apt install -y unicornscan")
+
+        information_gathering_tools()
+
+    def wafw00f():
+        os.system("sudo apt install -y wafw00f")
+
+        information_gathering_tools()
+
+    # Information gathering tools loop install function
+    def information_gathering_tools():
+        tools = [
+            "0trace",
+            "arping",
+            "braa",
+            "dmitry",
+            "dnsenum",
+            "dnsmap",
+            "dnsrecon",
+            "dnstracer",
+            "dnswalk",
+            "enum4linux",
+            "fierce",
+            "firewalk",
+            "fping",
+            "fragrouter",
+            "ftester",
+            "hping3",
+            "ike-scan",
+            "intrace",
+            "irpas",
+            "lbd",
+            "legion",
+            "maltego",
+            "masscan",
+            "metagoofil",
+            "nbtscan",
+            "ncat",
+            "netdiscover",
+            "netmask",
+            "nmap",
+            "onesixtyone",
+            "p0f",
+            "qsslcaudit",
+            "recon-ng",
+            "smbmap",
+            "smtp-user-enum",
+            "snmpcheck",
+            "ssldump",
+            "sslh",
+            "sslscan",
+            "sslyze",
+            "swaks",
+            "thc-ipv6",
+            "theharvester",
+            "tlssled",
+            "twofi",
+            "unicornscan",
+            "urlcrazy",
+            "wafw00f",
+        ]
+        for tool in tools:
+            os.system(f"sudo apt install  {tool}")
+
+        information_gathering_tools()
 
     # Password cracking tools
     def cewl():
@@ -550,6 +851,78 @@ def social_engineering_tools():
         Operators.case_default()
 
 
+# Information gathering call function
+def information_gathering_tools():
+    colors.red("\n INFORMATION GATHERING TOOLS ")
+
+    colors.light_gnome(
+        " \n \n [1]  p0f            [2]  lbd  \n [3]  ncat           [4]  braa  \n [5]  nmap           [6]  irpas \n [7]  sslh           [8]  0trace \n [9]  fierce         [10] dnsenum \n [11] legion         [12] masscan \n [13] nbtscan        [14] thc-ipv6 \n [15] fping          [16] dnswalk \n [17] recon-ng       [18] ftester \n [19] ssldump        [20] sslscan \n [21] swaks          [22] ike-scan \n [23] twofi          [24] urlcrazy \n [25] arping         [26] dmitry \n [27] dnsmap         [28] wafw00f \n [29] smbmap         [30] firewalk \n [31] sslyze         [32] hping3 \n [33] intrace        [34] tlssled \n [35] maltego        [36] netmask \n [37] dnsrecon       [38] dnstracer \n [39] enum4linux     [40] theharvester \n [41] fragrouter     [42] netdiscover  \n [43] snmpcheck      [44] metagoofil \n [45] qsslcaudit     [46] unicornscan \n [47] onesixtyone    [48] smtp-user-enum \n [49] All            [50] back"
+    )
+    colors.red("\n \nEnter The Tool Number To  install ??")
+    choice = input(colr().hex("#ff0000", "> ", rgb_mode=True))
+
+    switch = {
+        1: Tool.p0f,
+        2: Tool.lbd,
+        3: Tool.ncat,
+        4: Tool.braa,
+        5: Tool.nmap,
+        6: Tool.irpas,
+        7: Tool.sslh,
+        8: Tool.Otrace,
+        9: Tool.fierce,
+        10: Tool.dnsenum,
+        11: Tool.legion,
+        12: Tool.masscan,
+        13: Tool.nbtscan,
+        14: Tool.thc_ipv6,
+        15: Tool.fping,
+        16: Tool.dnswalk,
+        17: Tool.recon_ng,
+        18: Tool.ftester,
+        19: Tool.ssldump,
+        20: Tool.sslscan,
+        21: Tool.swaks,
+        22: Tool.ike_scan,
+        23: Tool.twofi,
+        24: Tool.urlcrazy,
+        25: Tool.arping,
+        26: Tool.dmitry,
+        27: Tool.dnsmap,
+        28: Tool.wafw00f,
+        29: Tool.smbmap,
+        30: Tool.firewalk,
+        31: Tool.sslyze,
+        32: Tool.hping3,
+        33: Tool.intrace,
+        34: Tool.tlssled,
+        35: Tool.maltego,
+        36: Tool.netmask,
+        37: Tool.dnsrecon,
+        38: Tool.dnstracer,
+        39: Tool.enum4linux,
+        40: Tool.theharvester,
+        41: Tool.fragrouter,
+        42: Tool.netdiscover,
+        43: Tool.snmpcheck,
+        44: Tool.metagoofil,
+        45: Tool.qsslcaudit,
+        46: Tool.unicornscan,
+        47: Tool.onesixtyone,
+        48: Tool.smtp_user_enum,
+        49: Tool.information_gathering_tools,
+        50: Operators.back,
+    }
+    try:
+        switch_case = switch.get(
+            int(choice),
+            Operators.case_default,
+        )
+        switch_case()
+    except ValueError:
+        Operators.case_default()
+
+
 # Passwords cracking tools call function
 def password_cracking_tools():
     colors.gnome_green("\n  PASSWORDS CRACKING TOOLS")
@@ -625,7 +998,7 @@ def choices():
     switch = {
         1: kali_top10_tools,
         2: social_engineering_tools,
-        # 3: information_gathering_tools,
+        3: information_gathering_tools,
         4: password_cracking_tools,
     }
     try:
