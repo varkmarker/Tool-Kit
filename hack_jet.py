@@ -73,15 +73,13 @@ def tools_category():
     colors.rose(" \n \n [1] KALI TOP 10 TOOLS            [2] SOCIAL ENGINEERING TOOLS")
     colors.red(" [3] INFORMATION GATHERING TOOLS  [4] PASSWORDS CRACKING TOOLS")
     colors.dark_orange(" [5] FORENSICS TOOLS              [6] EXPLOITATION TOOLS")
-    colors.violet(" [7] VULNERABILITY TOOLS ")
+    colors.violet(" [7] VULNERABILITY TOOLS          [8] WEB APPLICATION TOOLS")
 
 
 tools_category()
 
 
 # Operators
-
-
 class Operators:
     def back():
         tools_category()
@@ -91,13 +89,14 @@ class Operators:
     def exit():
         os.system("exit")
 
+        the_end()
+
     def case_default():
         colors.red("Invalid option")
 
 
-# All Tool Function in Class
-class Tool:
-    # Kali top10 tools
+# Kali top10 tools
+class KaliTop10:
     def nmap():
         os.system("sudo apt install -y nmap")
         kali_top10_tools()
@@ -167,7 +166,9 @@ class Tool:
 
         kali_top10_tools()
 
-    # Social engineering tools
+
+# Social engineering tools
+class SocialEnginneering:
     def backdoor_factory():
         os.system("sudo apt install -y backdoor-factory")
 
@@ -207,7 +208,9 @@ class Tool:
 
         social_engineering_tools()
 
-    # Information gathering tools
+
+# Information gathering tools
+class InformationGathering:
     def Otrace():
         os.system("sudo apt install -y 0trace")
 
@@ -505,7 +508,9 @@ class Tool:
 
         information_gathering_tools()
 
-    # Password cracking tools
+
+# Password cracking tools
+class PasswordCracking:
     def cewl():
         os.system("sudo apt install -y cewl")
 
@@ -803,7 +808,9 @@ class Tool:
 
         password_cracking_tools()
 
-    # Forensics tools
+
+# Forensics tools
+class Forensics:
     def afflib_tools():
         os.system("sudo apt install -y afflib-tools")
 
@@ -1408,7 +1415,9 @@ class Tool:
 
         forensics_tools()
 
-    # Exploitation tools
+
+# Exploitation tools
+class Exploitation:
     def armitage():
         os.system("sudo apt install -y armitage")
 
@@ -1429,32 +1438,30 @@ class Tool:
 
         exploitation_tools()
 
-    def ep_metasploit_framework():
+    def metasploit_framework():
         os.system("sudo apt install -y metasploit-framework")
 
         exploitation_tools()
 
-    def ep_set():
+    def set():
         os.system("sudo apt install -y set")
 
         exploitation_tools()
 
-    def ep_sqlmap():
+    def sqlmap():
         os.system("sudo apt install -y sqlmap")
 
         exploitation_tools()
 
-    def ep_msfpc():
+    def msfpc():
         os.system("sudo apt install -y msfpc")
 
         exploitation_tools()
 
-    def ep_beef_xss():
+    def beef_xss():
         os.system("sudo apt install -y beef-xss")
 
         exploitation_tools()
-
-    # metasploit-framework , msfpc , beef-xss, sqlmap,set the following tools function already defined so it will call from there
 
     # Exploitation tools loop install function
     def exploitation_tools():
@@ -1474,188 +1481,190 @@ class Tool:
 
         exploitation_tools()
 
-    # Vulnerability tools
-    def vul_afl():
+
+# Vulnerability tools
+class Vulnerability:
+    def afl():
         os.system("sudo apt install -y afl++")
 
         vulnerability_tools()
 
-    def vul_cisco_auditing_tool():
+    def cisco_auditing_tool():
         os.system("sudo apt install -y cisco-auditing-tool")
 
         vulnerability_tools()
 
-    def vul_cisco_ocs():
+    def cisco_ocs():
         os.system("sudo apt install -y cisco-ocs")
 
         vulnerability_tools()
 
-    def vul_copy_router_config():
+    def copy_router_config():
         os.system("sudo apt install -y copy-router-config")
 
         vulnerability_tools()
 
-    def vul_enumiax():
+    def enumiax():
         os.system("sudo apt install -y enumiax")
 
         vulnerability_tools()
 
-    def vul_iaxflood():
+    def iaxflood():
         os.system("sudo apt install -y iaxflood")
 
         vulnerability_tools()
 
-    def vul_legion():
+    def legion():
         os.system("sudo apt install -y legion")
 
         vulnerability_tools()
 
-    def vul_nikto():
+    def nikto():
         os.system("sudo apt install -y nikto")
 
         vulnerability_tools()
 
-    def vul_ohrwurm():
+    def ohrwurm():
         os.system("sudo apt install -y ohrwurm")
 
         vulnerability_tools()
 
-    def vul_protos_sip():
+    def protos_sip():
         os.system("sudo apt install -y protos-sip")
 
         vulnerability_tools()
 
-    def vul_rtpflood():
+    def rtpflood():
         os.system("sudo apt install -y rtpflood")
 
         vulnerability_tools()
 
-    def vul_rtpmixsound():
+    def rtpmixsound():
         os.system("sudo apt install -y rtpmixsound")
 
         vulnerability_tools()
 
-    def vul_sfuzz():
+    def sfuzz():
         os.system("sudo apt install -y sfuzz")
 
         vulnerability_tools()
 
-    def vul_siparmyknife():
+    def siparmyknife():
         os.system("sudo apt install -y siparmyknife")
 
         vulnerability_tools()
 
-    def vul_sipsak():
+    def sipsak():
         os.system("sudo apt install -y sipsak")
 
         vulnerability_tools()
 
-    def vul_slowhttptest():
+    def slowhttptest():
         os.system("sudo apt install -y slowhttptest")
 
         vulnerability_tools()
 
-    def vul_t50():
+    def t50():
         os.system("sudo apt install -y t50")
 
         vulnerability_tools()
 
-    def vul_unix_privesc_check():
+    def unix_privesc_check():
         os.system("sudo apt install -y unix-privesc-check")
 
         vulnerability_tools()
 
-    def vul_yersinia():
+    def yersinia():
         os.system("sudo apt install -y yersinia")
 
         vulnerability_tools()
 
-    def vul_bed():
+    def bed():
         os.system("sudo apt install -y bed")
 
         vulnerability_tools()
 
-    def vul_cisco_global_exploiter():
+    def cisco_global_exploiter():
         os.system("sudo apt install -y cisco-global-exploiter")
 
         vulnerability_tools()
 
-    def vul_cisco_torch():
+    def cisco_torch():
         os.system("sudo apt install -y cisco-torch")
 
         vulnerability_tools()
 
-    def vul_dhcpig():
+    def dhcpig():
         os.system("sudo apt install -y dhcpig")
 
         vulnerability_tools()
 
-    def vul_gvm():
+    def gvm():
         os.system("sudo apt install -y gvm")
 
         vulnerability_tools()
 
-    def vul_inviteflood():
+    def inviteflood():
         os.system("sudo apt install -y inviteflood")
 
         vulnerability_tools()
 
-    def vul_lynis():
+    def lynis():
         os.system("sudo apt install -y lynis")
 
         vulnerability_tools()
 
-    def vul_nmap():
+    def nmap():
         os.system("sudo apt install -y nmap")
 
         vulnerability_tools()
 
-    def vul_peass():
+    def peass():
         os.system("sudo apt install -y peass")
 
         vulnerability_tools()
 
-    def vul_rtpbreak():
+    def rtpbreak():
         os.system("sudo apt install -y rtpbreak")
 
         vulnerability_tools()
 
-    def vul_rtpinsertsound():
+    def rtpinsertsound():
         os.system("sudo apt install -y rtpinsertsound")
 
         vulnerability_tools()
 
-    def vul_sctpscan():
+    def sctpscan():
         os.system("sudo apt install -y sctpscan")
 
         vulnerability_tools()
 
-    def vul_siege():
+    def siege():
         os.system("sudo apt install -y siege")
 
         vulnerability_tools()
 
-    def vul_sipp():
+    def sipp():
         os.system("sudo apt install -y sipp")
 
         vulnerability_tools()
 
-    def vul_sipvicious():
+    def sipvicious():
         os.system("sudo apt install -y sipvicious")
 
         vulnerability_tools()
 
-    def vul_spike():
+    def spike():
         os.system("sudo apt install -y spike")
 
         vulnerability_tools()
 
-    def vul_thc_ssl_dos():
+    def thc_ssl_dos():
         os.system("sudo apt install -y thc-ssl-dos")
 
         vulnerability_tools()
 
-    def vul_voiphopper():
+    def voiphopper():
         os.system("sudo apt install -y voiphopper")
 
         vulnerability_tools()
@@ -1707,6 +1716,338 @@ class Tool:
         vulnerability_tools()
 
 
+# Web Application Tools
+
+
+class WebApplication:
+    def apache_users():
+        os.system("sudo apt install -y apache-users")
+
+    def beef_xss():
+        os.system("sudo apt install -y beef-xss")
+
+    def cadaver():
+        os.system("sudo apt install -y cadaver")
+
+    def cutycapt():
+        os.system("sudo apt install -y cutycapt")
+
+    def default_mysql_server():
+        os.system("sudo apt install -y default-mysql-server")
+
+    def dirbuster():
+        os.system("sudo apt install -y dirbuster")
+
+    def eyewitness():
+        os.system("sudo apt install -y eyewitness")
+
+    def ftester():
+        os.system("sudo apt install -y ftester")
+
+    def hamster_sidejack():
+        os.system("sudo apt install -y hamster-sidejack")
+
+    def httprint():
+        os.system("sudo apt install -y httprint")
+
+    def hydra():
+        os.system("sudo apt install -y hydra")
+
+    def jboss_autopwn():
+        os.system("sudo apt install -y jboss-autopwn")
+
+    def jsql_injection():
+        os.system("sudo apt install -y jsql-injection")
+
+    def lbd():
+        os.system("sudo apt install -y lbd")
+
+    def medusa():
+        os.system("sudo apt install -y medusa")
+
+    def ncrack():
+        os.system("sudo apt install -y ncrack")
+
+    def nishang():
+        os.system("sudo apt install -y nishang")
+
+    def oscanner():
+        os.system("sudo apt install -y oscanner")
+
+    def padbuster():
+        os.system("sudo apt install -y padbuster")
+
+    def patator():
+        os.system("sudo apt install -y patator")
+
+    def patator():
+        os.system("sudo apt install -y php-mysql")
+
+    def proxychains4():
+        os.system("sudo apt install -y proxychains4")
+
+    def qsslcaudit():
+        os.system("sudo apt install -y qsslcaudit")
+
+    def sidguesser():
+        os.system("sudo apt install -y sidguesser")
+
+    def skipfish():
+        os.system("sudo apt install -y skipfish")
+
+    def sqldict():
+        os.system("sudo apt install -y sqldict")
+
+    def sqlmap():
+        os.system("sudo apt install -y sqlmap")
+
+    def sqlsus():
+        os.system("sudo apt install -y sqlsus")
+
+    def sslh():
+        os.system("sudo apt install -y sslh")
+
+    def sslsniff():
+        os.system("sudo apt install -y sslsniff")
+
+    def sslyze():
+        os.system("sudo apt install -y sslyze")
+
+    def thc_ssl_dos():
+        os.system("sudo apt install -y thc-ssl-dos")
+
+    def tnscmd10g():
+        os.system("sudo apt install -y tnscmd10g")
+
+    def wafw00f():
+        os.system("sudo apt install -y wafw00f")
+
+    def watobo():
+        os.system("sudo apt install -y watobo")
+
+    def webscarab():
+        os.system("sudo apt install -y webscarab")
+
+    def weevely():
+        os.system("sudo apt install -y weevely")
+
+    def whatweb():
+        os.system("sudo apt install -y whatweb")
+
+    def wpscan():
+        os.system("sudo apt install -y wpscan")
+
+    def zaproxy():
+        os.system("sudo apt install -y zaproxy")
+
+    def apache2():
+        os.system("sudo apt install -y apache2")
+
+    def burpsuite():
+        os.system("sudo apt install -y burpsuite")
+
+    def commix():
+        os.system("sudo apt install -y commix")
+
+    def davtest():
+        os.system("sudo apt install -y davtest")
+
+    def dirb():
+        os.system("sudo apt install -y dirb")
+
+    def dotdotpwn():
+        os.system("sudo apt install -y dotdotpwn")
+
+    def ferret_sidejack():
+        os.system("sudo apt install -y ferret-sidejack")
+
+    def hakrawler():
+        os.system("sudo apt install -y hakrawler")
+
+    def heartleech():
+        os.system("sudo apt install -y heartleech")
+
+    def httrack():
+        os.system("sudo apt install -y httrack")
+
+    def hydra_gtk():
+        os.system("sudo apt install -y hydra-gtk")
+
+    def joomscan():
+        os.system("sudo apt install -y joomscan")
+
+    def laudanum():
+        os.system("sudo apt install -y laudanum")
+
+    def maltego():
+        os.system("sudo apt install -y maltego")
+
+    def mitmproxy():
+        os.system("sudo apt install -y mitmproxy")
+
+    def nikto():
+        os.system("sudo apt install -y nikto")
+
+    def nmap():
+        os.system("sudo apt install -y nmap")
+
+    def owasp_mantra_ff():
+        os.system("sudo apt install -y owasp-mantra-ff")
+
+    def paros():
+        os.system("sudo apt install -y paros")
+
+    def php():
+        os.system("sudo apt install -y php")
+
+    def plecost():
+        os.system("sudo apt install -y plecost")
+
+    def proxytunnel():
+        os.system("sudo apt install -y proxytunnel")
+
+    def redsocks():
+        os.system("sudo apt install -y redsocks")
+
+    def siege():
+        os.system("sudo apt install -y siege")
+
+    def slowhttptest():
+        os.system("sudo apt install -y slowhttptest")
+
+    def sqlitebrowser():
+        os.system("sudo apt install -y sqlitebrowser")
+
+    def sqlninja():
+        os.system("sudo apt install -y sqlninja")
+
+    def ssldump():
+        os.system("sudo apt install -y ssldump")
+
+    def sslscan():
+        os.system("sudo apt install -y sslscan")
+
+    def sslsplit():
+        os.system("sudo apt install -y sslsplit")
+
+    def stunnel4():
+        os.system("sudo apt install -y stunnel4")
+
+    def tlssled():
+        os.system("sudo apt install -y tlssled")
+
+    def uniscan():
+        os.system("sudo apt install -y uniscan")
+
+    def wapiti():
+        os.system("sudo apt install -y wapiti")
+
+    def webacoo():
+        os.system("sudo apt install -y webacoo")
+
+    def webshells():
+        os.system("sudo apt install -y webshells")
+
+    def wfuzz():
+        os.system("sudo apt install -y wfuzz")
+
+    def wireshark():
+        os.system("sudo apt install -y wireshark")
+
+    def xsser():
+        os.system("sudo apt install -y xsser")
+
+    def gobuster():
+        os.system("sudo apt install -y gobuster")
+
+    # Web application tools loop install function
+    def web_application_tools():
+        tools = [
+            "apache-user",
+            "apache",
+            "beef-xs",
+            "burpsuit",
+            "cadave",
+            "commi",
+            "cutycap",
+            "davtes",
+            "default-mysql-serve",
+            "dir",
+            "dirbuste",
+            "dotdotpw",
+            "eyewitnes",
+            "ferret-sidejac",
+            "fteste",
+            "hakrawle",
+            "hamster-sidejac",
+            "heartleec",
+            "httprin",
+            "httrac",
+            "hydr",
+            "hydra-gt",
+            "jboss-autopw",
+            "joomsca",
+            "jsql-injectio",
+            "laudanu",
+            "lb",
+            "malteg",
+            "medus",
+            "mitmprox",
+            "ncrac",
+            "nikt",
+            "nishan",
+            "nma",
+            "oscanne",
+            "owasp-mantra-f",
+            "padbuste",
+            "paro",
+            "patato",
+            "ph",
+            "php-mysq",
+            "plecos",
+            "proxychains",
+            "proxytunne",
+            "qsslcaudi",
+            "redsock",
+            "sidguesse",
+            "sieg",
+            "skipfis",
+            "slowhttptes",
+            "sqldic",
+            "sqlitebrowse",
+            "sqlma",
+            "sqlninj",
+            "sqlsu",
+            "ssldum",
+            "ssl",
+            "sslsca",
+            "sslsnif",
+            "sslspli",
+            "sslyz",
+            "stunnel",
+            "thc-ssl-do",
+            "tlssle",
+            "tnscmd10",
+            "unisca",
+            "wafw00",
+            "wapit",
+            "watob",
+            "webaco",
+            "webscara",
+            "webshell",
+            "weevel",
+            "wfuz",
+            "whatwe",
+            "wireshar",
+            "wpsca",
+            "xsse",
+            "zaproxy",
+            "gobuster",
+        ]
+        for tool in tools:
+            os.system(f"sudo apt install -y {tool}")
+
+
 # Kali_top 10 tools call function
 def kali_top10_tools():
     colors.red("\n   KALI TOP 10 TOOLS ")
@@ -1717,17 +2058,17 @@ def kali_top10_tools():
     choice = input(colr().hex("#2ed1b4", "> ", rgb_mode=True))
 
     switch = {
-        1: Tool.nmap,
-        2: Tool.aircrack_ng,
-        3: Tool.john,
-        4: Tool.sqlmap,
-        5: Tool.hydra,
-        6: Tool.metasploit_framework,
-        7: Tool.responder,
-        8: Tool.wireshark,
-        9: Tool.burpsuite,
-        10: Tool.crackmapexec,
-        11: Tool.kali_top10_tools,
+        1: KaliTop10.nmap,
+        2: KaliTop10.aircrack_ng,
+        3: KaliTop10.john,
+        4: KaliTop10.sqlmap,
+        5: KaliTop10.hydra,
+        6: KaliTop10.metasploit_framework,
+        7: KaliTop10.responder,
+        8: KaliTop10.wireshark,
+        9: KaliTop10.burpsuite,
+        10: KaliTop10.crackmapexec,
+        11: KaliTop10.kali_top10_tools,
         12: Operators.back,
     }
     try:
@@ -1747,12 +2088,12 @@ def social_engineering_tools():
     choice = input(colr().hex("#2ed1b4", "> ", rgb_mode=True))
 
     switch = {
-        1: Tool.set,
-        2: Tool.veil,
-        3: Tool.msfpc,
-        4: Tool.beef_xss,
-        5: Tool.backdoor_factory,
-        6: Tool.social_engineering_tools,
+        1: SocialEnginneering.set,
+        2: SocialEnginneering.veil,
+        3: SocialEnginneering.msfpc,
+        4: SocialEnginneering.beef_xss,
+        5: SocialEnginneering.backdoor_factory,
+        6: SocialEnginneering.social_engineering_tools,
         7: Operators.back,
     }
     try:
@@ -1776,55 +2117,55 @@ def information_gathering_tools():
     choice = input(colr().hex("#ff0000", "> ", rgb_mode=True))
 
     switch = {
-        1: Tool.p0f,
-        2: Tool.lbd,
-        3: Tool.ncat,
-        4: Tool.braa,
-        5: Tool.nmap,
-        6: Tool.irpas,
-        7: Tool.sslh,
-        8: Tool.Otrace,
-        9: Tool.fierce,
-        10: Tool.dnsenum,
-        11: Tool.legion,
-        12: Tool.masscan,
-        13: Tool.nbtscan,
-        14: Tool.thc_ipv6,
-        15: Tool.fping,
-        16: Tool.dnswalk,
-        17: Tool.recon_ng,
-        18: Tool.ftester,
-        19: Tool.ssldump,
-        20: Tool.sslscan,
-        21: Tool.swaks,
-        22: Tool.ike_scan,
-        23: Tool.twofi,
-        24: Tool.urlcrazy,
-        25: Tool.arping,
-        26: Tool.dmitry,
-        27: Tool.dnsmap,
-        28: Tool.wafw00f,
-        29: Tool.smbmap,
-        30: Tool.firewalk,
-        31: Tool.sslyze,
-        32: Tool.hping3,
-        33: Tool.intrace,
-        34: Tool.tlssled,
-        35: Tool.maltego,
-        36: Tool.netmask,
-        37: Tool.dnsrecon,
-        38: Tool.dnstracer,
-        39: Tool.enum4linux,
-        40: Tool.theharvester,
-        41: Tool.fragrouter,
-        42: Tool.netdiscover,
-        43: Tool.snmpcheck,
-        44: Tool.metagoofil,
-        45: Tool.qsslcaudit,
-        46: Tool.unicornscan,
-        47: Tool.onesixtyone,
-        48: Tool.smtp_user_enum,
-        49: Tool.information_gathering_tools,
+        1: InformationGathering.p0f,
+        2: InformationGathering.lbd,
+        3: InformationGathering.ncat,
+        4: InformationGathering.braa,
+        5: InformationGathering.nmap,
+        6: InformationGathering.irpas,
+        7: InformationGathering.sslh,
+        8: InformationGathering.Otrace,
+        9: InformationGathering.fierce,
+        10: InformationGathering.dnsenum,
+        11: InformationGathering.legion,
+        12: InformationGathering.masscan,
+        13: InformationGathering.nbtscan,
+        14: InformationGathering.thc_ipv6,
+        15: InformationGathering.fping,
+        16: InformationGathering.dnswalk,
+        17: InformationGathering.recon_ng,
+        18: InformationGathering.ftester,
+        19: InformationGathering.ssldump,
+        20: InformationGathering.sslscan,
+        21: InformationGathering.swaks,
+        22: InformationGathering.ike_scan,
+        23: InformationGathering.twofi,
+        24: InformationGathering.urlcrazy,
+        25: InformationGathering.arping,
+        26: InformationGathering.dmitry,
+        27: InformationGathering.dnsmap,
+        28: InformationGathering.wafw00f,
+        29: InformationGathering.smbmap,
+        30: InformationGathering.firewalk,
+        31: InformationGathering.sslyze,
+        32: InformationGathering.hping3,
+        33: InformationGathering.intrace,
+        34: InformationGathering.tlssled,
+        35: InformationGathering.maltego,
+        36: InformationGathering.netmask,
+        37: InformationGathering.dnsrecon,
+        38: InformationGathering.dnstracer,
+        39: InformationGathering.enum4linux,
+        40: InformationGathering.theharvester,
+        41: InformationGathering.fragrouter,
+        42: InformationGathering.netdiscover,
+        43: InformationGathering.snmpcheck,
+        44: InformationGathering.metagoofil,
+        45: InformationGathering.qsslcaudit,
+        46: InformationGathering.unicornscan,
+        47: InformationGathering.onesixtyone,
+        48: InformationGathering.smtp_user_enum,
+        49: InformationGathering.information_gathering_tools,
         50: Operators.back,
     }
     try:
@@ -1847,55 +2188,55 @@ def password_cracking_tools():
     choice = input(colr().hex("#2ed1b4", "> ", rgb_mode=True))
 
     switch = {
-        1: Tool.cewl,
-        2: Tool.chntpw,
-        3: Tool.cisco_auditing_tool,
-        4: Tool.cmospwd,
-        5: Tool.crackle,
-        6: Tool.creddump7,
-        7: Tool.crunch,
-        8: Tool.fcrackzip,
-        9: Tool.freerdp2_x11,
-        10: Tool.gpp_decrypt,
-        11: Tool.hash_identifier,
-        12: Tool.hashcat,
-        13: Tool.hashcat_utils,
-        14: Tool.hashid,
-        15: Tool.hydra,
-        16: Tool.hydra_gtk,
-        17: Tool.john,
-        18: Tool.johnny,
-        19: Tool.truecrack,
-        20: Tool.oclgausscrack,
-        21: Tool.maskprocessor,
-        22: Tool.medusa,
-        23: Tool.mimikatz,
-        24: Tool.ncrack,
-        25: Tool.onesixtyone,
-        26: Tool.ophcrack,
-        27: Tool.ophcrack_cli,
-        28: Tool.pack,
-        29: Tool.passing_the_hash,
-        30: Tool.patator,
-        31: Tool.pdfcrack,
-        32: Tool.pipal,
-        33: Tool.polenum,
-        34: Tool.rainbowcrack,
-        35: Tool.rarcrack,
-        36: Tool.rcracki_mt,
-        37: Tool.rsmangler,
-        38: Tool.samdump2,
-        39: Tool.seclists,
-        40: Tool.sipcrack,
-        41: Tool.sipvicious,
-        42: Tool.smbmap,
-        43: Tool.sqldict,
-        44: Tool.statsprocessor,
-        45: Tool.sucrack,
-        46: Tool.thc_pptp_bruter,
-        47: Tool.twofi,
-        48: Tool.wordlists,
-        49: Tool.password_cracking_tools,
+        1: PasswordCracking.cewl,
+        2: PasswordCracking.chntpw,
+        3: PasswordCracking.cisco_auditing_tool,
+        4: PasswordCracking.cmospwd,
+        5: PasswordCracking.crackle,
+        6: PasswordCracking.creddump7,
+        7: PasswordCracking.crunch,
+        8: PasswordCracking.fcrackzip,
+        9: PasswordCracking.freerdp2_x11,
+        10: PasswordCracking.gpp_decrypt,
+        11: PasswordCracking.hash_identifier,
+        12: PasswordCracking.hashcat,
+        13: PasswordCracking.hashcat_utils,
+        14: PasswordCracking.hashid,
+        15: PasswordCracking.hydra,
+        16: PasswordCracking.hydra_gtk,
+        17: PasswordCracking.john,
+        18: PasswordCracking.johnny,
+        19: PasswordCracking.truecrack,
+        20: PasswordCracking.oclgausscrack,
+        21: PasswordCracking.maskprocessor,
+        22: PasswordCracking.medusa,
+        23: PasswordCracking.mimikatz,
+        24: PasswordCracking.ncrack,
+        25: PasswordCracking.onesixtyone,
+        26: PasswordCracking.ophcrack,
+        27: PasswordCracking.ophcrack_cli,
+        28: PasswordCracking.pack,
+        29: PasswordCracking.passing_the_hash,
+        30: PasswordCracking.patator,
+        31: PasswordCracking.pdfcrack,
+        32: PasswordCracking.pipal,
+        33: PasswordCracking.polenum,
+        34: PasswordCracking.rainbowcrack,
+        35: PasswordCracking.rarcrack,
+        36: PasswordCracking.rcracki_mt,
+        37: PasswordCracking.rsmangler,
+        38: PasswordCracking.samdump2,
+        39: PasswordCracking.seclists,
+        40: PasswordCracking.sipcrack,
+        41: PasswordCracking.sipvicious,
+        42: PasswordCracking.smbmap,
+        43: PasswordCracking.sqldict,
+        44: PasswordCracking.statsprocessor,
+        45: PasswordCracking.sucrack,
+        46: PasswordCracking.thc_pptp_bruter,
+        47: PasswordCracking.twofi,
+        48: PasswordCracking.wordlists,
+        49: PasswordCracking.password_cracking_tools,
         50: Operators.back,
     }
     try:
@@ -1963,106 +2304,106 @@ def forensics_tools():
     choice = input(colr().hex("#ff0000", "> ", rgb_mode=True))
 
     switch = {
-        1: Tool.pev,
-        2: Tool.wce,
-        3: Tool.nasm,
-        4: Tool.gdb,
-        5: Tool.plaso,
-        6: Tool.lvm2,
-        7: Tool.gpart,
-        8: Tool.yara,
-        9: Tool.exiv2,
-        10: Tool.lynis,
-        11: Tool.undbx,
-        12: Tool.unrar,
-        13: Tool.dc3dd,
-        14: Tool.jadx,
-        15: Tool.pasco,
-        16: Tool.nasty,
-        17: Tool.parted,
-        18: Tool.pdfid,
-        19: Tool.xplico,
-        20: Tool.dcfldd,
-        21: Tool.unhide,
-        22: Tool.ssdeep,
-        23: Tool.xmount,
-        24: Tool.binwalk,
-        25: Tool.tcpdump,
-        26: Tool.ollydbg,
-        27: Tool.gparted,
-        28: Tool.metacam,
-        29: Tool.inetsim,
-        30: Tool.md5deep,
-        31: Tool.autopsy,
-        32: Tool.polenum,
-        33: Tool.rifiuti,
-        34: Tool.scalpel,
-        35: Tool.rifiuti,
-        36: Tool.foremost,
-        37: Tool.memdump,
-        38: Tool.guymager,
-        39: Tool.apktool,
-        40: Tool.rephrase,
-        41: Tool.galleta,
-        42: Tool.ddrescue,
-        43: Tool.vinetto,
-        44: Tool.mdbtools,
-        45: Tool.upx_ucl,
-        46: Tool.hashdeep,
-        47: Tool.radare2,
-        48: Tool.rkhunter,
-        49: Tool.tcpflow,
-        50: Tool.winregfs,
-        51: Tool.grokevt,
-        52: Tool.ext3grep,
-        53: Tool.samdump2,
-        54: Tool.myrescue,
-        55: Tool.rifiuti2,
-        56: Tool.ewf_tools,
-        57: Tool.safecopy,
-        58: Tool.ext4magic,
-        59: Tool.reglookup,
-        60: Tool.recoverdm,
-        61: Tool.sleuthkit,
-        62: Tool.tcpreplay,
-        63: Tool.regripper,
-        64: Tool.exifprobe,
-        65: Tool.dumpzilla,
-        66: Tool.truecrack,
-        67: Tool.javasnoop,
-        68: Tool.pst_utils,
-        69: Tool.wireshark,
-        70: Tool.fcrackzip,
-        71: Tool.cabextract,
-        72: Tool.creddump7,
-        73: Tool.mac_robber,
-        74: Tool.pdf_parser,
-        75: Tool.extundelete,
-        76: Tool.chkrootkit,
-        77: Tool.magicrescue,
-        78: Tool.rsakeyfind,
-        79: Tool.afflib_tools,
-        80: Tool.p7zip_full,
-        81: Tool.rizin_cutter,
-        82: Tool.recoverjpeg,
-        83: Tool.edb_debugger,
-        84: Tool.missidentify,
-        85: Tool.python3_dfvfs,
-        86: Tool.libhivex_bin,
-        87: Tool.sqlitebrowser,
-        88: Tool.libsmali_java,
-        89: Tool.bulk_extractor,
-        90: Tool.scrounge_ntfs,
-        91: Tool.lime_forensics,
-        92: Tool.firmware_mod_kit,
-        93: Tool.bytecode_viewer,
-        94: Tool.python3_distorm3,
-        95: Tool.python3_dfwinreg,
-        96: Tool.forensics_colorize,
-        97: Tool.python3_capstone,
-        98: Tool.forensic_artifacts,
-        99: Tool.python3_dfdatetime,
-        100: Tool.forensics_tools,
+        1: Forensics.pev,
+        2: Forensics.wce,
+        3: Forensics.nasm,
+        4: Forensics.gdb,
+        5: Forensics.plaso,
+        6: Forensics.lvm2,
+        7: Forensics.gpart,
+        8: Forensics.yara,
+        9: Forensics.exiv2,
+        10: Forensics.lynis,
+        11: Forensics.undbx,
+        12: Forensics.unrar,
+        13: Forensics.dc3dd,
+        14: Forensics.jadx,
+        15: Forensics.pasco,
+        16: Forensics.nasty,
+        17: Forensics.parted,
+        18: Forensics.pdfid,
+        19: Forensics.xplico,
+        20: Forensics.dcfldd,
+        21: Forensics.unhide,
+        22: Forensics.ssdeep,
+        23: Forensics.xmount,
+        24: Forensics.binwalk,
+        25: Forensics.tcpdump,
+        26: Forensics.ollydbg,
+        27: Forensics.gparted,
+        28: Forensics.metacam,
+        29: Forensics.inetsim,
+        30: Forensics.md5deep,
+        31: Forensics.autopsy,
+        32: Forensics.polenum,
+        33: Forensics.rifiuti,
+        34: Forensics.scalpel,
+        35: Forensics.rifiuti,
+        36: Forensics.foremost,
+        37: Forensics.memdump,
+        38: Forensics.guymager,
+        39: Forensics.apktool,
+        40: Forensics.rephrase,
+        41: Forensics.galleta,
+        42: Forensics.ddrescue,
+        43: Forensics.vinetto,
+        44: Forensics.mdbtools,
+        45: Forensics.upx_ucl,
+        46: Forensics.hashdeep,
+        47: Forensics.radare2,
+        48: Forensics.rkhunter,
+        49: Forensics.tcpflow,
+        50: Forensics.winregfs,
+        51: Forensics.grokevt,
+        52: Forensics.ext3grep,
+        53: Forensics.samdump2,
+        54: Forensics.myrescue,
+        55: Forensics.rifiuti2,
+        56: Forensics.ewf_tools,
+        57: Forensics.safecopy,
+        58: Forensics.ext4magic,
+        59: Forensics.reglookup,
+        60: Forensics.recoverdm,
+        61: Forensics.sleuthkit,
+        62: Forensics.tcpreplay,
+        63: Forensics.regripper,
+        64: Forensics.exifprobe,
+        65: Forensics.dumpzilla,
+        66: Forensics.truecrack,
+        67: Forensics.javasnoop,
+        68: Forensics.pst_utils,
+        69: Forensics.wireshark,
+        70: Forensics.fcrackzip,
+        71: Forensics.cabextract,
+        72: Forensics.creddump7,
+        73: Forensics.mac_robber,
+        74: Forensics.pdf_parser,
+        75: Forensics.extundelete,
+        76: Forensics.chkrootkit,
+        77: Forensics.magicrescue,
+        78: Forensics.rsakeyfind,
+        79: Forensics.afflib_tools,
+        80: Forensics.p7zip_full,
+        81: Forensics.rizin_cutter,
+        82: Forensics.recoverjpeg,
+        83: Forensics.edb_debugger,
+        84: Forensics.missidentify,
+        85: Forensics.python3_dfvfs,
+        86: Forensics.libhivex_bin,
+        87: Forensics.sqlitebrowser,
+        88: Forensics.libsmali_java,
+        89: Forensics.bulk_extractor,
+        90: Forensics.scrounge_ntfs,
+        91: Forensics.lime_forensics,
+        92: Forensics.firmware_mod_kit,
+        93: Forensics.bytecode_viewer,
+        94: Forensics.python3_distorm3,
+        95: Forensics.python3_dfwinreg,
+        96: Forensics.forensics_colorize,
+        97: Forensics.python3_capstone,
+        98: Forensics.forensic_artifacts,
+        99: Forensics.python3_dfdatetime,
+        100: Forensics.forensics_tools,
         101: Operators.back,
         102: Operators.exit,
     }
@@ -2089,18 +2430,18 @@ def exploitation_tools():
     choice = input(colr().hex("#cf301b", "> ", rgb_mode=True))
 
     switch = {
-        1: Tool.ep_set,
-        2: Tool.ep_msfpc,
-        3: Tool.ep_sqlmap,
-        4: Tool.armitage,
-        5: Tool.ep_beef_xss,
-        6: Tool.exploitdb,
-        7: Tool.termineter,
-        8: Tool.shellnoob,
-        9: Tool.ep_metasploit_framework,
-        10: Tool.exploitation_tools,
+        1: Exploitation.set,
+        2: Exploitation.msfpc,
+        3: Exploitation.sqlmap,
+        4: Exploitation.armitage,
+        5: Exploitation.beef_xss,
+        6: Exploitation.exploitdb,
+        7: Exploitation.termineter,
+        8: Exploitation.shellnoob,
+        9: Exploitation.metasploit_framework,
+        10: Exploitation.exploitation_tools,
         11: Operators.back,
-        12: Operators.exit
+        12: Operators.exit,
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
@@ -2137,47 +2478,151 @@ def vulnerability_tools():
     choice = input(colr().hex("#ff0000", "> ", rgb_mode=True))
 
     switch = {
-        1: Tool.vul_t50,
-        2: Tool.vul_gvm,
-        3: Tool.vul_sfuzz,
-        4: Tool.vul_bed,
-        5: Tool.vul_sipsak,
-        6: Tool.vul_nikto,
-        7: Tool.vul_legion,
-        8: Tool.vul_afl,
-        9: Tool.vul_dhcpig,
-        10: Tool.vul_nmap,
-        11: Tool.vul_iaxflood,
-        12: Tool.vul_sipp,
-        13: Tool.vul_rtpbreak,
-        14: Tool.vul_spike,
-        15: Tool.vul_sctpscan,
-        16: Tool.vul_siege,
-        17: Tool.vul_voiphopper,
-        18: Tool.vul_peass,
-        19: Tool.vul_sipvicious,
-        20: Tool.vul_lynis,
-        21: Tool.vul_cisco_torch,
-        22: Tool.vul_enumiax,
-        23: Tool.vul_thc_ssl_dos,
-        24: Tool.vul_ohrwurm,
-        25: Tool.vul_inviteflood,
-        26: Tool.vul_yersinia,
-        27: Tool.vul_rtpmixsound,
-        28: Tool.vul_rtpflood,
-        29: Tool.vul_siparmyknife,
-        30: Tool.vul_cisco_ocs,
-        31: Tool.vul_slowhttptest,
-        32: Tool.vul_protos_sip,
-        33: Tool.vul_unix_privesc_check,
-        34: Tool.vul_rtpinsertsound,
-        35: Tool.vul_cisco_auditing_tool,
-        36: Tool.vul_copy_router_config,
-        37: Tool.vul_cisco_global_exploiter,
-        38: Tool.vulnerability_tools,
+        1: Vulnerability.t50,
+        2: Vulnerability.gvm,
+        3: Vulnerability.sfuzz,
+        4: Vulnerability.bed,
+        5: Vulnerability.sipsak,
+        6: Vulnerability.nikto,
+        7: Vulnerability.legion,
+        8: Vulnerability.afl,
+        9: Vulnerability.dhcpig,
+        10: Vulnerability.nmap,
+        11: Vulnerability.iaxflood,
+        12: Vulnerability.sipp,
+        13: Vulnerability.rtpbreak,
+        14: Vulnerability.spike,
+        15: Vulnerability.sctpscan,
+        16: Vulnerability.siege,
+        17: Vulnerability.voiphopper,
+        18: Vulnerability.peass,
+        19: Vulnerability.sipvicious,
+        20: Vulnerability.lynis,
+        21: Vulnerability.cisco_torch,
+        22: Vulnerability.enumiax,
+        23: Vulnerability.thc_ssl_dos,
+        24: Vulnerability.ohrwurm,
+        25: Vulnerability.inviteflood,
+        26: Vulnerability.yersinia,
+        27: Vulnerability.rtpmixsound,
+        28: Vulnerability.rtpflood,
+        29: Vulnerability.siparmyknife,
+        30: Vulnerability.cisco_ocs,
+        31: Vulnerability.slowhttptest,
+        32: Vulnerability.protos_sip,
+        33: Vulnerability.unix_privesc_check,
+        34: Vulnerability.rtpinsertsound,
+        35: Vulnerability.cisco_auditing_tool,
+        36: Vulnerability.copy_router_config,
+        37: Vulnerability.cisco_global_exploiter,
+        38: Vulnerability.vulnerability_tools,
         39: Operators.back,
         40: Operators.exit,
     }
+    try:
+        switch_case = switch.get(int(choice), Operators.case_default)
+        switch_case()
+    except ValueError:
+        Operators.case_default()
+
+
+# Web application tools call function
+def web_application_tools():
+    colors.red("\n   WEB APPLICATION TOOLS ")
+    colors.light_green(
+        " \n\n [1]  apache-users                          [2]   patator  "
+    )
+    colors.light_green(" [3]  beef-xss                        [4]   php-mysql ")
+    colors.light_green(" [5]  cadaver                       [6]   proxychains4")
+    colors.light_green(" [7]  cutycapt                       [8]   qsslcaudit    ")
+    colors.light_green(
+        " [9]  default-mysql-server                       [10] sidguesser  "
+    )
+    colors.light_green(" [11] dirbuster                     [12]  skipfish    ")
+    colors.light_green(" [13] eyewitness                     [14]  sqldict  ")
+    colors.light_green(" [15] gobuster                     [16]  sqlmap")
+    colors.light_green(" [17] ftester                   [18]  sqlsus  ")
+    colors.light_green(" [19] hamster-sidejack                   [20]  sslh")
+    colors.light_green(" [21] httprint                  [22]  sslsniff  ")
+    colors.light_green(" [23] hydra                  [24]  sslyze")
+    colors.light_green(" [25] jboss-autopwn                  [26] thc-ssl-dos ")
+    colors.light_green(" [27] jsql-injection                  [28]  tnscmd10g  ")
+    colors.light_green(" [29] lbd                 [30]  wafw00f ")
+    colors.light_green(" [31] medusa                 [32]  watobo  ")
+    colors.light_green(" [33] ncrack           [34]  webscarab")
+    colors.light_green(" [35] nishang          [36]  weevely")
+    colors.light_green(" [37] oscanner       [38] whatweb ")
+    colors.light_green(" [39] padbuster                        [40]  wpscan ")
+    colors.light_green(" [41] wpscan                        [42]  zaproxy ")
+    colors.light_green(" [43] burpsuite                        [44]  apache2 ")
+    colors.light_green(" [45] commix                        [46]  davtest ")
+    colors.light_green(" [47] dotdotpwn                        [48]  dirb ")
+    colors.light_green(
+        " [49] ferret-sidejack                        [50] ferret-sidejack "
+    )
+    colors.light_green(" [51] heartleech                        [52]  httrack ")
+    colors.light_green(" [53] hydra-gtk                        [54]  joomscan ")
+    colors.light_green(" [55] maltego                        [56]  laudanum ")
+    colors.light_green(" [57] mitmproxy                        [58]  nikto ")
+    colors.light_green(" [59] nmap                        [60]  owasp-mantra-ff ")
+    colors.light_green(" [61] paros                        [62]  php")
+    colors.light_green(" [63] plecost                        [64]  proxytunnel ")
+    colors.light_green(" [65] redsocks                        [66]  siege ")
+    colors.light_green(" [67] slowhttptest                        [68]  sqlitebrowser ")
+    colors.light_green(" [69] sqlninja                        [70]  ssldump ")
+    colors.light_green(" [71] sslscan                        [72]  sslsplit ")
+    colors.light_green(" [73] stunnel4                        [74] tlssled ")
+    colors.light_green(" [75] uniscan                        [76]  wapiti ")
+    colors.light_green(" [78] webacoo                        [79]  webshells ")
+    colors.light_green(" [80] wireshark                        [81]  wfuzz ")
+    colors.light_green(" [82] xsser                        [83]  All ")
+    colors.light_green(" [84] Back                       [85]  Exit ")
+
+    colors.red("\n \nEnter The Tool Number To  install ??")
+    choice = input(colr().hex("#ff0000", "> ", rgb_mode=True))
+
+    # switch = {
+    #     1: .t50,
+    #     2: .gvm,
+    #     3: .sfuzz,
+    #     4: .bed,
+    #     5: .sipsak,
+    #     6: .nikto,
+    #     7: .legion,
+    #     8: .afl,
+    #     9: .dhcpig,
+    #     10:.nmap,
+    #     11:.iaxflood,
+    #     12:.sipp,
+    #     13:.rtpbreak,
+    #     14:.spike,
+    #     15:.sctpscan,
+    #     16:.siege,
+    #     17:.voiphopper,
+    #     18:.peass,
+    #     19:.sipvicious,
+    #     20:.lynis,
+    #     21:.cisco_torch,
+    #     22:.enumiax,
+    #     23:.thc_ssl_dos,
+    #     24:.ohrwurm,
+    #     25:.inviteflood,
+    #     26:.yersinia,
+    #     27:.rtpmixsound,
+    #     28:.rtpflood,
+    #     29:.siparmyknife,
+    #     30:.cisco_ocs,
+    #     31:.slowhttptest,
+    #     32:.protos_sip,
+    #     33:.unix_privesc_check,
+    #     34:.rtpinsertsound,
+    #     35:.cisco_auditing_tool,
+    #     36:.copy_router_config,
+    #     37:.cisco_global_exploiter,
+    #     38:.vulnerability_tools,
+    #     39: Operators.back,
+    #     40: Operators.exit,
+    # }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
         switch_case()
@@ -2197,6 +2642,7 @@ def choices():
         5: forensics_tools,
         6: exploitation_tools,
         7: vulnerability_tools,
+        8: web_application_tools,
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
