@@ -32,6 +32,9 @@ class colors:
     def violet(data):
         print(colr().hex("#9f5fa7", data, rgb_mode=True))
 
+    def light_green(data):
+        print(colr().hex("#21ff00", data, rgb_mode=True))
+
 
 # Main Banner
 banner = pyfiglet.figlet_format(" HACK JET")
@@ -70,6 +73,7 @@ def tools_category():
     colors.rose(" \n \n [1] KALI TOP 10 TOOLS            [2] SOCIAL ENGINEERING TOOLS")
     colors.red(" [3] INFORMATION GATHERING TOOLS  [4] PASSWORDS CRACKING TOOLS")
     colors.dark_orange(" [5] FORENSICS TOOLS              [6] EXPLOITATION TOOLS")
+    colors.violet(" [7] VULNERABILITY TOOLS ")
 
 
 tools_category()
@@ -1452,7 +1456,7 @@ class Tool:
 
     # metasploit-framework , msfpc , beef-xss, sqlmap,set the following tools function already defined so it will call from there
 
-    # Exploitation tools loop installation function
+    # Exploitation tools loop install function
     def exploitation_tools():
         tools = [
             "armitage",
@@ -1469,6 +1473,238 @@ class Tool:
             os.system(f"sudo apt install -y {tool}")
 
         exploitation_tools()
+
+    # Vulnerability tools
+    def vul_afl():
+        os.system("sudo apt install -y afl++")
+
+        vulnerability_tools()
+
+    def vul_cisco_auditing_tool():
+        os.system("sudo apt install -y cisco-auditing-tool")
+
+        vulnerability_tools()
+
+    def vul_cisco_ocs():
+        os.system("sudo apt install -y cisco-ocs")
+
+        vulnerability_tools()
+
+    def vul_copy_router_config():
+        os.system("sudo apt install -y copy-router-config")
+
+        vulnerability_tools()
+
+    def vul_enumiax():
+        os.system("sudo apt install -y enumiax")
+
+        vulnerability_tools()
+
+    def vul_iaxflood():
+        os.system("sudo apt install -y iaxflood")
+
+        vulnerability_tools()
+
+    def vul_legion():
+        os.system("sudo apt install -y legion")
+
+        vulnerability_tools()
+
+    def vul_nikto():
+        os.system("sudo apt install -y nikto")
+
+        vulnerability_tools()
+
+    def vul_ohrwurm():
+        os.system("sudo apt install -y ohrwurm")
+
+        vulnerability_tools()
+
+    def vul_protos_sip():
+        os.system("sudo apt install -y protos-sip")
+
+        vulnerability_tools()
+
+    def vul_rtpflood():
+        os.system("sudo apt install -y rtpflood")
+
+        vulnerability_tools()
+
+    def vul_rtpmixsound():
+        os.system("sudo apt install -y rtpmixsound")
+
+        vulnerability_tools()
+
+    def vul_sfuzz():
+        os.system("sudo apt install -y sfuzz")
+
+        vulnerability_tools()
+
+    def vul_siparmyknife():
+        os.system("sudo apt install -y siparmyknife")
+
+        vulnerability_tools()
+
+    def vul_sipsak():
+        os.system("sudo apt install -y sipsak")
+
+        vulnerability_tools()
+
+    def vul_slowhttptest():
+        os.system("sudo apt install -y slowhttptest")
+
+        vulnerability_tools()
+
+    def vul_t50():
+        os.system("sudo apt install -y t50")
+
+        vulnerability_tools()
+
+    def vul_unix_privesc_check():
+        os.system("sudo apt install -y unix-privesc-check")
+
+        vulnerability_tools()
+
+    def vul_yersinia():
+        os.system("sudo apt install -y yersinia")
+
+        vulnerability_tools()
+
+    def vul_bed():
+        os.system("sudo apt install -y bed")
+
+        vulnerability_tools()
+
+    def vul_cisco_global_exploiter():
+        os.system("sudo apt install -y cisco-global-exploiter")
+
+        vulnerability_tools()
+
+    def vul_cisco_torch():
+        os.system("sudo apt install -y cisco-torch")
+
+        vulnerability_tools()
+
+    def vul_dhcpig():
+        os.system("sudo apt install -y dhcpig")
+
+        vulnerability_tools()
+
+    def vul_gvm():
+        os.system("sudo apt install -y gvm")
+
+        vulnerability_tools()
+
+    def vul_inviteflood():
+        os.system("sudo apt install -y inviteflood")
+
+        vulnerability_tools()
+
+    def vul_lynis():
+        os.system("sudo apt install -y lynis")
+
+        vulnerability_tools()
+
+    def vul_nmap():
+        os.system("sudo apt install -y nmap")
+
+        vulnerability_tools()
+
+    def vul_peass():
+        os.system("sudo apt install -y peass")
+
+        vulnerability_tools()
+
+    def vul_rtpbreak():
+        os.system("sudo apt install -y rtpbreak")
+
+        vulnerability_tools()
+
+    def vul_rtpinsertsound():
+        os.system("sudo apt install -y rtpinsertsound")
+
+        vulnerability_tools()
+
+    def vul_sctpscan():
+        os.system("sudo apt install -y sctpscan")
+
+        vulnerability_tools()
+
+    def vul_siege():
+        os.system("sudo apt install -y siege")
+
+        vulnerability_tools()
+
+    def vul_sipp():
+        os.system("sudo apt install -y sipp")
+
+        vulnerability_tools()
+
+    def vul_sipvicious():
+        os.system("sudo apt install -y sipvicious")
+
+        vulnerability_tools()
+
+    def vul_spike():
+        os.system("sudo apt install -y spike")
+
+        vulnerability_tools()
+
+    def vul_thc_ssl_dos():
+        os.system("sudo apt install -y thc-ssl-dos")
+
+        vulnerability_tools()
+
+    def vul_voiphopper():
+        os.system("sudo apt install -y voiphopper")
+
+        vulnerability_tools()
+
+    # Vulnerability Tools loop install function
+    def vulnerability_tools():
+        tools = [
+            "afl++",
+            "bed",
+            "cisco-auditing-tool",
+            "cisco-global-exploiter",
+            "cisco-ocs",
+            "cisco-torch",
+            "copy-router-config",
+            "dhcpig",
+            "enumiax",
+            "gvm",
+            "iaxflood",
+            "inviteflood",
+            "legion",
+            "lynis",
+            "nikto",
+            "nmap",
+            "ohrwurm",
+            "peass",
+            "protos-sip",
+            "rtpbreak",
+            "rtpflood",
+            "rtpinsertsound",
+            "rtpmixsound",
+            "sctpscan",
+            "sfuzz",
+            "siege",
+            "siparmyknife",
+            "sipp",
+            "sipsak",
+            "sipvicious",
+            "slowhttptest",
+            "spike",
+            "t50",
+            "thc-ssl-dos",
+            "unix-privesc-check",
+            "voiphopper",
+            "yersinia",
+        ]
+        for tool in tools:
+            os.system(f"sudo apt install -y {tool}")
+
+        vulnerability_tools()
 
 
 # Kali_top 10 tools call function
@@ -1722,7 +1958,7 @@ def forensics_tools():
     colors.yellow_green(" [95] Python3-dfwinreg           [96]  Forensics-colorize")
     colors.yellow_green(" [97] Python3-capstone           [98]  Forensic-artifacts")
     colors.yellow_green(" [99] Python3-dfdatetime         [100] All")
-    colors.yellow_green(" [101] Back")
+    colors.yellow_green(" [101] Back                      [102] Exit")
     colors.red("\n \nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#ff0000", "> ", rgb_mode=True))
 
@@ -1828,6 +2064,7 @@ def forensics_tools():
         99: Tool.python3_dfdatetime,
         100: Tool.forensics_tools,
         101: Operators.back,
+        102: Operators.exit,
     }
     try:
         switch_case = switch.get(
@@ -1847,7 +2084,7 @@ def exploitation_tools():
     colors.violet(" [5]  Beef-xss              [6]  Exploitdb")
     colors.violet(" [7]  Termineter            [8]  Shellnoob")
     colors.violet(" [9]  Metasploit-framework  [10] All")
-    colors.violet(" [11] Back")
+    colors.violet(" [11] Back                  [12] Exit")
     colors.dark_orange("\n \nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#cf301b", "> ", rgb_mode=True))
 
@@ -1863,6 +2100,83 @@ def exploitation_tools():
         9: Tool.ep_metasploit_framework,
         10: Tool.exploitation_tools,
         11: Operators.back,
+        12: Operators.exit
+    }
+    try:
+        switch_case = switch.get(int(choice), Operators.case_default)
+        switch_case()
+    except ValueError:
+        Operators.case_default()
+
+
+# Vulnerability tools call function
+def vulnerability_tools():
+    colors.red("\n   EXPLOITATION TOOLS ")
+    colors.light_green(" \n\n [1]  T50                          [2]   Gvm  ")
+    colors.light_green(" [3]  Sfuzz                        [4]   Bed ")
+    colors.light_green(" [5]  Sipsak                       [6]   Nikto")
+    colors.light_green(" [7]  Legion                       [8]   Afl++    ")
+    colors.light_green(" [9]  Dhcpig                       [10]  Nmap  ")
+    colors.light_green(" [11] Iaxflood                     [12]  Sipp    ")
+    colors.light_green(" [13] Rtpbreak                     [14]  Spike  ")
+    colors.light_green(" [15] Sctpscan                     [16]  Siege")
+    colors.light_green(" [17] Voiphopper                   [18]  Peass  ")
+    colors.light_green(" [19] Sipvicious                   [20]  Lynis")
+    colors.light_green(" [21] Cisco-torch                  [22]  Enumiax  ")
+    colors.light_green(" [23] Thc-ssl-dos                  [24]  Ohrwurm")
+    colors.light_green(" [25] Inviteflood                  [26]  Yersinia ")
+    colors.light_green(" [27] Rtpmixsound                  [28]  Rtpflood  ")
+    colors.light_green(" [29] Siparmyknife                 [30]  Cisco-ocs ")
+    colors.light_green(" [31] Slowhttptest                 [32]  Protos-sip  ")
+    colors.light_green(" [33] Unix-privesc-check           [34]  Rtpinsertsound")
+    colors.light_green(" [35] Cisco-auditing-tool          [36]  Copy-router-config")
+    colors.light_green(" [37] cisco-global-exploiter       [38]  ALL ")
+    colors.light_green(" [39] Back                         [40]  Exit  ")
+
+    colors.red("\n \nEnter The Tool Number To  install ??")
+    choice = input(colr().hex("#ff0000", "> ", rgb_mode=True))
+
+    switch = {
+        1: Tool.vul_t50,
+        2: Tool.vul_gvm,
+        3: Tool.vul_sfuzz,
+        4: Tool.vul_bed,
+        5: Tool.vul_sipsak,
+        6: Tool.vul_nikto,
+        7: Tool.vul_legion,
+        8: Tool.vul_afl,
+        9: Tool.vul_dhcpig,
+        10: Tool.vul_nmap,
+        11: Tool.vul_iaxflood,
+        12: Tool.vul_sipp,
+        13: Tool.vul_rtpbreak,
+        14: Tool.vul_spike,
+        15: Tool.vul_sctpscan,
+        16: Tool.vul_siege,
+        17: Tool.vul_voiphopper,
+        18: Tool.vul_peass,
+        19: Tool.vul_sipvicious,
+        20: Tool.vul_lynis,
+        21: Tool.vul_cisco_torch,
+        22: Tool.vul_enumiax,
+        23: Tool.vul_thc_ssl_dos,
+        24: Tool.vul_ohrwurm,
+        25: Tool.vul_inviteflood,
+        26: Tool.vul_yersinia,
+        27: Tool.vul_rtpmixsound,
+        28: Tool.vul_rtpflood,
+        29: Tool.vul_siparmyknife,
+        30: Tool.vul_cisco_ocs,
+        31: Tool.vul_slowhttptest,
+        32: Tool.vul_protos_sip,
+        33: Tool.vul_unix_privesc_check,
+        34: Tool.vul_rtpinsertsound,
+        35: Tool.vul_cisco_auditing_tool,
+        36: Tool.vul_copy_router_config,
+        37: Tool.vul_cisco_global_exploiter,
+        38: Tool.vulnerability_tools,
+        39: Operators.back,
+        40: Operators.exit,
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
@@ -1882,6 +2196,7 @@ def choices():
         4: password_cracking_tools,
         5: forensics_tools,
         6: exploitation_tools,
+        7: vulnerability_tools,
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
