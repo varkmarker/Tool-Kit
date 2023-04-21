@@ -26,6 +26,9 @@ class colors:
     def light_gnome(data):
         print(colr().hex("#00ffc4", data, rgb_mode=True))
 
+    def yellow_green(data):
+        print(colr().hex("#7ed666", data, rgb_mode=True))
+
 
 # Main Banner
 banner = pyfiglet.figlet_format(" HACK JET")
@@ -63,6 +66,7 @@ def the_end():
 def tools_category():
     colors.rose(" \n \n [1] KALI TOP 10 TOOLS            [2] SOCIAL ENGINEERING TOOLS")
     colors.red(" [3] INFORMATION GATHERING TOOLS  [4] PASSWORDS CRACKING TOOLS")
+    colors.dark_orange(" [5] FORENSICS TOOLS ")
 
 
 tools_category()
@@ -192,7 +196,7 @@ class Tool:
         tools = ["backdoor-factory", "beef-xss", "msfpc", "veil", "set", "maltego"]
 
         for tool in tools:
-            os.system(f"sudo apt -y install{tool}")
+            os.system(f"sudo apt -y install {tool}")
 
         social_engineering_tools()
 
@@ -490,7 +494,7 @@ class Tool:
             "wafw00f",
         ]
         for tool in tools:
-            os.system(f"sudo apt install  {tool}")
+            os.system(f"sudo apt install -y {tool}")
 
         information_gathering_tools()
 
@@ -792,6 +796,515 @@ class Tool:
 
         password_cracking_tools()
 
+    # Forensics tools
+    def afflib_tools():
+        os.system("sudo apt install -y afflib-tools")
+        forensics_tools()
+
+    def autopsy():
+        os.system("sudo apt install -y autopsy")
+        forensics_tools()
+
+    def bulk_extractor():
+        os.system("sudo apt install -y bulk-extractor")
+        forensics_tools()
+
+    def cabextract():
+        os.system("sudo apt install -y cabextract")
+        forensics_tools()
+
+    def creddump7():
+        os.system("sudo apt install -y creddump7")
+        forensics_tools()
+
+    def dcfldd():
+        os.system("sudo apt install -y dcfldd")
+        forensics_tools()
+
+    def dumpzilla():
+        os.system("sudo apt install -y dumpzilla")
+        forensics_tools()
+
+    def ewf_tools():
+        os.system("sudo apt install -y ewf-tools")
+        forensics_tools()
+
+    def exiv2():
+        os.system("sudo apt install -y exiv2")
+        forensics_tools()
+
+    def ext4magic():
+        os.system("sudo apt install -y ext4magic")
+        forensics_tools()
+
+    def fcrackzip():
+        os.system("sudo apt install -y fcrackzip")
+        forensics_tools()
+
+    def foremost():
+        os.system("sudo apt install -y foremost")
+        forensics_tools()
+
+    def forensics_colorize():
+        os.system("sudo apt install -y forensics-colorize")
+        forensics_tools()
+
+    def gdb():
+        os.system("sudo apt install -y gdb")
+        forensics_tools()
+
+    def gparted():
+        os.system("sudo apt install -y gparted")
+        forensics_tools()
+
+    def guymager():
+        os.system("sudo apt install -y guymager")
+        forensics_tools()
+
+    def inetsim():
+        os.system("sudo apt install -y inetsim")
+        forensics_tools()
+
+    def javasnoop():
+        os.system("sudo apt install -y javasnoop")
+        forensics_tools()
+
+    def libsmali_java():
+        os.system("sudo apt install -y libsmali-java")
+        forensics_tools()
+
+    def lvm2():
+        os.system("sudo apt install -y lvm2")
+        forensics_tools()
+
+    def mac_robber():
+        os.system("sudo apt install -y mac-robber")
+        forensics_tools()
+
+    def md5deep():
+        os.system("sudo apt install -y md5deep")
+        forensics_tools()
+
+    def memdump():
+        os.system("sudo apt install -y memdump")
+        forensics_tools()
+
+    def missidentify():
+        os.system("sudo apt install -y missidentify")
+        forensics_tools()
+
+    def nasm():
+        os.system("sudo apt install -y nasm")
+        forensics_tools()
+
+    def ollydbg():
+        os.system("sudo apt install -y ollydbg")
+        forensics_tools()
+
+    def parted():
+        os.system("sudo apt install -y parted")
+        forensics_tools()
+
+    def pdf_parser():
+        os.system("sudo apt install -y pdf-parser")
+        forensics_tools()
+
+    def pev():
+        os.system("sudo apt install -y pev")
+        forensics_tools()
+
+    def polenum():
+        os.system("sudo apt install -y polenum")
+        forensics_tools()
+
+    def python3_capstone():
+        os.system("sudo apt install -y python3-capstone")
+        forensics_tools()
+
+    def python3_dfvfs():
+        os.system("sudo apt install -y python3-dfvfs")
+        forensics_tools()
+
+    def python3_distorm3():
+        os.system("sudo apt install -y python3-distorm3")
+        forensics_tools()
+
+    def recoverdm():
+        os.system("sudo apt install -y recoverdm")
+        forensics_tools()
+
+    def reglookup():
+        os.system("sudo apt install -y reglookup")
+        forensics_tools()
+
+    def rephrase():
+        os.system("sudo apt install -y rephrase")
+        forensics_tools()
+
+    def rifiuti2():
+        os.system("sudo apt install -y rifiuti2")
+        forensics_tools()
+
+    def rkhunter():
+        os.system("sudo apt install -y rkhunter")
+        forensics_tools()
+
+    def safecopy():
+        os.system("sudo apt install -y safecopy")
+        forensics_tools()
+
+    def scalpel():
+        os.system("sudo apt install -y scalpel")
+        forensics_tools()
+
+    def sleuthkit():
+        os.system("sudo apt install -y sleuthkit")
+        forensics_tools()
+
+    def ssdeep():
+        os.system("sudo apt install -y ssdeep")
+        forensics_tools()
+
+    def tcpflow():
+        os.system("sudo apt install -y tcpflow")
+        forensics_tools()
+
+    def tcpreplay():
+        os.system("sudo apt install -y tcpreplay")
+        forensics_tools()
+
+    def undbx():
+        os.system("sudo apt install -y undbx")
+        forensics_tools()
+
+    def unrar():
+        os.system("sudo apt install -y unrar")
+        forensics_tools()
+
+    def vinetto():
+        os.system("sudo apt install -y vinetto")
+        forensics_tools()
+
+    def winregfs():
+        os.system("sudo apt install -y winregfs")
+        forensics_tools()
+
+    def xmount():
+        os.system("sudo apt install -y xmount")
+        forensics_tools()
+
+    def yara():
+        os.system("sudo apt install -y yara")
+        forensics_tools()
+
+    def apktool():
+        os.system("sudo apt install -y apktool")
+        forensics_tools()
+
+    def binwalk():
+        os.system("sudo apt install -y binwalk")
+        forensics_tools()
+
+    def bytecode_viewer():
+        os.system("sudo apt install -y bytecode-viewer")
+        forensics_tools()
+
+    def chkrootkit():
+        os.system("sudo apt install -y chkrootkit")
+        forensics_tools()
+
+    def dc3dd():
+        os.system("sudo apt install -y dc3dd")
+        forensics_tools()
+
+    def ddrescue():
+        os.system("sudo apt install -y ddrescue")
+        forensics_tools()
+
+    def edb_debugger():
+        os.system("sudo apt install -y edb-debugger")
+        forensics_tools()
+
+    def exifprobe():
+        os.system("sudo apt install -y exifprobe")
+        forensics_tools()
+
+    def ext3grep():
+        os.system("sudo apt install -y ext3grep")
+        forensics_tools()
+
+    def extundelete():
+        os.system("sudo apt install -y extundelete")
+        forensics_tools()
+
+    def firmware_mod_kit():
+        os.system("sudo apt install -y firmware-mod-kit")
+        forensics_tools()
+
+    def forensic_artifacts():
+        os.system("sudo apt install -y forensic-artifacts")
+        forensics_tools()
+
+    def python3_artifacts():
+        os.system("sudo apt install -y python3-artifacts")
+        forensics_tools()
+
+    def galleta():
+        os.system("sudo apt install -y galleta")
+        forensics_tools()
+
+    def gpart():
+        os.system("sudo apt install -y gpart")
+        forensics_tools()
+
+    def grokevt():
+        os.system("sudo apt install -y grokevt")
+        forensics_tools()
+
+    def hashdeep():
+        os.system("sudo apt install -y hashdeep")
+        forensics_tools()
+
+    def jadx():
+        os.system("sudo apt install -y jadx")
+        forensics_tools()
+
+    def libhivex_bin():
+        os.system("sudo apt install -y libhivex-bin")
+        forensics_tools()
+
+    def lime_forensics():
+        os.system("sudo apt install -y lime-forensics")
+        forensics_tools()
+
+    def lynis():
+        os.system("sudo apt install -y lynis")
+        forensics_tools()
+
+    def magicrescue():
+        os.system("sudo apt install -y magicrescue")
+        forensics_tools()
+
+    def mdbtools():
+        os.system("sudo apt install -y mdbtools")
+        forensics_tools()
+
+    def metacam():
+        os.system("sudo apt install -y metacam")
+        forensics_tools()
+
+    def myrescue():
+        os.system("sudo apt install -y myrescue")
+        forensics_tools()
+
+    def nasty():
+        os.system("sudo apt install -y nasty")
+        forensics_tools()
+
+    def p7zip_full():
+        os.system("sudo apt install -y p7zip-full")
+        forensics_tools()
+
+    def pasco():
+        os.system("sudo apt install -y pasco")
+        forensics_tools()
+
+    def pdfid():
+        os.system("sudo apt install -y pdfid")
+        forensics_tools()
+
+    def plaso():
+        os.system("sudo apt install -y plaso")
+        forensics_tools()
+
+    def pst_utils():
+        os.system("sudo apt install -y pst-utils")
+        forensics_tools()
+
+    def python3_dfdatetime():
+        os.system("sudo apt install -y python3-dfdatetime")
+        forensics_tools()
+
+    def python3_dfwinreg():
+        os.system("sudo apt install -y python3-dfwinreg")
+        forensics_tools()
+
+    def radare2():
+        os.system("sudo apt install -y radare2")
+        forensics_tools()
+
+    def recoverjpeg():
+        os.system("sudo apt install -y recoverjpeg")
+        forensics_tools()
+
+    def regripper():
+        os.system("sudo apt install -y regripper")
+        forensics_tools()
+
+    def rifiuti():
+        os.system("sudo apt install -y rifiuti")
+        forensics_tools()
+
+    def rizin_cutter():
+        os.system("sudo apt install -y rizin-cutter")
+        forensics_tools()
+
+    def rsakeyfind():
+        os.system("sudo apt install -y rsakeyfind")
+        forensics_tools()
+
+    def samdump2():
+        os.system("sudo apt install -y samdump2")
+        forensics_tools()
+
+    def scrounge_ntfs():
+        os.system("sudo apt install -y scrounge-ntfs")
+        forensics_tools()
+
+    def sqlitebrowser():
+        os.system("sudo apt install -y sqlitebrowser")
+        forensics_tools()
+
+    def tcpdump():
+        os.system("sudo apt install -y tcpdump")
+        forensics_tools()
+
+    def tcpick():
+        os.system("sudo apt install -y tcpick")
+        forensics_tools()
+
+    def truecrack():
+        os.system("sudo apt install -y truecrack")
+        forensics_tools()
+
+    def unhide():
+        os.system("sudo apt install -y unhide")
+        forensics_tools()
+
+    def upx_ucl():
+        os.system("sudo apt install -y upx-ucl")
+        forensics_tools()
+
+    def wce():
+        os.system("sudo apt install -y wce")
+        forensics_tools()
+
+    def wireshark():
+        os.system("sudo apt install -y wireshark")
+        forensics_tools()
+
+    def xplico():
+        os.system("sudo apt install -y xplico")
+        forensics_tools()
+
+    # Forensics tools loop install function
+    def forensics_tools():
+        tools = [
+            "afflib-tools",
+            "apktool",
+            "autopsy",
+            "binwalk",
+            "bulk-extractor",
+            "bytecode-viewer",
+            "cabextract",
+            "chkrootkit",
+            "creddump7",
+            "dc3dd",
+            "dcfldd",
+            "ddrescue",
+            "dumpzilla",
+            "edb-debugger",
+            "ewf-tools",
+            "exifprobe",
+            "exiv2",
+            "ext3grep",
+            "ext4magic",
+            "extundelete",
+            "fcrackzip",
+            "firmware-mod-kit",
+            "foremost",
+            "forensic-artifacts",
+            "forensics-colorize",
+            "galleta",
+            "gdb",
+            "gpart",
+            "gparted",
+            "grokevt",
+            "guymager",
+            "hashdeep",
+            "inetsim",
+            "jadx",
+            "javasnoop",
+            "libhivex-bin",
+            "libsmali-java",
+            "lime-forensics",
+            "lvm2",
+            "lynis",
+            "mac-robber",
+            "magicrescue",
+            "md5deep",
+            "mdbtools",
+            "memdump",
+            "metacam",
+            "missidentify",
+            "myrescue",
+            "nasm",
+            "nasty",
+            "ollydbg",
+            "p7zip-full",
+            "parted",
+            "pasco",
+            "pdf-parser",
+            "pdfid",
+            "pev",
+            "plaso",
+            "polenum",
+            "pst-utils",
+            "python3-capstone",
+            "python3-dfdatetime",
+            "python3-dfvfs",
+            "python3-dfwinreg",
+            "python3-distorm3",
+            "radare2",
+            "recoverdm",
+            "recoverjpeg",
+            "reglookup",
+            "regripper",
+            "rephrase",
+            "rifiuti",
+            "rifiuti2",
+            "rizin-cutter",
+            "rkhunter",
+            "rsakeyfind",
+            "safecopy",
+            "samdump2",
+            "scalpel",
+            "scrounge-ntfs",
+            "sleuthkit",
+            "sqlitebrowser",
+            "ssdeep",
+            "tcpdump",
+            "tcpflow",
+            "tcpick",
+            "tcpreplay",
+            "truecrack",
+            "undbx",
+            "unhide",
+            "unrar",
+            "upx-ucl",
+            "vinetto",
+            "wce",
+            "winregfs",
+            "wireshark",
+            "xmount",
+            "xplico",
+            "yara",
+            "python3-artifacts",
+        ]
+        for tool in tools:
+            os.system(f"sudo apt install -y {tool}")
+        forensics_tools()
+
 
 # Kali_top 10 tools call function
 def kali_top10_tools():
@@ -991,6 +1504,176 @@ def password_cracking_tools():
         Operators.case_default()
 
 
+# Forensics tools call function
+def forensics_tools():
+    colors.gnome_green("\n  FORENSICS TOOLS")
+    colors.yellow_green(" \n\n [1]  pev                        [2]   wce")
+    colors.yellow_green(" [3]  nasm                       [4]   gdb  ")
+    colors.yellow_green(" [5]  plaso                      [6]   lvm2 ")
+    colors.yellow_green(" [7]  gpart                      [8]   yara ")
+    colors.yellow_green(" [9]  exiv2                      [10]  lynis")
+    colors.yellow_green(" [11] undbx                      [12]  unrar  ")
+    colors.yellow_green(" [13] dc3dd                      [14]  jadx ")
+    colors.yellow_green(" [15] pasco                      [16]  nasty ")
+    colors.yellow_green(" [17] parted                     [18]  pdfid ")
+    colors.yellow_green(" [19] xplico                     [20]  dcfldd")
+    colors.yellow_green(" [21] unhide                     [22]  ssdeep ")
+    colors.yellow_green(" [23] xmount                     [24]  binwalk ")
+    colors.yellow_green(" [25] tcpdump                    [26]  ollydbg ")
+    colors.yellow_green(" [27] gparted                    [28]  metacam ")
+    colors.yellow_green(" [29] inetsim                    [30]  md5deep")
+    colors.yellow_green(" [31] autopsy                    [32]  polenum ")
+    colors.yellow_green(" [33] inetsim                    [34]  scalpel ")
+    colors.yellow_green(" [35] rifiuti                    [36]  foremost")
+    colors.yellow_green(" [37] memdump                    [38]  guymager")
+    colors.yellow_green(" [39] apktool                    [40]  rephrase ")
+    colors.yellow_green(" [41] galleta                    [42]  ddrescue ")
+    colors.yellow_green(" [43] vinetto                    [44]  mdbtools ")
+    colors.yellow_green(" [45] upx-ucl                    [46]  hashdeep ")
+    colors.yellow_green(" [47] radare2                    [48]  rkhunter")
+    colors.yellow_green(" [49] tcpflow                    [50]  winregfs")
+    colors.yellow_green(" [51] grokevt                    [52]  ext3grep ")
+    colors.yellow_green(" [53] samdump2                   [54]  myrescue ")
+    colors.yellow_green(" [55] rifiuti2                   [56]  ewf-tools")
+    colors.yellow_green(" [57] safecopy                   [58]  ext4magic")
+    colors.yellow_green(" [59] reglookup                  [60]  recoverdm")
+    colors.yellow_green(" [61] sleuthkit                  [62]  tcpreplay")
+    colors.yellow_green(" [63] regripper                  [64]  exifprobe ")
+    colors.yellow_green(" [65] dumpzilla                  [66]  truecrack")
+    colors.yellow_green(" [67] javasnoop                  [68]  pst-utils ")
+    colors.yellow_green(" [69] wireshark                  [70]  fcrackzip  ")
+    colors.yellow_green(" [71] cabextract                 [72]  creddump7  ")
+    colors.yellow_green(" [73] mac-robber                 [74]  pdf-parser  ")
+    colors.yellow_green(" [75] extundelete                [76]  chkrootkit")
+    colors.yellow_green(" [77] magicrescue                [78]  rsakeyfind  ")
+    colors.yellow_green(" [79] afflib-tools               [80]  p7zip-full ")
+    colors.yellow_green(" [81] rizin-cutter               [82]  recoverjpeg")
+    colors.yellow_green(" [83] edb-debugger               [84]  missidentify")
+    colors.yellow_green(" [85] python3-dfvfs              [86]  libhivex-bin")
+    colors.yellow_green(" [87] sqlitebrowser              [88]  libsmali-java")
+    colors.yellow_green(" [89] bulk-extractor             [90]  scrounge-ntfs")
+    colors.yellow_green(" [91] lime-forensics             [92]  firmware-mod-kit ")
+    colors.yellow_green(" [93] bytecode-viewer            [94]  python3-distorm3")
+    colors.yellow_green(" [95] python3-dfwinreg           [96]  forensics-colorize")
+    colors.yellow_green(" [97] python3-capstone           [98]  forensic-artifacts")
+    colors.yellow_green(" [99] python3-dfdatetime         [100] All")
+    colors.yellow_green(" [101] Back")
+    colors.red("\n \nEnter The Tool Number To  install ??")
+    choice = input(colr().hex("#ff0000", "> ", rgb_mode=True))
+
+    switch = {
+        1: Tool.pev,
+        2: Tool.wce,
+        3: Tool.nasm,
+        4: Tool.gdb,
+        5: Tool.plaso,
+        6: Tool.lvm2,
+        7: Tool.gpart,
+        8: Tool.yara,
+        9: Tool.exiv2,
+        10: Tool.lynis,
+        11: Tool.undbx,
+        12: Tool.unrar,
+        13: Tool.dc3dd,
+        14: Tool.jadx,
+        15: Tool.pasco,
+        16: Tool.nasty,
+        17: Tool.parted,
+        18: Tool.pdfid,
+        19: Tool.xplico,
+        20: Tool.dcfldd,
+        21: Tool.unhide,
+        22: Tool.ssdeep,
+        23: Tool.xmount,
+        24: Tool.binwalk,
+        25: Tool.tcpdump,
+        26: Tool.ollydbg,
+        27: Tool.gparted,
+        28: Tool.metacam,
+        29: Tool.inetsim,
+        30: Tool.md5deep,
+        31: Tool.autopsy,
+        32: Tool.polenum,
+        33: Tool.rifiuti,
+        34: Tool.scalpel,
+        35: Tool.rifiuti,
+        36: Tool.foremost,
+        37: Tool.memdump,
+        38: Tool.guymager,
+        39: Tool.apktool,
+        40: Tool.rephrase,
+        41: Tool.galleta,
+        42: Tool.ddrescue,
+        43: Tool.vinetto,
+        44: Tool.mdbtools,
+        45: Tool.upx_ucl,
+        46: Tool.hashdeep,
+        47: Tool.radare2,
+        48: Tool.rkhunter,
+        49: Tool.tcpflow,
+        50: Tool.winregfs,
+        51: Tool.grokevt,
+        52: Tool.ext3grep,
+        53: Tool.samdump2,
+        54: Tool.myrescue,
+        55: Tool.rifiuti2,
+        56: Tool.ewf_tools,
+        57: Tool.safecopy,
+        58: Tool.ext4magic,
+        59: Tool.reglookup,
+        60: Tool.recoverdm,
+        61: Tool.sleuthkit,
+        62: Tool.tcpreplay,
+        63: Tool.regripper,
+        64: Tool.exifprobe,
+        65: Tool.dumpzilla,
+        66: Tool.truecrack,
+        67: Tool.javasnoop,
+        68: Tool.pst_utils,
+        69: Tool.wireshark,
+        70: Tool.fcrackzip,
+        71: Tool.cabextract,
+        72: Tool.creddump7,
+        73: Tool.mac_robber,
+        74: Tool.pdf_parser,
+        75: Tool.extundelete,
+        76: Tool.chkrootkit,
+        77: Tool.magicrescue,
+        78: Tool.rsakeyfind,
+        79: Tool.afflib_tools,
+        80: Tool.p7zip_full,
+        81: Tool.rizin_cutter,
+        82: Tool.recoverjpeg,
+        83: Tool.edb_debugger,
+        84: Tool.missidentify,
+        85: Tool.python3_dfvfs,
+        86: Tool.libhivex_bin,
+        87: Tool.sqlitebrowser,
+        88: Tool.libsmali_java,
+        89: Tool.bulk_extractor,
+        90: Tool.scrounge_ntfs,
+        91: Tool.lime_forensics,
+        92: Tool.firmware_mod_kit,
+        93: Tool.bytecode_viewer,
+        94: Tool.python3_distorm3,
+        95: Tool.python3_dfwinreg,
+        96: Tool.forensics_colorize,
+        97: Tool.python3_capstone,
+        98: Tool.forensic_artifacts,
+        99: Tool.python3_dfdatetime,
+        100: Tool.forensics_tools,
+        101: Operators.back,
+    }
+    try:
+        switch_case = switch.get(
+            int(choice),
+            Operators.case_default,
+        )
+        switch_case()
+    except ValueError:
+        Operators.case_default()
+
+
 # Main Entry Choices ?
 def choices():
     colors.green("\n \nEnter which one to install ??")
@@ -1000,6 +1683,7 @@ def choices():
         2: social_engineering_tools,
         3: information_gathering_tools,
         4: password_cracking_tools,
+        5: forensics_tools,
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
