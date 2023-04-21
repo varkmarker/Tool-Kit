@@ -1012,8 +1012,8 @@ class Tool:
 
     def tcpflow():
         os.system("sudo apt install -y tcpflow")
-        f
-        orensics_tools()
+
+        forensics_tools()
 
     def tcpreplay():
         os.system("sudo apt install -y tcpreplay")
