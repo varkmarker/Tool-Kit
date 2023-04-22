@@ -35,6 +35,9 @@ class colors:
     def light_green(data):
         print(colr().hex("#21ff00", data, rgb_mode=True))
 
+    def orange(data):
+        print(colr().hex("#ff8e35", data, rgb_mode=True))
+
 
 # Main Banner
 banner = pyfiglet.figlet_format(" HACK JET")
@@ -1723,329 +1726,496 @@ class WebApplication:
     def apache_users():
         os.system("sudo apt install -y apache-users")
 
+        web_application_tools()
+
     def beef_xss():
         os.system("sudo apt install -y beef-xss")
+
+        web_application_tools()
 
     def cadaver():
         os.system("sudo apt install -y cadaver")
 
+        web_application_tools()
+
     def cutycapt():
         os.system("sudo apt install -y cutycapt")
+
+        web_application_tools()
 
     def default_mysql_server():
         os.system("sudo apt install -y default-mysql-server")
 
+        web_application_tools()
+
     def dirbuster():
         os.system("sudo apt install -y dirbuster")
+
+        web_application_tools()
 
     def eyewitness():
         os.system("sudo apt install -y eyewitness")
 
+        web_application_tools()
+
     def ftester():
         os.system("sudo apt install -y ftester")
+
+        web_application_tools()
 
     def hamster_sidejack():
         os.system("sudo apt install -y hamster-sidejack")
 
+        web_application_tools()
+
     def httprint():
         os.system("sudo apt install -y httprint")
+
+        web_application_tools()
 
     def hydra():
         os.system("sudo apt install -y hydra")
 
+        web_application_tools()
+
     def jboss_autopwn():
         os.system("sudo apt install -y jboss-autopwn")
+
+        web_application_tools()
 
     def jsql_injection():
         os.system("sudo apt install -y jsql-injection")
 
+        web_application_tools()
+
     def lbd():
         os.system("sudo apt install -y lbd")
+
+        web_application_tools()
 
     def medusa():
         os.system("sudo apt install -y medusa")
 
+        web_application_tools()
+
     def ncrack():
         os.system("sudo apt install -y ncrack")
+
+        web_application_tools()
 
     def nishang():
         os.system("sudo apt install -y nishang")
 
+        web_application_tools()
+
     def oscanner():
         os.system("sudo apt install -y oscanner")
+
+        web_application_tools()
 
     def padbuster():
         os.system("sudo apt install -y padbuster")
 
+        web_application_tools()
+
     def patator():
         os.system("sudo apt install -y patator")
+
+        web_application_tools()
 
     def patator():
         os.system("sudo apt install -y php-mysql")
 
+        web_application_tools()
+
     def proxychains4():
         os.system("sudo apt install -y proxychains4")
+
+        web_application_tools()
 
     def qsslcaudit():
         os.system("sudo apt install -y qsslcaudit")
 
+        web_application_tools()
+
     def sidguesser():
         os.system("sudo apt install -y sidguesser")
+
+        web_application_tools()
 
     def skipfish():
         os.system("sudo apt install -y skipfish")
 
+        web_application_tools()
+
     def sqldict():
         os.system("sudo apt install -y sqldict")
+
+        web_application_tools()
 
     def sqlmap():
         os.system("sudo apt install -y sqlmap")
 
+        web_application_tools()
+
     def sqlsus():
         os.system("sudo apt install -y sqlsus")
+
+        web_application_tools()
 
     def sslh():
         os.system("sudo apt install -y sslh")
 
+        web_application_tools()
+
     def sslsniff():
         os.system("sudo apt install -y sslsniff")
+
+        web_application_tools()
 
     def sslyze():
         os.system("sudo apt install -y sslyze")
 
+        web_application_tools()
+
     def thc_ssl_dos():
         os.system("sudo apt install -y thc-ssl-dos")
+
+        web_application_tools()
 
     def tnscmd10g():
         os.system("sudo apt install -y tnscmd10g")
 
+        web_application_tools()
+
     def wafw00f():
         os.system("sudo apt install -y wafw00f")
+
+        web_application_tools()
 
     def watobo():
         os.system("sudo apt install -y watobo")
 
+        web_application_tools()
+
     def webscarab():
         os.system("sudo apt install -y webscarab")
+
+        web_application_tools()
 
     def weevely():
         os.system("sudo apt install -y weevely")
 
+        web_application_tools()
+
     def whatweb():
         os.system("sudo apt install -y whatweb")
+
+        web_application_tools()
 
     def wpscan():
         os.system("sudo apt install -y wpscan")
 
+        web_application_tools()
+
     def zaproxy():
         os.system("sudo apt install -y zaproxy")
+
+        web_application_tools()
 
     def apache2():
         os.system("sudo apt install -y apache2")
 
+        web_application_tools()
+
     def burpsuite():
         os.system("sudo apt install -y burpsuite")
+
+        web_application_tools()
 
     def commix():
         os.system("sudo apt install -y commix")
 
+        web_application_tools()
+
     def davtest():
         os.system("sudo apt install -y davtest")
+
+        web_application_tools()
 
     def dirb():
         os.system("sudo apt install -y dirb")
 
+        web_application_tools()
+
     def dotdotpwn():
         os.system("sudo apt install -y dotdotpwn")
+
+        web_application_tools()
 
     def ferret_sidejack():
         os.system("sudo apt install -y ferret-sidejack")
 
+        web_application_tools()
+
     def hakrawler():
         os.system("sudo apt install -y hakrawler")
+
+        web_application_tools()
 
     def heartleech():
         os.system("sudo apt install -y heartleech")
 
+        web_application_tools()
+
     def httrack():
         os.system("sudo apt install -y httrack")
+
+        web_application_tools()
 
     def hydra_gtk():
         os.system("sudo apt install -y hydra-gtk")
 
+        web_application_tools()
+
     def joomscan():
         os.system("sudo apt install -y joomscan")
+
+        web_application_tools()
 
     def laudanum():
         os.system("sudo apt install -y laudanum")
 
+        web_application_tools()
+
     def maltego():
         os.system("sudo apt install -y maltego")
+
+        web_application_tools()
 
     def mitmproxy():
         os.system("sudo apt install -y mitmproxy")
 
+        web_application_tools()
+
     def nikto():
         os.system("sudo apt install -y nikto")
+
+        web_application_tools()
 
     def nmap():
         os.system("sudo apt install -y nmap")
 
+        web_application_tools()
+
     def owasp_mantra_ff():
         os.system("sudo apt install -y owasp-mantra-ff")
+
+        web_application_tools()
 
     def paros():
         os.system("sudo apt install -y paros")
 
+        web_application_tools()
+
     def php():
         os.system("sudo apt install -y php")
+
+        web_application_tools()
 
     def plecost():
         os.system("sudo apt install -y plecost")
 
+        web_application_tools()
+
     def proxytunnel():
         os.system("sudo apt install -y proxytunnel")
+
+        web_application_tools()
 
     def redsocks():
         os.system("sudo apt install -y redsocks")
 
+        web_application_tools()
+
     def siege():
         os.system("sudo apt install -y siege")
+
+        web_application_tools()
 
     def slowhttptest():
         os.system("sudo apt install -y slowhttptest")
 
+        web_application_tools()
+
     def sqlitebrowser():
         os.system("sudo apt install -y sqlitebrowser")
+
+        web_application_tools()
 
     def sqlninja():
         os.system("sudo apt install -y sqlninja")
 
+        web_application_tools()
+
     def ssldump():
         os.system("sudo apt install -y ssldump")
+
+        web_application_tools()
 
     def sslscan():
         os.system("sudo apt install -y sslscan")
 
+        web_application_tools()
+
     def sslsplit():
         os.system("sudo apt install -y sslsplit")
+
+        web_application_tools()
 
     def stunnel4():
         os.system("sudo apt install -y stunnel4")
 
+        web_application_tools()
+
     def tlssled():
         os.system("sudo apt install -y tlssled")
+
+        web_application_tools()
 
     def uniscan():
         os.system("sudo apt install -y uniscan")
 
+        web_application_tools()
+
     def wapiti():
         os.system("sudo apt install -y wapiti")
+
+        web_application_tools()
 
     def webacoo():
         os.system("sudo apt install -y webacoo")
 
+        web_application_tools()
+
     def webshells():
         os.system("sudo apt install -y webshells")
+
+        web_application_tools()
 
     def wfuzz():
         os.system("sudo apt install -y wfuzz")
 
+        web_application_tools()
+
     def wireshark():
         os.system("sudo apt install -y wireshark")
+
+        web_application_tools()
 
     def xsser():
         os.system("sudo apt install -y xsser")
 
+        web_application_tools()
+
     def gobuster():
         os.system("sudo apt install -y gobuster")
+
+        web_application_tools()
+
+    def php_mysql():
+        os.system("sudo apt install -y php-mysql")
+
+        web_application_tools()
 
     # Web application tools loop install function
     def web_application_tools():
         tools = [
-            "apache-user",
-            "apache",
-            "beef-xs",
-            "burpsuit",
-            "cadave",
-            "commi",
-            "cutycap",
-            "davtes",
-            "default-mysql-serve",
-            "dir",
-            "dirbuste",
-            "dotdotpw",
-            "eyewitnes",
-            "ferret-sidejac",
-            "fteste",
-            "hakrawle",
-            "hamster-sidejac",
-            "heartleec",
-            "httprin",
-            "httrac",
-            "hydr",
-            "hydra-gt",
-            "jboss-autopw",
-            "joomsca",
-            "jsql-injectio",
-            "laudanu",
-            "lb",
-            "malteg",
-            "medus",
-            "mitmprox",
-            "ncrac",
-            "nikt",
-            "nishan",
-            "nma",
-            "oscanne",
-            "owasp-mantra-f",
-            "padbuste",
-            "paro",
-            "patato",
-            "ph",
-            "php-mysq",
-            "plecos",
-            "proxychains",
-            "proxytunne",
-            "qsslcaudi",
-            "redsock",
-            "sidguesse",
-            "sieg",
-            "skipfis",
-            "slowhttptes",
-            "sqldic",
-            "sqlitebrowse",
-            "sqlma",
-            "sqlninj",
-            "sqlsu",
-            "ssldum",
-            "ssl",
-            "sslsca",
-            "sslsnif",
-            "sslspli",
-            "sslyz",
-            "stunnel",
-            "thc-ssl-do",
-            "tlssle",
-            "tnscmd10",
-            "unisca",
-            "wafw00",
-            "wapit",
-            "watob",
-            "webaco",
-            "webscara",
-            "webshell",
-            "weevel",
-            "wfuz",
-            "whatwe",
-            "wireshar",
-            "wpsca",
-            "xsse",
+            "apache-users",
+            "apache2",
+            "beef-xss",
+            "burpsuite",
+            "cadaver",
+            "commix",
+            "cutycapt",
+            "davtest",
+            "default-mysql-server",
+            "dirb",
+            "dirbuster",
+            "dotdotpwn",
+            "eyewitness",
+            "ferret-sidejack",
+            "ftester",
+            "hakrawler",
+            "hamster-sidejack",
+            "heartleech",
+            "httprint",
+            "httrack",
+            "hydra",
+            "hydra-gtk",
+            "jboss-autopwn",
+            "joomscan",
+            "jsql-injection",
+            "laudanum",
+            "lbd",
+            "maltego",
+            "medusa",
+            "mitmproxy",
+            "ncrack",
+            "nikto",
+            "nishang",
+            "nmap",
+            "oscanner",
+            "owasp-mantra-ff",
+            "padbuster",
+            "paros",
+            "patator",
+            "php",
+            "php-mysql",
+            "plecost",
+            "proxychains4",
+            "proxytunnel",
+            "qsslcaudit",
+            "redsocks",
+            "sidguesser",
+            "siege",
+            "skipfish",
+            "slowhttptest",
+            "sqldict",
+            "sqlitebrowser",
+            "sqlmap",
+            "sqlninja",
+            "sqlsus",
+            "ssldump",
+            "sslh",
+            "sslscan",
+            "sslsniff",
+            "sslsplit",
+            "sslyze",
+            "stunnel4",
+            "thc-ssl-dos",
+            "tlssled",
+            "tnscmd10g",
+            "uniscan",
+            "wafw00f",
+            "wapiti",
+            "watobo",
+            "webacoo",
+            "webscarab",
+            "webshells",
+            "weevely",
+            "wfuzz",
+            "whatweb",
+            "wireshark",
+            "wpscan",
+            "xsser",
             "zaproxy",
             "gobuster",
         ]
         for tool in tools:
             os.system(f"sudo apt install -y {tool}")
+
+        web_application_tools()
 
 
 # Kali_top 10 tools call function
@@ -2528,101 +2698,138 @@ def vulnerability_tools():
 
 # Web application tools call function
 def web_application_tools():
-    colors.red("\n   WEB APPLICATION TOOLS ")
-    colors.light_green(
-        " \n\n [1]  apache-users                          [2]   patator  "
-    )
-    colors.light_green(" [3]  beef-xss                        [4]   php-mysql ")
-    colors.light_green(" [5]  cadaver                       [6]   proxychains4")
-    colors.light_green(" [7]  cutycapt                       [8]   qsslcaudit    ")
-    colors.light_green(
-        " [9]  default-mysql-server                       [10] sidguesser  "
-    )
-    colors.light_green(" [11] dirbuster                     [12]  skipfish    ")
-    colors.light_green(" [13] eyewitness                     [14]  sqldict  ")
-    colors.light_green(" [15] gobuster                     [16]  sqlmap")
-    colors.light_green(" [17] ftester                   [18]  sqlsus  ")
-    colors.light_green(" [19] hamster-sidejack                   [20]  sslh")
-    colors.light_green(" [21] httprint                  [22]  sslsniff  ")
-    colors.light_green(" [23] hydra                  [24]  sslyze")
-    colors.light_green(" [25] jboss-autopwn                  [26] thc-ssl-dos ")
-    colors.light_green(" [27] jsql-injection                  [28]  tnscmd10g  ")
-    colors.light_green(" [29] lbd                 [30]  wafw00f ")
-    colors.light_green(" [31] medusa                 [32]  watobo  ")
-    colors.light_green(" [33] ncrack           [34]  webscarab")
-    colors.light_green(" [35] nishang          [36]  weevely")
-    colors.light_green(" [37] oscanner       [38] whatweb ")
-    colors.light_green(" [39] padbuster                        [40]  wpscan ")
-    colors.light_green(" [41] wpscan                        [42]  zaproxy ")
-    colors.light_green(" [43] burpsuite                        [44]  apache2 ")
-    colors.light_green(" [45] commix                        [46]  davtest ")
-    colors.light_green(" [47] dotdotpwn                        [48]  dirb ")
-    colors.light_green(
-        " [49] ferret-sidejack                        [50] ferret-sidejack "
-    )
-    colors.light_green(" [51] heartleech                        [52]  httrack ")
-    colors.light_green(" [53] hydra-gtk                        [54]  joomscan ")
-    colors.light_green(" [55] maltego                        [56]  laudanum ")
-    colors.light_green(" [57] mitmproxy                        [58]  nikto ")
-    colors.light_green(" [59] nmap                        [60]  owasp-mantra-ff ")
-    colors.light_green(" [61] paros                        [62]  php")
-    colors.light_green(" [63] plecost                        [64]  proxytunnel ")
-    colors.light_green(" [65] redsocks                        [66]  siege ")
-    colors.light_green(" [67] slowhttptest                        [68]  sqlitebrowser ")
-    colors.light_green(" [69] sqlninja                        [70]  ssldump ")
-    colors.light_green(" [71] sslscan                        [72]  sslsplit ")
-    colors.light_green(" [73] stunnel4                        [74] tlssled ")
-    colors.light_green(" [75] uniscan                        [76]  wapiti ")
-    colors.light_green(" [78] webacoo                        [79]  webshells ")
-    colors.light_green(" [80] wireshark                        [81]  wfuzz ")
-    colors.light_green(" [82] xsser                        [83]  All ")
-    colors.light_green(" [84] Back                       [85]  Exit ")
+    colors.light_green("\n           WEB APPLICATION TOOLS ")
+    colors.orange(" \n\n [1]  lbd                        [2]   php      ")
+    colors.orange(" [3]  nmap                       [4]   dirb ")
+    colors.orange(" [5]  paros                      [6]   sslh  ")
+    colors.orange(" [7]  wfuzz                      [8]   nikto     ")
+    colors.orange(" [9]  hydra                      [10]  siege   ")
+    colors.orange(" [11] xsser                      [12]  wapiti     ")
+    colors.orange(" [13] medusa                     [14]  wpscan ")
+    colors.orange(" [15] commix                     [16]  sslyze ")
+    colors.orange(" [17] ncrack                     [18]  sqlmap   ")
+    colors.orange(" [19] cadaver                    [20]  sqlsus")
+    colors.orange(" [21] maltego                    [22]  watobo   ")
+    colors.orange(" [23] ftester                    [24]  patator  ")
+    colors.orange(" [25] plecost                    [26]  tlssled")
+    colors.orange(" [27] nishang                    [28]  sqldict")
+    colors.orange(" [29] webacoo                    [30]  davtest")
+    colors.orange(" [31] uniscan                    [32]  ssldump ")
+    colors.orange(" [33] sslscan                    [34]  wafw00f ")
+    colors.orange(" [35] cutycapt                   [36]  weevely")
+    colors.orange(" [37] httprint                   [38]  whatweb ")
+    colors.orange(" [39] beef-xss                   [40]  httrack ")
+    colors.orange(" [41] stunnel4                   [42]  zaproxy ")
+    colors.orange(" [43] sqlninja                   [44]  apache2 ")
+    colors.orange(" [45] redsocks                   [46]  skipfish  ")
+    colors.orange(" [47] gobuster                   [48]  sslsplit")
+    colors.orange(" [49] oscanner                   [50]  sslsniff")
+    colors.orange(" [51] dirbuster                  [52]  laudanum ")
+    colors.orange(" [53] webshells                  [54]  joomscan ")
+    colors.orange(" [55] dotdotpwn                  [56]  hakrawler ")
+    colors.orange(" [57] padbuster                  [58]  php-mysql")
+    colors.orange(" [59] burpsuite                  [60]  wireshark  ")
+    colors.orange(" [61] hydra-gtk                  [62]  tnscmd10g")
+    colors.orange(" [63] mitmproxy                  [64]  webscarab")
+    colors.orange(" [65] eyewitness                 [66]  sidguesser")
+    colors.orange(" [67] heartleech                 [68]  qsslcaudit")
+    colors.orange(" [69] slowhttptest               [70]  proxytunnel ")
+    colors.orange(" [71] apache-users               [72]  thc-ssl-dos ")
+    colors.orange(" [73] jboss-autopwn              [74]  proxychains4")
+    colors.orange(" [75] jsql-injection             [76]  sqlitebrowser ")
+    colors.orange(" [77] ferret-sidejack            [78]  owasp-mantra-ff ")
+    colors.orange(" [79] default-mysql-server       [80]  hamster-sidejack")
+    colors.orange(" [81] Back                       [82]  All ")
+    colors.orange(" [83] Exit    ")
 
-    colors.red("\n \nEnter The Tool Number To  install ??")
-    choice = input(colr().hex("#ff0000", "> ", rgb_mode=True))
+    colors.light_green("\n \nEnter The Tool Number To  install ??")
+    choice = input(colr().hex("#21ff00", "> ", rgb_mode=True))
 
-    # switch = {
-    #     1: .t50,
-    #     2: .gvm,
-    #     3: .sfuzz,
-    #     4: .bed,
-    #     5: .sipsak,
-    #     6: .nikto,
-    #     7: .legion,
-    #     8: .afl,
-    #     9: .dhcpig,
-    #     10:.nmap,
-    #     11:.iaxflood,
-    #     12:.sipp,
-    #     13:.rtpbreak,
-    #     14:.spike,
-    #     15:.sctpscan,
-    #     16:.siege,
-    #     17:.voiphopper,
-    #     18:.peass,
-    #     19:.sipvicious,
-    #     20:.lynis,
-    #     21:.cisco_torch,
-    #     22:.enumiax,
-    #     23:.thc_ssl_dos,
-    #     24:.ohrwurm,
-    #     25:.inviteflood,
-    #     26:.yersinia,
-    #     27:.rtpmixsound,
-    #     28:.rtpflood,
-    #     29:.siparmyknife,
-    #     30:.cisco_ocs,
-    #     31:.slowhttptest,
-    #     32:.protos_sip,
-    #     33:.unix_privesc_check,
-    #     34:.rtpinsertsound,
-    #     35:.cisco_auditing_tool,
-    #     36:.copy_router_config,
-    #     37:.cisco_global_exploiter,
-    #     38:.vulnerability_tools,
-    #     39: Operators.back,
-    #     40: Operators.exit,
-    # }
+    switch = {
+        1: WebApplication.lbd,
+        2: WebApplication.php,
+        3: WebApplication.nmap,
+        4: WebApplication.dirb,
+        5: WebApplication.paros,
+        6: WebApplication.sslh,
+        7: WebApplication.wfuzz,
+        8: WebApplication.nikto,
+        9: WebApplication.hydra,
+        10: WebApplication.siege,
+        11: WebApplication.xsser,
+        12: WebApplication.wapiti,
+        13: WebApplication.medusa,
+        14: WebApplication.wpscan,
+        15: WebApplication.commix,
+        16: WebApplication.sslyze,
+        17: WebApplication.ncrack,
+        18: WebApplication.sqlmap,
+        19: WebApplication.cadaver,
+        20: WebApplication.sqlsus,
+        21: WebApplication.maltego,
+        22: WebApplication.watobo,
+        23: WebApplication.ftester,
+        24: WebApplication.patator,
+        25: WebApplication.plecost,
+        26: WebApplication.tlssled,
+        27: WebApplication.nishang,
+        28: WebApplication.sqldict,
+        29: WebApplication.webacoo,
+        30: WebApplication.davtest,
+        31: WebApplication.uniscan,
+        32: WebApplication.ssldump,
+        33: WebApplication.sslscan,
+        34: WebApplication.wafw00f,
+        35: WebApplication.cutycapt,
+        36: WebApplication.weevely,
+        37: WebApplication.httprint,
+        38: WebApplication.whatweb,
+        39: WebApplication.beef_xss,
+        40: WebApplication.httrack,
+        41: WebApplication.stunnel4,
+        42: WebApplication.zaproxy,
+        43: WebApplication.sqlninja,
+        44: WebApplication.apache2,
+        45: WebApplication.redsocks,
+        46: WebApplication.skipfish,
+        47: WebApplication.gobuster,
+        48: WebApplication.sslsplit,
+        49: WebApplication.oscanner,
+        50: WebApplication.sslsniff,
+        51: WebApplication.dirbuster,
+        52: WebApplication.laudanum,
+        53: WebApplication.webshells,
+        54: WebApplication.joomscan,
+        55: WebApplication.dotdotpwn,
+        56: WebApplication.hakrawler,
+        57: WebApplication.padbuster,
+        58: WebApplication.php_mysql,
+        59: WebApplication.burpsuite,
+        60: WebApplication.wireshark,
+        61: WebApplication.hydra_gtk,
+        62: WebApplication.tnscmd10g,
+        63: WebApplication.mitmproxy,
+        64: WebApplication.webscarab,
+        65: WebApplication.eyewitness,
+        66: WebApplication.sidguesser,
+        67: WebApplication.heartleech,
+        68: WebApplication.qsslcaudit,
+        69: WebApplication.slowhttptest,
+        70: WebApplication.proxytunnel,
+        71: WebApplication.apache_users,
+        72: WebApplication.thc_ssl_dos,
+        73: WebApplication.jboss_autopwn,
+        74: WebApplication.proxychains4,
+        75: WebApplication.jsql_injection,
+        76: WebApplication.sqlitebrowser,
+        77: WebApplication.ferret_sidejack,
+        78: WebApplication.owasp_mantra_ff,
+        79: WebApplication.default_mysql_server,
+        80: WebApplication.hamster_sidejack,
+        81: Operators.back,
+        82: WebApplication.web_application_tools,
+        83: Operators.exit,
+    }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
         switch_case()
