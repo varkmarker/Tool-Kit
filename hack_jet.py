@@ -38,6 +38,9 @@ class colors:
     def orange(data):
         print(colr().hex("#ff8e35", data, rgb_mode=True))
 
+    def yellow(data):
+        print(colr().hex("#fff300", data, rgb_mode=True))
+
 
 # Main Banner
 banner = pyfiglet.figlet_format(" HACK JET")
@@ -2220,10 +2223,14 @@ class WebApplication:
 
 # Kali_top 10 tools call function
 def kali_top10_tools():
-    colors.red("\n   KALI TOP 10 TOOLS ")
-    colors.green(
-        " \n \n [1]  Nmap        [2]  Aircrack-ng \n [3]  John        [4]  Sqlmap \n [5]  Hydra       [6]  Metasploit-framework \n [7]  Responder   [8]  Wireshark \n [9]  Burpsuite   [10] Crackmapexec  \n [11] ALL         [12] Back "
-    )
+    colors.red("\n        KALI TOP 10 TOOLS ")
+    colors.green(" \n \n [1]  Nmap        [2]  Aircrack-ng ")
+    colors.green(" [3]  John        [4]  Sqlmap ")
+    colors.green(" [5]  Hydra       [6]  Wireshark ")
+    colors.green(" [7]  Responder   [8]  Crackmapexec ")
+    colors.green(" [9]  Burpsuite   [10] Metasploit-framework  ")
+    colors.green(" [11] ALL         [12] Back ")
+    colors.green(" [13] Exit")
     colors.gnome_green("\n \nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#2ed1b4", "> ", rgb_mode=True))
 
@@ -2240,6 +2247,7 @@ def kali_top10_tools():
         10: KaliTop10.crackmapexec,
         11: KaliTop10.kali_top10_tools,
         12: Operators.back,
+        13: Operators.exit
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
@@ -2250,10 +2258,11 @@ def kali_top10_tools():
 
 # Social engineering tools call function
 def social_engineering_tools():
-    colors.red("\n  SOCIAL ENGINEERING TOOLS ")
-    colors.dark_orange(
-        " \n \n [1] set                 [2] veil \n [3] msfpc               [4] Beef-xss \n [5] Backdoor-factory    [6] All \n [7] Back   "
-    )
+    colors.red("\n        SOCIAL ENGINEERING TOOLS ")
+    colors.dark_orange(" \n \n    [1] Set                 [2] Veil ")
+    colors.dark_orange("    [3] Beef-xss            [4] Msfpc   ")
+    colors.dark_orange("    [5] Backdoor-factory    [6] All ")
+    colors.dark_orange("    [7] Back                [8] Exit ")
     colors.gnome_green("\n \nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#2ed1b4", "> ", rgb_mode=True))
 
@@ -2265,6 +2274,7 @@ def social_engineering_tools():
         5: SocialEnginneering.backdoor_factory,
         6: SocialEnginneering.social_engineering_tools,
         7: Operators.back,
+        8: Operators.exit,
     }
     try:
         switch_case = switch.get(
@@ -2278,11 +2288,33 @@ def social_engineering_tools():
 
 # Information gathering call function
 def information_gathering_tools():
-    colors.red("\n INFORMATION GATHERING TOOLS ")
-
-    colors.light_gnome(
-        " \n \n [1]  p0f            [2]  lbd  \n [3]  ncat           [4]  braa  \n [5]  nmap           [6]  irpas \n [7]  sslh           [8]  0trace \n [9]  fierce         [10] dnsenum \n [11] legion         [12] masscan \n [13] nbtscan        [14] thc-ipv6 \n [15] fping          [16] dnswalk \n [17] recon-ng       [18] ftester \n [19] ssldump        [20] sslscan \n [21] swaks          [22] ike-scan \n [23] twofi          [24] urlcrazy \n [25] arping         [26] dmitry \n [27] dnsmap         [28] wafw00f \n [29] smbmap         [30] firewalk \n [31] sslyze         [32] hping3 \n [33] intrace        [34] tlssled \n [35] maltego        [36] netmask \n [37] dnsrecon       [38] dnstracer \n [39] enum4linux     [40] theharvester \n [41] fragrouter     [42] netdiscover  \n [43] snmpcheck      [44] metagoofil \n [45] qsslcaudit     [46] unicornscan \n [47] onesixtyone    [48] smtp-user-enum \n [49] All            [50] back"
-    )
+    colors.red("\n     INFORMATION GATHERING TOOLS ")
+    colors.yellow_green(" \n\n [1]  P0f              [2]   Lbd ")
+    colors.yellow_green(" [3]  Ncat             [4]   Swaks")
+    colors.yellow_green(" [5]  Braa             [6]   Twofi   ")
+    colors.yellow_green(" [7]  Nmap             [8]   Fping      ")
+    colors.yellow_green(" [9]  Sslh             [10]  Dnsmap   ")
+    colors.yellow_green(" [11] Irpas            [12]  Arping     ")
+    colors.yellow_green(" [13] 0trace           [14]  Dmitry      ")
+    colors.yellow_green(" [15] Fierce           [16]  Smbmap      ")
+    colors.yellow_green(" [17] Legion           [18]  Sslyze  ")
+    colors.yellow_green(" [19] Ssldump          [20]  Hping3   ")
+    colors.yellow_green(" [21] Dnsenum          [22]  Sslscan    ")
+    colors.yellow_green(" [23] Masscan          [24]  Dnswalk   ")
+    colors.yellow_green(" [25] Nbtscan          [26]  Wafw00f ")
+    colors.yellow_green(" [27] Maltego          [28]  Intrace")
+    colors.yellow_green(" [29] Netmask          [30]  Tlssled")
+    colors.yellow_green(" [31] Thc-ipv6         [32]  Ftester     ")
+    colors.yellow_green(" [33] Dnsrecon         [34]  Urlcrazy ")
+    colors.yellow_green(" [35] Dnstracer        [36]  Recon-ng ")
+    colors.yellow_green(" [37] Snmpcheck        [38]  Firewalk  ")
+    colors.yellow_green(" [39] Metagoofil       [40]  Ike-scan ")
+    colors.yellow_green(" [41] Enum4linux       [42]  Onesixtyone ")
+    colors.yellow_green(" [43] Fragrouter       [44]  Netdiscover")
+    colors.yellow_green(" [45] Qsslcaudit       [46]  Theharvester  ")
+    colors.yellow_green(" [47] Unicornscan      [48]  Smtp-user-enum  ")
+    colors.yellow_green(" [49] ALL              [50]  Back ")
+    colors.yellow_green(" [51] Exit")
     colors.red("\n \nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#ff0000", "> ", rgb_mode=True))
 
@@ -2290,53 +2322,54 @@ def information_gathering_tools():
         1: InformationGathering.p0f,
         2: InformationGathering.lbd,
         3: InformationGathering.ncat,
-        4: InformationGathering.braa,
-        5: InformationGathering.nmap,
-        6: InformationGathering.irpas,
-        7: InformationGathering.sslh,
-        8: InformationGathering.Otrace,
-        9: InformationGathering.fierce,
-        10: InformationGathering.dnsenum,
-        11: InformationGathering.legion,
-        12: InformationGathering.masscan,
-        13: InformationGathering.nbtscan,
-        14: InformationGathering.thc_ipv6,
-        15: InformationGathering.fping,
-        16: InformationGathering.dnswalk,
-        17: InformationGathering.recon_ng,
-        18: InformationGathering.ftester,
+        4: InformationGathering.swaks,
+        5: InformationGathering.braa,
+        6: InformationGathering.twofi,
+        7: InformationGathering.nmap,
+        8: InformationGathering.fping,
+        9: InformationGathering.sslh,
+        10: InformationGathering.dnsmap,
+        11: InformationGathering.irpas,
+        12: InformationGathering.arping,
+        13: InformationGathering.Otrace,
+        14: InformationGathering.dmitry,
+        15: InformationGathering.fierce,
+        16: InformationGathering.smbmap,
+        17: InformationGathering.legion,
+        18: InformationGathering.sslyze,
         19: InformationGathering.ssldump,
-        20: InformationGathering.sslscan,
-        21: InformationGathering.swaks,
-        22: InformationGathering.ike_scan,
-        23: InformationGathering.twofi,
-        24: InformationGathering.urlcrazy,
-        25: InformationGathering.arping,
-        26: InformationGathering.dmitry,
-        27: InformationGathering.dnsmap,
-        28: InformationGathering.wafw00f,
-        29: InformationGathering.smbmap,
-        30: InformationGathering.firewalk,
-        31: InformationGathering.sslyze,
-        32: InformationGathering.hping3,
-        33: InformationGathering.intrace,
-        34: InformationGathering.tlssled,
-        35: InformationGathering.maltego,
-        36: InformationGathering.netmask,
-        37: InformationGathering.dnsrecon,
-        38: InformationGathering.dnstracer,
-        39: InformationGathering.enum4linux,
-        40: InformationGathering.theharvester,
-        41: InformationGathering.fragrouter,
-        42: InformationGathering.netdiscover,
-        43: InformationGathering.snmpcheck,
-        44: InformationGathering.metagoofil,
+        20: InformationGathering.hping3,
+        21: InformationGathering.dnsenum,
+        22: InformationGathering.sslscan,
+        23: InformationGathering.masscan,
+        24: InformationGathering.dnswalk,
+        25: InformationGathering.nbtscan,
+        26: InformationGathering.wafw00f,
+        27: InformationGathering.maltego,
+        28: InformationGathering.intrace,
+        29: InformationGathering.netmask,
+        30: InformationGathering.tlssled,
+        31: InformationGathering.thc_ipv6,
+        32: InformationGathering.ftester,
+        33: InformationGathering.dnsrecon,
+        34: InformationGathering.urlcrazy,
+        35: InformationGathering.dnstracer,
+        36: InformationGathering.recon_ng,
+        37: InformationGathering.snmpcheck,
+        38: InformationGathering.firewalk,
+        39: InformationGathering.metagoofil,
+        40: InformationGathering.ike_scan,
+        41: InformationGathering.enum4linux,
+        42: InformationGathering.onesixtyone,
+        43: InformationGathering.fragrouter,
+        44: InformationGathering.netdiscover,
         45: InformationGathering.qsslcaudit,
-        46: InformationGathering.unicornscan,
-        47: InformationGathering.onesixtyone,
+        46: InformationGathering.theharvester,
+        47: InformationGathering.unicornscan,
         48: InformationGathering.smtp_user_enum,
         49: InformationGathering.information_gathering_tools,
         50: Operators.back,
+        51: Operators.exit,
     }
     try:
         switch_case = switch.get(
@@ -2350,64 +2383,92 @@ def information_gathering_tools():
 
 # Passwords cracking tools call function
 def password_cracking_tools():
-    colors.gnome_green("\n  PASSWORDS CRACKING TOOLS")
-    colors.yellow_green(
-        " \n \n [1]  Cewl                	[2]  Chntpw \n [3]  Cisco-auditing-tool 	[4]  Cmospwd \n [5]  Crackle 			[6]  Creddump7 \n [7]  Crunch 			[8]  Fcrackzip \n [9]  Freerdp2-x11 		[10] Gpp-decrypt \n [11] Hash-identifier 		[12] Hashcat \n [13] Hashcat-utils 		[14] Hashid \n [15] Hydra 			[16] Hydra-gtk \n [17] John 			[18] Johnny \n [19] Truecrack 		[20] Oclgausscrack \n [21] Maskprocessor 		[22] Medusa \n [23] Mimikatz 			[24] Ncrack \n [25] Onesixtyone 		[26] Ophcrack \n [27] Ophcrack-cli 		[28] Pack \n [29] Passing-the-hash 		[30] Patator \n [31] Pdfcrack 			[32] Pipal \n [33] Polenum 			[34] Rainbowcrack \n [35] Rarcrack 			[36] Rcracki-mt \n [37] Rsmangler 	        [38] Samdump2 \n [39] Seclists 			[40] Sipcrack \n [41] Sipvicious 		[42] Smbmap \n [43] Sqldict 			[44] Statsprocessor 	\n [45] Sucrack 			[46] Thc-pptp-bruter  \n [47] Twofi  		        [48] Wordlists   \n [49] All 		        [50] back "
+    colors.red("\n       PASSWORDS CRACKING TOOLS")
+    colors.yellow_green(" \n\n [1]  Cewl                  [2]   John ")
+    colors.yellow_green(" [3]  Pack                  [4]   Hydra  ")
+    colors.yellow_green(" [5]  Smbmap                [6]   Pipal     ")
+    colors.yellow_green(" [7]  Ncrack                [8]   Twofi     ")
+    colors.yellow_green(" [9]  Chntpw                [10]  Medusa      ")
+    colors.yellow_green(" [11] Crunch                [12]  Crackle   ")
+    colors.yellow_green(" [13] Hashid                [14]  Sucrack    ")
+    colors.yellow_green(" [15] Johnny                [16]  Cmospwd    ")
+    colors.yellow_green(" [17] Polenum               [18]  Patator  ")
+    colors.yellow_green(" [19] Hashcat               [20]  Sqldict    ")
+    colors.yellow_green(" [21] Ophcrack              [22]  Rarcrack    ")
+    colors.yellow_green(" [23] rcracki-mt            [24]  Seclists  ")
+    colors.yellow_green(" [25] Gpp-decrypt           [26]  Samdump2 ")
+    colors.yellow_green(" [27] Onesixtyone           [28]  Pdfcrack  ")
+    colors.yellow_green(" [29] Freerdp2-x11          [30]  Sipcrack ")
+    colors.yellow_green(" [31] Rainbowcrack          [32]  Mimikatz    ")
+    colors.yellow_green(" [33] Ophcrack-cli          [34]  Rsmangler")
+    colors.yellow_green(" [35] Hashcat-utils         [36]  Creddump7")
+    print(
+        colr().hex("#7ed666", " [37] Oclgausscrack"),
+        colr().hex("#ff0000", "        [38]  Wordlists "),
     )
+    colors.yellow_green(" [39] Maskprocessor         [40]  Hydra-gtk")
+    colors.yellow_green(" [41] Statsprocessor        [42]  Truecrack  ")
+    colors.yellow_green(" [43] Thc-pptp-bruter       [44]  Fcrackzip ")
+    colors.yellow_green(" [45] Hash-identifier       [46]  Sipvicious")
+    colors.yellow_green(" [47] Passing-the-hash      [48]  Cisco-auditing-tool")
+    colors.yellow_green(" [49] ALL                   [50]  Back ")
+    colors.yellow_green(" [51] Exit")
+
     colors.gnome_green("\n \nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#2ed1b4", "> ", rgb_mode=True))
 
     switch = {
         1: PasswordCracking.cewl,
-        2: PasswordCracking.chntpw,
-        3: PasswordCracking.cisco_auditing_tool,
-        4: PasswordCracking.cmospwd,
-        5: PasswordCracking.crackle,
-        6: PasswordCracking.creddump7,
-        7: PasswordCracking.crunch,
-        8: PasswordCracking.fcrackzip,
-        9: PasswordCracking.freerdp2_x11,
-        10: PasswordCracking.gpp_decrypt,
-        11: PasswordCracking.hash_identifier,
-        12: PasswordCracking.hashcat,
-        13: PasswordCracking.hashcat_utils,
-        14: PasswordCracking.hashid,
-        15: PasswordCracking.hydra,
-        16: PasswordCracking.hydra_gtk,
-        17: PasswordCracking.john,
-        18: PasswordCracking.johnny,
-        19: PasswordCracking.truecrack,
-        20: PasswordCracking.oclgausscrack,
-        21: PasswordCracking.maskprocessor,
-        22: PasswordCracking.medusa,
-        23: PasswordCracking.mimikatz,
-        24: PasswordCracking.ncrack,
-        25: PasswordCracking.onesixtyone,
-        26: PasswordCracking.ophcrack,
-        27: PasswordCracking.ophcrack_cli,
-        28: PasswordCracking.pack,
-        29: PasswordCracking.passing_the_hash,
-        30: PasswordCracking.patator,
-        31: PasswordCracking.pdfcrack,
-        32: PasswordCracking.pipal,
-        33: PasswordCracking.polenum,
-        34: PasswordCracking.rainbowcrack,
-        35: PasswordCracking.rarcrack,
-        36: PasswordCracking.rcracki_mt,
-        37: PasswordCracking.rsmangler,
-        38: PasswordCracking.samdump2,
-        39: PasswordCracking.seclists,
-        40: PasswordCracking.sipcrack,
-        41: PasswordCracking.sipvicious,
-        42: PasswordCracking.smbmap,
-        43: PasswordCracking.sqldict,
-        44: PasswordCracking.statsprocessor,
-        45: PasswordCracking.sucrack,
-        46: PasswordCracking.thc_pptp_bruter,
-        47: PasswordCracking.twofi,
-        48: PasswordCracking.wordlists,
+        2: PasswordCracking.john,
+        3: PasswordCracking.pack,
+        4: PasswordCracking.hydra,
+        5: PasswordCracking.smbmap,
+        6: PasswordCracking.pipal,
+        7: PasswordCracking.ncrack,
+        8: PasswordCracking.twofi,
+        9: PasswordCracking.chntpw,
+        10: PasswordCracking.medusa,
+        11: PasswordCracking.crunch,
+        12: PasswordCracking.crackle,
+        13: PasswordCracking.hashid,
+        14: PasswordCracking.sucrack,
+        15: PasswordCracking.johnny,
+        16: PasswordCracking.cmospwd,
+        17: PasswordCracking.polenum,
+        18: PasswordCracking.patator,
+        19: PasswordCracking.hashcat,
+        20: PasswordCracking.sqldict,
+        21: PasswordCracking.ophcrack,
+        22: PasswordCracking.rarcrack,
+        23: PasswordCracking.rcracki_mt,
+        24: PasswordCracking.seclists,
+        25: PasswordCracking.gpp_decrypt,
+        26: PasswordCracking.samdump2,
+        27: PasswordCracking.onesixtyone,
+        28: PasswordCracking.pdfcrack,
+        29: PasswordCracking.freerdp2_x11,
+        30: PasswordCracking.sipcrack,
+        31: PasswordCracking.rainbowcrack,
+        32: PasswordCracking.mimikatz,
+        33: PasswordCracking.ophcrack_cli,
+        34: PasswordCracking.rsmangler,
+        35: PasswordCracking.hashcat_utils,
+        36: PasswordCracking.creddump7,
+        37: PasswordCracking.oclgausscrack,
+        38: PasswordCracking.wordlists,
+        39: PasswordCracking.maskprocessor,
+        40: PasswordCracking.hydra_gtk,
+        41: PasswordCracking.statsprocessor,
+        42: PasswordCracking.truecrack,
+        43: PasswordCracking.thc_pptp_bruter,
+        44: PasswordCracking.fcrackzip,
+        45: PasswordCracking.hash_identifier,
+        46: PasswordCracking.sipvicious,
+        47: PasswordCracking.passing_the_hash,
+        48: PasswordCracking.cisco_auditing_tool,
         49: PasswordCracking.password_cracking_tools,
         50: Operators.back,
+        51: Operators.exit,
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
@@ -2418,60 +2479,60 @@ def password_cracking_tools():
 
 # Forensics tools call function
 def forensics_tools():
-    colors.gnome_green("\n  FORENSICS TOOLS")
-    colors.yellow_green(" \n\n [1]  Pev                        [2]   Wce")
-    colors.yellow_green(" [3]  Nasm                       [4]   Gdb  ")
-    colors.yellow_green(" [5]  Plaso                      [6]   Lvm2 ")
-    colors.yellow_green(" [7]  Gpart                      [8]   Yara ")
-    colors.yellow_green(" [9]  Exiv2                      [10]  Lynis")
-    colors.yellow_green(" [11] Undbx                      [12]  Unrar  ")
-    colors.yellow_green(" [13] Dc3dd                      [14]  Jadx ")
-    colors.yellow_green(" [15] Pasco                      [16]  Nasty ")
-    colors.yellow_green(" [17] Parted                     [18]  Pdfid ")
-    colors.yellow_green(" [19] Xplico                     [20]  Dcfldd")
-    colors.yellow_green(" [21] Unhide                     [22]  Ssdeep ")
-    colors.yellow_green(" [23] Xmount                     [24]  binwalk ")
-    colors.yellow_green(" [25] Tcpdump                    [26]  Ollydbg ")
-    colors.yellow_green(" [27] Gparted                    [28]  Metacam ")
-    colors.yellow_green(" [29] Inetsim                    [30]  Md5deep")
-    colors.yellow_green(" [31] Autopsy                    [32]  Polenum ")
-    colors.yellow_green(" [33] Inetsim                    [34]  Scalpel ")
-    colors.yellow_green(" [35] Rifiuti                    [36]  Foremost")
-    colors.yellow_green(" [37] Memdump                    [38]  Guymager")
-    colors.yellow_green(" [39] Apktool                    [40]  Rephrase ")
-    colors.yellow_green(" [41] Galleta                    [42]  Ddrescue ")
-    colors.yellow_green(" [43] Vinetto                    [44]  Mdbtools ")
-    colors.yellow_green(" [45] Upx-ucl                    [46]  Hashdeep ")
-    colors.yellow_green(" [47] Radare2                    [48]  Rkhunter")
-    colors.yellow_green(" [49] Tcpflow                    [50]  Winregfs")
-    colors.yellow_green(" [51] Grokevt                    [52]  Ext3grep ")
-    colors.yellow_green(" [53] Samdump2                   [54]  Myrescue ")
-    colors.yellow_green(" [55] Rifiuti2                   [56]  Ewf-tools")
-    colors.yellow_green(" [57] Safecopy                   [58]  Ext4magic")
-    colors.yellow_green(" [59] Reglookup                  [60]  Recoverdm")
-    colors.yellow_green(" [61] Sleuthkit                  [62]  Tcpreplay")
-    colors.yellow_green(" [63] Regripper                  [64]  Exifprobe ")
-    colors.yellow_green(" [65] Dumpzilla                  [66]  Truecrack")
-    colors.yellow_green(" [67] Javasnoop                  [68]  Pst-utils ")
-    colors.yellow_green(" [69] Wireshark                  [70]  Fcrackzip  ")
-    colors.yellow_green(" [71] Cabextract                 [72]  Creddump7  ")
-    colors.yellow_green(" [73] Mac-robber                 [74]  Pdf-parser  ")
-    colors.yellow_green(" [75] Extundelete                [76]  Chkrootkit")
-    colors.yellow_green(" [77] Magicrescue                [78]  Rsakeyfind  ")
-    colors.yellow_green(" [79] Afflib-tools               [80]  P7zip-full ")
-    colors.yellow_green(" [81] Rizin-cutter               [82]  Recoverjpeg")
-    colors.yellow_green(" [83] Edb-debugger               [84]  Missidentify")
-    colors.yellow_green(" [85] Python3-dfvfs              [86]  Libhivex-bin")
-    colors.yellow_green(" [87] Sqlitebrowser              [88]  Libsmali-java")
-    colors.yellow_green(" [89] Bulk-extractor             [90]  Scrounge-ntfs")
-    colors.yellow_green(" [91] Lime-forensics             [92]  Firmware-mod-kit ")
-    colors.yellow_green(" [93] Bytecode-viewer            [94]  Python3-distorm3")
-    colors.yellow_green(" [95] Python3-dfwinreg           [96]  Forensics-colorize")
-    colors.yellow_green(" [97] Python3-capstone           [98]  Forensic-artifacts")
-    colors.yellow_green(" [99] Python3-dfdatetime         [100] All")
-    colors.yellow_green(" [101] Back                      [102] Exit")
-    colors.red("\n \nEnter The Tool Number To  install ??")
-    choice = input(colr().hex("#ff0000", "> ", rgb_mode=True))
+    colors.orange("\n               FORENSICS TOOLS")
+    colors.yellow(" \n\n [1]  Pev                        [2]   Wce")
+    colors.yellow(" [3]  Nasm                       [4]   Gdb  ")
+    colors.yellow(" [5]  Plaso                      [6]   Lvm2 ")
+    colors.yellow(" [7]  Gpart                      [8]   Yara ")
+    colors.yellow(" [9]  Exiv2                      [10]  Lynis")
+    colors.yellow(" [11] Undbx                      [12]  Unrar  ")
+    colors.yellow(" [13] Dc3dd                      [14]  Jadx ")
+    colors.yellow(" [15] Pasco                      [16]  Nasty ")
+    colors.yellow(" [17] Parted                     [18]  Pdfid ")
+    colors.yellow(" [19] Xplico                     [20]  Dcfldd")
+    colors.yellow(" [21] Unhide                     [22]  Ssdeep ")
+    colors.yellow(" [23] Xmount                     [24]  binwalk ")
+    colors.yellow(" [25] Tcpdump                    [26]  Ollydbg ")
+    colors.yellow(" [27] Gparted                    [28]  Metacam ")
+    colors.yellow(" [29] Inetsim                    [30]  Md5deep")
+    colors.yellow(" [31] Autopsy                    [32]  Polenum ")
+    colors.yellow(" [33] Inetsim                    [34]  Scalpel ")
+    colors.yellow(" [35] Rifiuti                    [36]  Foremost")
+    colors.yellow(" [37] Memdump                    [38]  Guymager")
+    colors.yellow(" [39] Apktool                    [40]  Rephrase ")
+    colors.yellow(" [41] Galleta                    [42]  Ddrescue ")
+    colors.yellow(" [43] Vinetto                    [44]  Mdbtools ")
+    colors.yellow(" [45] Upx-ucl                    [46]  Hashdeep ")
+    colors.yellow(" [47] Radare2                    [48]  Rkhunter")
+    colors.yellow(" [49] Tcpflow                    [50]  Winregfs")
+    colors.yellow(" [51] Grokevt                    [52]  Ext3grep ")
+    colors.yellow(" [53] Samdump2                   [54]  Myrescue ")
+    colors.yellow(" [55] Rifiuti2                   [56]  Ewf-tools")
+    colors.yellow(" [57] Safecopy                   [58]  Ext4magic")
+    colors.yellow(" [59] Reglookup                  [60]  Recoverdm")
+    colors.yellow(" [61] Sleuthkit                  [62]  Tcpreplay")
+    colors.yellow(" [63] Regripper                  [64]  Exifprobe ")
+    colors.yellow(" [65] Dumpzilla                  [66]  Truecrack")
+    colors.yellow(" [67] Javasnoop                  [68]  Pst-utils ")
+    colors.yellow(" [69] Wireshark                  [70]  Fcrackzip  ")
+    colors.yellow(" [71] Cabextract                 [72]  Creddump7  ")
+    colors.yellow(" [73] Mac-robber                 [74]  Pdf-parser  ")
+    colors.yellow(" [75] Extundelete                [76]  Chkrootkit")
+    colors.yellow(" [77] Magicrescue                [78]  Rsakeyfind  ")
+    colors.yellow(" [79] Afflib-tools               [80]  P7zip-full ")
+    colors.yellow(" [81] Rizin-cutter               [82]  Recoverjpeg")
+    colors.yellow(" [83] Edb-debugger               [84]  Missidentify")
+    colors.yellow(" [85] Python3-dfvfs              [86]  Libhivex-bin")
+    colors.yellow(" [87] Sqlitebrowser              [88]  Libsmali-java")
+    colors.yellow(" [89] Bulk-extractor             [90]  Scrounge-ntfs")
+    colors.yellow(" [91] Lime-forensics             [92]  Firmware-mod-kit ")
+    colors.yellow(" [93] Bytecode-viewer            [94]  Python3-distorm3")
+    colors.yellow(" [95] Python3-dfwinreg           [96]  Forensics-colorize")
+    colors.yellow(" [97] Python3-capstone           [98]  Forensic-artifacts")
+    colors.yellow(" [99] Python3-dfdatetime         [100] All")
+    colors.yellow(" [101] Back                      [102] Exit")
+    colors.orange("\n \nEnter The Tool Number To  install ??")
+    choice = input(colr().hex("#ff8e35", "> ", rgb_mode=True))
 
     switch = {
         1: Forensics.pev,
@@ -2739,7 +2800,7 @@ def web_application_tools():
     colors.orange(" [75] jsql-injection             [76]  sqlitebrowser ")
     colors.orange(" [77] ferret-sidejack            [78]  owasp-mantra-ff ")
     colors.orange(" [79] default-mysql-server       [80]  hamster-sidejack")
-    colors.orange(" [81] Back                       [82]  All ")
+    colors.orange(" [81] All                        [82]  Back ")
     colors.orange(" [83] Exit    ")
 
     colors.light_green("\n \nEnter The Tool Number To  install ??")
@@ -2826,8 +2887,8 @@ def web_application_tools():
         78: WebApplication.owasp_mantra_ff,
         79: WebApplication.default_mysql_server,
         80: WebApplication.hamster_sidejack,
-        81: Operators.back,
-        82: WebApplication.web_application_tools,
+        81: WebApplication.web_application_tools,
+        82: Operators.back,
         83: Operators.exit,
     }
     try:
