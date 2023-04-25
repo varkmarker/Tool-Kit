@@ -41,6 +41,12 @@ class colors:
     def yellow(data):
         print(colr().hex("#fff300", data, rgb_mode=True))
 
+    def sky_blue(data):
+        print(colr().hex("#00ffff", data, rgb_mode=True))
+
+    def blue(data):
+        print(colr().hex("#0000ff", data, rgb_mode=True))
+
 
 # Main Banner
 banner = pyfiglet.figlet_format(" HACK JET")
@@ -78,8 +84,9 @@ def the_end():
 def tools_category():
     colors.rose(" \n \n [1] KALI TOP 10 TOOLS            [2] SOCIAL ENGINEERING TOOLS")
     colors.red(" [3] INFORMATION GATHERING TOOLS  [4] PASSWORDS CRACKING TOOLS")
-    colors.dark_orange(" [5] FORENSICS TOOLS              [6] EXPLOITATION TOOLS")
+    colors.green(" [5] FORENSICS TOOLS              [6] EXPLOITATION TOOLS")
     colors.violet(" [7] VULNERABILITY TOOLS          [8] WEB APPLICATION TOOLS")
+    colors.orange(" [9] WIRELESS TOOLS")
 
 
 tools_category()
@@ -2221,16 +2228,451 @@ class WebApplication:
         web_application_tools()
 
 
+# Wireless tools
+class Wireless:
+    def spectools():
+        os.system("sudo apt install -y spectools")
+
+        wireless_tools()
+
+    def rfcat():
+        os.system("sudo apt install -y rfcat")
+
+        wireless_tools()
+
+    def rfkill():
+        os.system("sudo apt install -y rfkill")
+
+        wireless_tools()
+
+    def sakis3g():
+        os.system("sudo apt install -y sakis3g")
+
+        wireless_tools()
+
+    # Software defined radio tools
+    class Sdr:
+        def chirp():
+            os.system("sudo apt install -y chirp")
+
+            wireless_tools()
+
+        def gr_air_modes():
+            os.system("sudo apt install -y gr-air-modes")
+
+            wireless_tools()
+
+        def hackrf():
+            os.system("sudo apt install -y hackrf")
+
+            wireless_tools()
+
+        def multimon_ng():
+            os.system("sudo apt install -y multimon-ng")
+
+            wireless_tools()
+
+        def uhd_images():
+            os.system("sudo apt install -y uhd-images")
+
+            wireless_tools()
+
+        def gnuradio():
+            os.system("sudo apt install -y gnuradio")
+
+            wireless_tools()
+
+        def gr_iqbal():
+            os.system("sudo apt install -y gr-iqbal")
+
+            wireless_tools()
+
+        def inspectrum():
+            os.system("sudo apt install -y inspectrum")
+
+            wireless_tools()
+
+        def rtlsdr_scanner():
+            os.system("sudo apt install -y rtlsdr-scanner")
+
+            wireless_tools()
+
+        def gqrx_sdr():
+            os.system("sudo apt install -y gqrx-sdr")
+
+            wireless_tools()
+
+        def gr_osmosdr():
+            os.system("sudo apt install -y gr-osmosdr")
+
+            wireless_tools()
+
+        def kalibrate_rtl():
+            os.system("sudo apt install -y kalibrate-rtl")
+
+            wireless_tools()
+
+        def uhd_host():
+            os.system("sudo apt install -y uhd-host")
+
+            wireless_tools()
+
+        # Software defined radio tool loop install function
+        def sdr_tools_loop():
+            tools = [
+                "chirp",
+                "gnuradio",
+                "gqrx-sdr",
+                "gr-air-modes",
+                "gr-iqbal",
+                "gr-osmosdr",
+                "hackrf",
+                "inspectrum",
+                "kalibrate-rtl",
+                "multimon-ng",
+                "rtlsdr-scanner",
+                "uhd-host",
+                "uhd-images",
+            ]
+            for tool in tools:
+                os.system(f"sudo apt install -y {tool}")
+
+            wireless_tools()
+
+    # Wifi tools 802-11
+    class WifiHacking:
+        def aircrack_ng():
+            os.system("sudo apt install -y aircrack-ng")
+
+            wireless_tools()
+
+        def bully():
+            os.system("sudo apt install -y bully")
+
+            wireless_tools()
+
+        def fern_wifi_cracker():
+            os.system("sudo apt install -y fern-wifi-cracker")
+
+            wireless_tools()
+
+        def hostapd_wpe():
+            os.system("sudo apt install -y hostapd-wpe")
+
+            wireless_tools()
+
+        def macchanger():
+            os.system("sudo apt install -y macchanger")
+
+            wireless_tools()
+
+        def pixiewps():
+            os.system("sudo apt install -y pixiewps")
+
+            wireless_tools()
+
+        def wifite():
+            os.system("sudo apt install -y wifite")
+
+            wireless_tools()
+
+        def airgeddon():
+            os.system("sudo apt install -y airgeddon")
+
+            wireless_tools()
+
+        def cowpatty():
+            os.system("sudo apt install -y cowpatty")
+
+            wireless_tools()
+
+        def freeradius_wpe():
+            os.system("sudo apt install -y freeradius-wpe")
+
+            wireless_tools()
+
+        def iw():
+            os.system("sudo apt install -y iw")
+
+            wireless_tools()
+
+        def mdk3():
+            os.system("sudo apt install -y mdk3")
+
+            wireless_tools()
+
+        def reaver():
+            os.system("sudo apt install -y reaver")
+
+            wireless_tools()
+
+        def asleap():
+            os.system("sudo apt install -y asleap")
+
+            wireless_tools()
+
+        def eapmd5pass():
+            os.system("sudo apt install -y eapmd5pass")
+
+            wireless_tools()
+
+        def hashcat():
+            os.system("sudo apt install -y hashcat")
+
+            wireless_tools()
+
+        def kismet():
+            os.system("sudo apt install -y kismet")
+
+            wireless_tools()
+
+        def mdk4():
+            os.system("sudo apt install -y mdk4")
+
+            wireless_tools()
+
+        def wifi_honey():
+            os.system("sudo apt install -y wifi-honey")
+
+            wireless_tools()
+
+        def wireshark():
+            os.system("sudo apt install -y wireshark")
+
+            wireless_tools()
+
+        # wifi tools loop install function
+        def wifi_hacking_loop():
+            tools = [
+                "aircrack-ng",
+                "airgeddon",
+                "asleap",
+                "bully",
+                "cowpatty",
+                "eapmd5pass",
+                "fern-wifi-cracker",
+                "freeradius-wpe",
+                "hashcat",
+                "hostapd-wpe",
+                "iw",
+                "kismet",
+                "macchanger",
+                "mdk3",
+                "mdk4",
+                "pixiewps",
+                "reaver",
+                "wifi-honey",
+                "wifite",
+                "wireshark",
+            ]
+            for tool in tools:
+                os.system(f"sudo apt install -y {tool}")
+
+            wireless_tools()
+
+    # Bluetooth tools
+    class Bluetooth:
+        def bluelog():
+            os.system("sudo apt install -y bluelog")
+
+            wireless_tools()
+
+        def bluez():
+            os.system("sudo apt install -y bluez")
+
+            wireless_tools()
+
+        def crackle():
+            os.system("sudo apt install -y crackle")
+
+            wireless_tools()
+
+        def bluesnarfer():
+            os.system("sudo apt install -y bluesnarfer")
+
+            wireless_tools()
+
+        def ubertooth():
+            os.system("sudo apt install -y ubertooth")
+
+            wireless_tools()
+
+        def blueranger():
+            os.system("sudo apt install -y blueranger")
+
+            wireless_tools()
+
+        def bluez_hcidump():
+            os.system("sudo apt install -y bluez-hcidump")
+
+            wireless_tools()
+
+        def redfang():
+            os.system("sudo apt install -y redfang")
+
+            wireless_tools()
+
+        def btscanner():
+            os.system("sudo apt install -y btscanner")
+
+            wireless_tools()
+
+        def spooftooph():
+            os.system("sudo apt install -y spooftooph")
+
+            wireless_tools()
+
+        # Bluetooth tool loop install function
+        def bluetooth_tools_loop():
+            tools = [
+                "bluelog",
+                "blueranger",
+                "bluesnarfer",
+                "bluez",
+                "bluez-hcidump",
+                "btscanner",
+                "crackle",
+                "redfang",
+                "spooftooph",
+                "ubertooth",
+            ]
+            for tool in tools:
+                os.system(f"sudo apt install -y {tool}")
+
+            wireless_tools()
+
+    # Radio frequency identification tools
+    class Rfid:
+        def gnuradio():
+            os.system("sudo apt install -y gnuradio")
+
+            wireless_tools()
+
+        def mfcuk():
+            os.system("sudo apt install -y mfcuk")
+
+            wireless_tools()
+
+        def proxmark3():
+            os.system("sudo apt install -y proxmark3")
+
+            wireless_tools()
+
+        def rfdump():
+            os.system("sudo apt install -y rfdump")
+
+            wireless_tools()
+
+        def mfoc():
+            os.system("sudo apt install -y mfoc")
+
+            wireless_tools()
+
+        def libfreefare_bin():
+            os.system("sudo apt install -y libfreefare-bin")
+
+            wireless_tools()
+
+        def mfterm():
+            os.system("sudo apt install -y mfterm")
+
+            wireless_tools()
+
+        def libnfc_bin():
+            os.system("sudo apt install -y libnfc-bin")
+
+            wireless_tools()
+
+        # Radio frequency identification tools loop install function
+        def rfid_tools_loop():
+            tools = [
+                "gnuradio",
+                "libfreefare-bin",
+                "libnfc-bin",
+                "mfcuk",
+                "mfoc",
+                "mfterm",
+                "proxmark3",
+                "rfdump",
+            ]
+            for tool in tools:
+                os.system(f"sudo apt install -y {tool}")
+
+            wireless_tools()
+
+    def wireless_install_all():
+        tools = [
+            "gnuradio",
+            "libfreefare-bin",
+            "libnfc-bin",
+            "mfcuk",
+            "mfoc",
+            "mfterm",
+            "proxmark3",
+            "rfdump",
+            "aircrack-ng",
+            "airgeddon",
+            "asleap",
+            "bully",
+            "cowpatty",
+            "eapmd5pass",
+            "fern-wifi-cracker",
+            "freeradius-wpe",
+            "hashcat",
+            "hostapd-wpe",
+            "iw",
+            "kismet",
+            "macchanger",
+            "mdk3",
+            "mdk4",
+            "pixiewps",
+            "reaver",
+            "wifi-honey",
+            "wifite",
+            "wireshark" "bluelog",
+            "blueranger",
+            "bluesnarfer",
+            "bluez",
+            "bluez-hcidump",
+            "btscanner",
+            "crackle",
+            "redfang",
+            "spooftooph",
+            "ubertooth",
+            "chirp",
+            "gnuradio",
+            "gqrx-sdr",
+            "gr-air-modes",
+            "gr-iqbal",
+            "gr-osmosdr",
+            "hackrf",
+            "inspectrum",
+            "kalibrate-rtl",
+            "multimon-ng",
+            "rtlsdr-scanner",
+            "uhd-host",
+            "uhd-images",
+            "spectools",
+            "rfcat",
+            "rfkill",
+            "sakis3g",
+        ]
+        for tool in tools:
+            os.system(f"sudo apt install -y {tool}")
+
+        wireless_tools()
+
+
 # Kali_top 10 tools call function
 def kali_top10_tools():
-    colors.red("\n        KALI TOP 10 TOOLS ")
-    colors.green(" \n \n [1]  Nmap        [2]  Aircrack-ng ")
-    colors.green(" [3]  John        [4]  Sqlmap ")
-    colors.green(" [5]  Hydra       [6]  Wireshark ")
-    colors.green(" [7]  Responder   [8]  Crackmapexec ")
-    colors.green(" [9]  Burpsuite   [10] Metasploit-framework  ")
-    colors.green(" [11] ALL         [12] Back ")
-    colors.green(" [13] Exit")
+    colors.red("\n             KALI TOP 10 TOOLS ")
+    colors.green(" \n      [1]  Nmap        [2]  Aircrack-ng ")
+    colors.green("      [3]  John        [4]  Sqlmap ")
+    colors.green("      [5]  Hydra       [6]  Wireshark ")
+    colors.green("      [7]  Responder   [8]  Crackmapexec ")
+    colors.green("      [9]  Burpsuite   [10] Metasploit-framework  ")
+    colors.green("      [11] ALL         [12] Back ")
+    colors.green("      [13] Exit")
     colors.gnome_green("\n \nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#2ed1b4", "> ", rgb_mode=True))
 
@@ -2247,7 +2689,7 @@ def kali_top10_tools():
         10: KaliTop10.metasploit_framework,
         11: KaliTop10.kali_top10_tools,
         12: Operators.back,
-        13: Operators.exit
+        13: Operators.exit,
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
@@ -2259,7 +2701,7 @@ def kali_top10_tools():
 # Social engineering tools call function
 def social_engineering_tools():
     colors.red("\n        SOCIAL ENGINEERING TOOLS ")
-    colors.dark_orange(" \n \n    [1] Set                 [2] Veil ")
+    colors.dark_orange(" \n    [1] Set                 [2] Veil ")
     colors.dark_orange("    [3] Beef-xss            [4] Msfpc   ")
     colors.dark_orange("    [5] Backdoor-factory    [6] All ")
     colors.dark_orange("    [7] Back                [8] Exit ")
@@ -2288,33 +2730,33 @@ def social_engineering_tools():
 
 # Information gathering call function
 def information_gathering_tools():
-    colors.red("\n     INFORMATION GATHERING TOOLS ")
-    colors.yellow_green(" \n\n [1]  P0f              [2]   Lbd ")
-    colors.yellow_green(" [3]  Ncat             [4]   Swaks")
-    colors.yellow_green(" [5]  Braa             [6]   Twofi   ")
-    colors.yellow_green(" [7]  Nmap             [8]   Fping      ")
-    colors.yellow_green(" [9]  Sslh             [10]  Dnsmap   ")
-    colors.yellow_green(" [11] Irpas            [12]  Arping     ")
-    colors.yellow_green(" [13] 0trace           [14]  Dmitry      ")
-    colors.yellow_green(" [15] Fierce           [16]  Smbmap      ")
-    colors.yellow_green(" [17] Legion           [18]  Sslyze  ")
-    colors.yellow_green(" [19] Ssldump          [20]  Hping3   ")
-    colors.yellow_green(" [21] Dnsenum          [22]  Sslscan    ")
-    colors.yellow_green(" [23] Masscan          [24]  Dnswalk   ")
-    colors.yellow_green(" [25] Nbtscan          [26]  Wafw00f ")
-    colors.yellow_green(" [27] Maltego          [28]  Intrace")
-    colors.yellow_green(" [29] Netmask          [30]  Tlssled")
-    colors.yellow_green(" [31] Thc-ipv6         [32]  Ftester     ")
-    colors.yellow_green(" [33] Dnsrecon         [34]  Urlcrazy ")
-    colors.yellow_green(" [35] Dnstracer        [36]  Recon-ng ")
-    colors.yellow_green(" [37] Snmpcheck        [38]  Firewalk  ")
-    colors.yellow_green(" [39] Metagoofil       [40]  Ike-scan ")
-    colors.yellow_green(" [41] Enum4linux       [42]  Onesixtyone ")
-    colors.yellow_green(" [43] Fragrouter       [44]  Netdiscover")
-    colors.yellow_green(" [45] Qsslcaudit       [46]  Theharvester  ")
-    colors.yellow_green(" [47] Unicornscan      [48]  Smtp-user-enum  ")
-    colors.yellow_green(" [49] ALL              [50]  Back ")
-    colors.yellow_green(" [51] Exit")
+    colors.red("\n          INFORMATION GATHERING TOOLS ")
+    colors.yellow_green(" \n       [1]  P0f              [2]   Lbd ")
+    colors.yellow_green("       [3]  Ncat             [4]   Swaks")
+    colors.yellow_green("       [5]  Braa             [6]   Twofi   ")
+    colors.yellow_green("       [7]  Nmap             [8]   Fping      ")
+    colors.yellow_green("       [9]  Sslh             [10]  Dnsmap   ")
+    colors.yellow_green("       [11] Irpas            [12]  Arping     ")
+    colors.yellow_green("       [13] 0trace           [14]  Dmitry      ")
+    colors.yellow_green("       [15] Fierce           [16]  Smbmap      ")
+    colors.yellow_green("       [17] Legion           [18]  Sslyze  ")
+    colors.yellow_green("       [19] Ssldump          [20]  Hping3   ")
+    colors.yellow_green("       [21] Dnsenum          [22]  Sslscan    ")
+    colors.yellow_green("       [23] Masscan          [24]  Dnswalk   ")
+    colors.yellow_green("       [25] Nbtscan          [26]  Wafw00f ")
+    colors.yellow_green("       [27] Maltego          [28]  Intrace")
+    colors.yellow_green("       [29] Netmask          [30]  Tlssled")
+    colors.yellow_green("       [31] Thc-ipv6         [32]  Ftester     ")
+    colors.yellow_green("       [33] Dnsrecon         [34]  Urlcrazy ")
+    colors.yellow_green("       [35] Dnstracer        [36]  Recon-ng ")
+    colors.yellow_green("       [37] Snmpcheck        [38]  Firewalk  ")
+    colors.yellow_green("       [39] Metagoofil       [40]  Ike-scan ")
+    colors.yellow_green("       [41] Enum4linux       [42]  Onesixtyone ")
+    colors.yellow_green("       [43] Fragrouter       [44]  Netdiscover")
+    colors.yellow_green("       [45] Qsslcaudit       [46]  Theharvester  ")
+    colors.yellow_green("       [47] Unicornscan      [48]  Smtp-user-enum  ")
+    colors.yellow_green("       [49] ALL              [50]  Back ")
+    colors.yellow_green("       [51] Exit")
     colors.red("\n \nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#ff0000", "> ", rgb_mode=True))
 
@@ -2383,36 +2825,36 @@ def information_gathering_tools():
 
 # Passwords cracking tools call function
 def password_cracking_tools():
-    colors.red("\n       PASSWORDS CRACKING TOOLS")
-    colors.yellow_green(" \n\n [1]  Cewl                  [2]   John ")
-    colors.yellow_green(" [3]  Pack                  [4]   Hydra  ")
-    colors.yellow_green(" [5]  Smbmap                [6]   Pipal     ")
-    colors.yellow_green(" [7]  Ncrack                [8]   Twofi     ")
-    colors.yellow_green(" [9]  Chntpw                [10]  Medusa      ")
-    colors.yellow_green(" [11] Crunch                [12]  Crackle   ")
-    colors.yellow_green(" [13] Hashid                [14]  Sucrack    ")
-    colors.yellow_green(" [15] Johnny                [16]  Cmospwd    ")
-    colors.yellow_green(" [17] Polenum               [18]  Patator  ")
-    colors.yellow_green(" [19] Hashcat               [20]  Sqldict    ")
-    colors.yellow_green(" [21] Ophcrack              [22]  Rarcrack    ")
-    colors.yellow_green(" [23] rcracki-mt            [24]  Seclists  ")
-    colors.yellow_green(" [25] Gpp-decrypt           [26]  Samdump2 ")
-    colors.yellow_green(" [27] Onesixtyone           [28]  Pdfcrack  ")
-    colors.yellow_green(" [29] Freerdp2-x11          [30]  Sipcrack ")
-    colors.yellow_green(" [31] Rainbowcrack          [32]  Mimikatz    ")
-    colors.yellow_green(" [33] Ophcrack-cli          [34]  Rsmangler")
-    colors.yellow_green(" [35] Hashcat-utils         [36]  Creddump7")
+    colors.red("\n          PASSWORDS CRACKING TOOLS")
+    colors.yellow_green("\n   [1]  Cewl                  [2]   John ")
+    colors.yellow_green("   [3]  Pack                  [4]   Hydra  ")
+    colors.yellow_green("   [5]  Smbmap                [6]   Pipal     ")
+    colors.yellow_green("   [7]  Ncrack                [8]   Twofi     ")
+    colors.yellow_green("   [9]  Chntpw                [10]  Medusa      ")
+    colors.yellow_green("   [11] Crunch                [12]  Crackle   ")
+    colors.yellow_green("   [13] Hashid                [14]  Sucrack    ")
+    colors.yellow_green("   [15] Johnny                [16]  Cmospwd    ")
+    colors.yellow_green("   [17] Polenum               [18]  Patator  ")
+    colors.yellow_green("   [19] Hashcat               [20]  Sqldict    ")
+    colors.yellow_green("   [21] Ophcrack              [22]  Rarcrack    ")
+    colors.yellow_green("   [23] rcracki-mt            [24]  Seclists  ")
+    colors.yellow_green("   [25] Gpp-decrypt           [26]  Samdump2 ")
+    colors.yellow_green("   [27] Onesixtyone           [28]  Pdfcrack  ")
+    colors.yellow_green("   [29] Freerdp2-x11          [30]  Sipcrack ")
+    colors.yellow_green("   [31] Rainbowcrack          [32]  Mimikatz    ")
+    colors.yellow_green("   [33] Ophcrack-cli          [34]  Rsmangler")
+    colors.yellow_green("   [35] Hashcat-utils         [36]  Creddump7")
     print(
-        colr().hex("#7ed666", " [37] Oclgausscrack"),
+        colr().hex("#7ed666", "   [37] Oclgausscrack"),
         colr().hex("#ff0000", "        [38]  Wordlists "),
     )
-    colors.yellow_green(" [39] Maskprocessor         [40]  Hydra-gtk")
-    colors.yellow_green(" [41] Statsprocessor        [42]  Truecrack  ")
-    colors.yellow_green(" [43] Thc-pptp-bruter       [44]  Fcrackzip ")
-    colors.yellow_green(" [45] Hash-identifier       [46]  Sipvicious")
-    colors.yellow_green(" [47] Passing-the-hash      [48]  Cisco-auditing-tool")
-    colors.yellow_green(" [49] ALL                   [50]  Back ")
-    colors.yellow_green(" [51] Exit")
+    colors.yellow_green("   [39] Maskprocessor         [40]  Hydra-gtk")
+    colors.yellow_green("   [41] Statsprocessor        [42]  Truecrack  ")
+    colors.yellow_green("   [43] Thc-pptp-bruter       [44]  Fcrackzip ")
+    colors.yellow_green("   [45] Hash-identifier       [46]  Sipvicious")
+    colors.yellow_green("   [47] Passing-the-hash      [48]  Cisco-auditing-tool")
+    colors.yellow_green("   [49] ALL                   [50]  Back ")
+    colors.yellow_green("   [51] Exit")
 
     colors.gnome_green("\n \nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#2ed1b4", "> ", rgb_mode=True))
@@ -2480,57 +2922,57 @@ def password_cracking_tools():
 # Forensics tools call function
 def forensics_tools():
     colors.orange("\n               FORENSICS TOOLS")
-    colors.yellow(" \n\n [1]  Pev                        [2]   Wce")
-    colors.yellow(" [3]  Nasm                       [4]   Gdb  ")
-    colors.yellow(" [5]  Plaso                      [6]   Lvm2 ")
-    colors.yellow(" [7]  Gpart                      [8]   Yara ")
-    colors.yellow(" [9]  Exiv2                      [10]  Lynis")
-    colors.yellow(" [11] Undbx                      [12]  Unrar  ")
-    colors.yellow(" [13] Dc3dd                      [14]  Jadx ")
-    colors.yellow(" [15] Pasco                      [16]  Nasty ")
-    colors.yellow(" [17] Parted                     [18]  Pdfid ")
-    colors.yellow(" [19] Xplico                     [20]  Dcfldd")
-    colors.yellow(" [21] Unhide                     [22]  Ssdeep ")
-    colors.yellow(" [23] Xmount                     [24]  binwalk ")
-    colors.yellow(" [25] Tcpdump                    [26]  Ollydbg ")
-    colors.yellow(" [27] Gparted                    [28]  Metacam ")
-    colors.yellow(" [29] Inetsim                    [30]  Md5deep")
-    colors.yellow(" [31] Autopsy                    [32]  Polenum ")
-    colors.yellow(" [33] Inetsim                    [34]  Scalpel ")
-    colors.yellow(" [35] Rifiuti                    [36]  Foremost")
-    colors.yellow(" [37] Memdump                    [38]  Guymager")
-    colors.yellow(" [39] Apktool                    [40]  Rephrase ")
-    colors.yellow(" [41] Galleta                    [42]  Ddrescue ")
-    colors.yellow(" [43] Vinetto                    [44]  Mdbtools ")
-    colors.yellow(" [45] Upx-ucl                    [46]  Hashdeep ")
-    colors.yellow(" [47] Radare2                    [48]  Rkhunter")
-    colors.yellow(" [49] Tcpflow                    [50]  Winregfs")
-    colors.yellow(" [51] Grokevt                    [52]  Ext3grep ")
-    colors.yellow(" [53] Samdump2                   [54]  Myrescue ")
-    colors.yellow(" [55] Rifiuti2                   [56]  Ewf-tools")
-    colors.yellow(" [57] Safecopy                   [58]  Ext4magic")
-    colors.yellow(" [59] Reglookup                  [60]  Recoverdm")
-    colors.yellow(" [61] Sleuthkit                  [62]  Tcpreplay")
-    colors.yellow(" [63] Regripper                  [64]  Exifprobe ")
-    colors.yellow(" [65] Dumpzilla                  [66]  Truecrack")
-    colors.yellow(" [67] Javasnoop                  [68]  Pst-utils ")
-    colors.yellow(" [69] Wireshark                  [70]  Fcrackzip  ")
-    colors.yellow(" [71] Cabextract                 [72]  Creddump7  ")
-    colors.yellow(" [73] Mac-robber                 [74]  Pdf-parser  ")
-    colors.yellow(" [75] Extundelete                [76]  Chkrootkit")
-    colors.yellow(" [77] Magicrescue                [78]  Rsakeyfind  ")
-    colors.yellow(" [79] Afflib-tools               [80]  P7zip-full ")
-    colors.yellow(" [81] Rizin-cutter               [82]  Recoverjpeg")
-    colors.yellow(" [83] Edb-debugger               [84]  Missidentify")
-    colors.yellow(" [85] Python3-dfvfs              [86]  Libhivex-bin")
-    colors.yellow(" [87] Sqlitebrowser              [88]  Libsmali-java")
-    colors.yellow(" [89] Bulk-extractor             [90]  Scrounge-ntfs")
-    colors.yellow(" [91] Lime-forensics             [92]  Firmware-mod-kit ")
-    colors.yellow(" [93] Bytecode-viewer            [94]  Python3-distorm3")
-    colors.yellow(" [95] Python3-dfwinreg           [96]  Forensics-colorize")
-    colors.yellow(" [97] Python3-capstone           [98]  Forensic-artifacts")
-    colors.yellow(" [99] Python3-dfdatetime         [100] All")
-    colors.yellow(" [101] Back                      [102] Exit")
+    colors.yellow(" \n    [1]   Pev                       [2]   Wce")
+    colors.yellow("    [3]   Nasm                      [4]   Gdb  ")
+    colors.yellow("    [5]   Plaso                     [6]   Lvm2 ")
+    colors.yellow("    [7]   Gpart                     [8]   Yara ")
+    colors.yellow("    [9]   Exiv2                     [10]  Lynis")
+    colors.yellow("    [11]  Undbx                     [12]  Unrar  ")
+    colors.yellow("    [13]  Dc3dd                     [14]  Jadx ")
+    colors.yellow("    [15]  Pasco                     [16]  Nasty ")
+    colors.yellow("    [17]  Parted                    [18]  Pdfid ")
+    colors.yellow("    [19]  Xplico                    [20]  Dcfldd")
+    colors.yellow("    [21]  Unhide                    [22]  Ssdeep ")
+    colors.yellow("    [23]  Xmount                    [24]  binwalk ")
+    colors.yellow("    [25]  Tcpdump                   [26]  Ollydbg ")
+    colors.yellow("    [27]  Gparted                   [28]  Metacam ")
+    colors.yellow("    [29]  Inetsim                   [30]  Md5deep")
+    colors.yellow("    [31]  Autopsy                   [32]  Polenum ")
+    colors.yellow("    [33]  Inetsim                   [34]  Scalpel ")
+    colors.yellow("    [35]  Rifiuti                   [36]  Foremost")
+    colors.yellow("    [37]  Memdump                   [38]  Guymager")
+    colors.yellow("    [39]  Apktool                   [40]  Rephrase ")
+    colors.yellow("    [41]  Galleta                   [42]  Ddrescue ")
+    colors.yellow("    [43]  Vinetto                   [44]  Mdbtools ")
+    colors.yellow("    [45]  Upx-ucl                   [46]  Hashdeep ")
+    colors.yellow("    [47]  Radare2                   [48]  Rkhunter")
+    colors.yellow("    [49]  Tcpflow                   [50]  Winregfs")
+    colors.yellow("    [51]  Grokevt                   [52]  Ext3grep ")
+    colors.yellow("    [53]  Samdump2                  [54]  Myrescue ")
+    colors.yellow("    [55]  Rifiuti2                  [56]  Ewf-tools")
+    colors.yellow("    [57]  Safecopy                  [58]  Ext4magic")
+    colors.yellow("    [59]  Reglookup                 [60]  Recoverdm")
+    colors.yellow("    [61]  Sleuthkit                 [62]  Tcpreplay")
+    colors.yellow("    [63]  Regripper                 [64]  Exifprobe ")
+    colors.yellow("    [65]  Dumpzilla                 [66]  Truecrack")
+    colors.yellow("    [67]  Javasnoop                 [68]  Pst-utils ")
+    colors.yellow("    [69]  Wireshark                 [70]  Fcrackzip  ")
+    colors.yellow("    [71]  Cabextract                [72]  Creddump7  ")
+    colors.yellow("    [73]  Mac-robber                [74]  Pdf-parser  ")
+    colors.yellow("    [75]  Extundelete               [76]  Chkrootkit")
+    colors.yellow("    [77]  Magicrescue               [78]  Rsakeyfind  ")
+    colors.yellow("    [79]  Afflib-tools              [80]  P7zip-full ")
+    colors.yellow("    [81]  Rizin-cutter              [82]  Recoverjpeg")
+    colors.yellow("    [83]  Edb-debugger              [84]  Missidentify")
+    colors.yellow("    [85]  Python3-dfvfs             [86]  Libhivex-bin")
+    colors.yellow("    [87]  Sqlitebrowser             [88]  Libsmali-java")
+    colors.yellow("    [89]  Bulk-extractor            [90]  Scrounge-ntfs")
+    colors.yellow("    [91]  Lime-forensics            [92]  Firmware-mod-kit ")
+    colors.yellow("    [93]  Bytecode-viewer           [94]  Python3-distorm3")
+    colors.yellow("    [95]  Python3-dfwinreg          [96]  Forensics-colorize")
+    colors.yellow("    [97]  Python3-capstone          [98]  Forensic-artifacts")
+    colors.yellow("    [99]  Python3-dfdatetime        [100] All")
+    colors.yellow("    [101] Back                      [102] Exit")
     colors.orange("\n \nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#ff8e35", "> ", rgb_mode=True))
 
@@ -2650,13 +3092,13 @@ def forensics_tools():
 
 # Exploitation tool call function
 def exploitation_tools():
-    colors.red("\n   EXPLOITATION TOOLS ")
-    colors.violet("\n\n [1]  Set                   [2]  Msfpc")
-    colors.violet(" [3]  Sqlmap                [4]  Armitage ")
-    colors.violet(" [5]  Beef-xss              [6]  Exploitdb")
-    colors.violet(" [7]  Termineter            [8]  Shellnoob")
-    colors.violet(" [9]  Metasploit-framework  [10] All")
-    colors.violet(" [11] Back                  [12] Exit")
+    colors.red("\n                EXPLOITATION TOOLS ")
+    colors.violet("\n     [1]  Set                   [2]  Msfpc")
+    colors.violet("     [3]  Sqlmap                [4]  Armitage ")
+    colors.violet("     [5]  Beef-xss              [6]  Exploitdb")
+    colors.violet("     [7]  Termineter            [8]  Shellnoob")
+    colors.violet("     [9]  Metasploit-framework  [10] All")
+    colors.violet("     [11] Back                  [12] Exit")
     colors.dark_orange("\n \nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#cf301b", "> ", rgb_mode=True))
 
@@ -2683,27 +3125,29 @@ def exploitation_tools():
 
 # Vulnerability tools call function
 def vulnerability_tools():
-    colors.red("\n   EXPLOITATION TOOLS ")
-    colors.light_green(" \n\n [1]  T50                          [2]   Gvm  ")
-    colors.light_green(" [3]  Sfuzz                        [4]   Bed ")
-    colors.light_green(" [5]  Sipsak                       [6]   Nikto")
-    colors.light_green(" [7]  Legion                       [8]   Afl++    ")
-    colors.light_green(" [9]  Dhcpig                       [10]  Nmap  ")
-    colors.light_green(" [11] Iaxflood                     [12]  Sipp    ")
-    colors.light_green(" [13] Rtpbreak                     [14]  Spike  ")
-    colors.light_green(" [15] Sctpscan                     [16]  Siege")
-    colors.light_green(" [17] Voiphopper                   [18]  Peass  ")
-    colors.light_green(" [19] Sipvicious                   [20]  Lynis")
-    colors.light_green(" [21] Cisco-torch                  [22]  Enumiax  ")
-    colors.light_green(" [23] Thc-ssl-dos                  [24]  Ohrwurm")
-    colors.light_green(" [25] Inviteflood                  [26]  Yersinia ")
-    colors.light_green(" [27] Rtpmixsound                  [28]  Rtpflood  ")
-    colors.light_green(" [29] Siparmyknife                 [30]  Cisco-ocs ")
-    colors.light_green(" [31] Slowhttptest                 [32]  Protos-sip  ")
-    colors.light_green(" [33] Unix-privesc-check           [34]  Rtpinsertsound")
-    colors.light_green(" [35] Cisco-auditing-tool          [36]  Copy-router-config")
-    colors.light_green(" [37] cisco-global-exploiter       [38]  ALL ")
-    colors.light_green(" [39] Back                         [40]  Exit  ")
+    colors.red("\n                    VULNERABILITY TOOLS ")
+    colors.light_green(" \n       [1]  T50                          [2]   Gvm  ")
+    colors.light_green("       [3]  Sfuzz                        [4]   Bed ")
+    colors.light_green("       [5]  Sipsak                       [6]   Nikto")
+    colors.light_green("       [7]  Legion                       [8]   Afl++    ")
+    colors.light_green("       [9]  Dhcpig                       [10]  Nmap  ")
+    colors.light_green("       [11] Iaxflood                     [12]  Sipp    ")
+    colors.light_green("       [13] Rtpbreak                     [14]  Spike  ")
+    colors.light_green("       [15] Sctpscan                     [16]  Siege")
+    colors.light_green("       [17] Voiphopper                   [18]  Peass  ")
+    colors.light_green("       [19] Sipvicious                   [20]  Lynis")
+    colors.light_green("       [21] Cisco-torch                  [22]  Enumiax  ")
+    colors.light_green("       [23] Thc-ssl-dos                  [24]  Ohrwurm")
+    colors.light_green("       [25] Inviteflood                  [26]  Yersinia ")
+    colors.light_green("       [27] Rtpmixsound                  [28]  Rtpflood  ")
+    colors.light_green("       [29] Siparmyknife                 [30]  Cisco-ocs ")
+    colors.light_green("       [31] Slowhttptest                 [32]  Protos-sip  ")
+    colors.light_green("       [33] Unix-privesc-check           [34]  Rtpinsertsound")
+    colors.light_green(
+        "       [35] Cisco-auditing-tool          [36]  Copy-router-config"
+    )
+    colors.light_green("       [37] cisco-global-exploiter       [38]  ALL ")
+    colors.light_green("       [39] Back                         [40]  Exit  ")
 
     colors.red("\n \nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#ff0000", "> ", rgb_mode=True))
@@ -2759,49 +3203,49 @@ def vulnerability_tools():
 
 # Web application tools call function
 def web_application_tools():
-    colors.light_green("\n           WEB APPLICATION TOOLS ")
-    colors.orange(" \n\n [1]  lbd                        [2]   php      ")
-    colors.orange(" [3]  nmap                       [4]   dirb ")
-    colors.orange(" [5]  paros                      [6]   sslh  ")
-    colors.orange(" [7]  wfuzz                      [8]   nikto     ")
-    colors.orange(" [9]  hydra                      [10]  siege   ")
-    colors.orange(" [11] xsser                      [12]  wapiti     ")
-    colors.orange(" [13] medusa                     [14]  wpscan ")
-    colors.orange(" [15] commix                     [16]  sslyze ")
-    colors.orange(" [17] ncrack                     [18]  sqlmap   ")
-    colors.orange(" [19] cadaver                    [20]  sqlsus")
-    colors.orange(" [21] maltego                    [22]  watobo   ")
-    colors.orange(" [23] ftester                    [24]  patator  ")
-    colors.orange(" [25] plecost                    [26]  tlssled")
-    colors.orange(" [27] nishang                    [28]  sqldict")
-    colors.orange(" [29] webacoo                    [30]  davtest")
-    colors.orange(" [31] uniscan                    [32]  ssldump ")
-    colors.orange(" [33] sslscan                    [34]  wafw00f ")
-    colors.orange(" [35] cutycapt                   [36]  weevely")
-    colors.orange(" [37] httprint                   [38]  whatweb ")
-    colors.orange(" [39] beef-xss                   [40]  httrack ")
-    colors.orange(" [41] stunnel4                   [42]  zaproxy ")
-    colors.orange(" [43] sqlninja                   [44]  apache2 ")
-    colors.orange(" [45] redsocks                   [46]  skipfish  ")
-    colors.orange(" [47] gobuster                   [48]  sslsplit")
-    colors.orange(" [49] oscanner                   [50]  sslsniff")
-    colors.orange(" [51] dirbuster                  [52]  laudanum ")
-    colors.orange(" [53] webshells                  [54]  joomscan ")
-    colors.orange(" [55] dotdotpwn                  [56]  hakrawler ")
-    colors.orange(" [57] padbuster                  [58]  php-mysql")
-    colors.orange(" [59] burpsuite                  [60]  wireshark  ")
-    colors.orange(" [61] hydra-gtk                  [62]  tnscmd10g")
-    colors.orange(" [63] mitmproxy                  [64]  webscarab")
-    colors.orange(" [65] eyewitness                 [66]  sidguesser")
-    colors.orange(" [67] heartleech                 [68]  qsslcaudit")
-    colors.orange(" [69] slowhttptest               [70]  proxytunnel ")
-    colors.orange(" [71] apache-users               [72]  thc-ssl-dos ")
-    colors.orange(" [73] jboss-autopwn              [74]  proxychains4")
-    colors.orange(" [75] jsql-injection             [76]  sqlitebrowser ")
-    colors.orange(" [77] ferret-sidejack            [78]  owasp-mantra-ff ")
-    colors.orange(" [79] default-mysql-server       [80]  hamster-sidejack")
-    colors.orange(" [81] All                        [82]  Back ")
-    colors.orange(" [83] Exit    ")
+    colors.red("\n                  WEB APPLICATION TOOLS ")
+    colors.orange(" \n      [1]  lbd                        [2]   php      ")
+    colors.orange("      [3]  nmap                       [4]   dirb ")
+    colors.orange("      [5]  paros                      [6]   sslh  ")
+    colors.orange("      [7]  wfuzz                      [8]   nikto     ")
+    colors.orange("      [9]  hydra                      [10]  siege   ")
+    colors.orange("      [11] xsser                      [12]  wapiti     ")
+    colors.orange("      [13] medusa                     [14]  wpscan ")
+    colors.orange("      [15] commix                     [16]  sslyze ")
+    colors.orange("      [17] ncrack                     [18]  sqlmap   ")
+    colors.orange("      [19] cadaver                    [20]  sqlsus")
+    colors.orange("      [21] maltego                    [22]  watobo   ")
+    colors.orange("      [23] ftester                    [24]  patator  ")
+    colors.orange("      [25] plecost                    [26]  tlssled")
+    colors.orange("      [27] nishang                    [28]  sqldict")
+    colors.orange("      [29] webacoo                    [30]  davtest")
+    colors.orange("      [31] uniscan                    [32]  ssldump ")
+    colors.orange("      [33] sslscan                    [34]  wafw00f ")
+    colors.orange("      [35] cutycapt                   [36]  weevely")
+    colors.orange("      [37] httprint                   [38]  whatweb ")
+    colors.orange("      [39] beef-xss                   [40]  httrack ")
+    colors.orange("      [41] stunnel4                   [42]  zaproxy ")
+    colors.orange("      [43] sqlninja                   [44]  apache2 ")
+    colors.orange("      [45] redsocks                   [46]  skipfish  ")
+    colors.orange("      [47] gobuster                   [48]  sslsplit")
+    colors.orange("      [49] oscanner                   [50]  sslsniff")
+    colors.orange("      [51] dirbuster                  [52]  laudanum ")
+    colors.orange("      [53] webshells                  [54]  joomscan ")
+    colors.orange("      [55] dotdotpwn                  [56]  hakrawler ")
+    colors.orange("      [57] padbuster                  [58]  php-mysql")
+    colors.orange("      [59] burpsuite                  [60]  wireshark  ")
+    colors.orange("      [61] hydra-gtk                  [62]  tnscmd10g")
+    colors.orange("      [63] mitmproxy                  [64]  webscarab")
+    colors.orange("      [65] eyewitness                 [66]  sidguesser")
+    colors.orange("      [67] heartleech                 [68]  qsslcaudit")
+    colors.orange("      [69] slowhttptest               [70]  proxytunnel ")
+    colors.orange("      [71] apache-users               [72]  thc-ssl-dos ")
+    colors.orange("      [73] jboss-autopwn              [74]  proxychains4")
+    colors.orange("      [75] jsql-injection             [76]  sqlitebrowser ")
+    colors.orange("      [77] ferret-sidejack            [78]  owasp-mantra-ff ")
+    colors.orange("      [79] default-mysql-server       [80]  hamster-sidejack")
+    colors.orange("      [81] All                        [82]  Back ")
+    colors.orange("      [83] Exit    ")
 
     colors.light_green("\n \nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#21ff00", "> ", rgb_mode=True))
@@ -2898,6 +3342,150 @@ def web_application_tools():
         Operators.case_default()
 
 
+# Wireless tool call function
+def wireless_tools():
+    colors.red(" \n \n                                 WIRELESS TOOLS")
+    # Wifi and Bluetooth tools
+    print(
+        colr().hex("#0000ff", " \n              WIFI TOOLS"),
+        colr().hex("#0000ff", "                                BLUETOOTH TOOLS"),
+    )
+    print(
+        colr().hex("#00ffff", "\n    [1]  iw              [2]  bully"),
+        colr().hex("#00ffff", "             [22]  bluez          [23]  crackle"),
+    )
+    print(
+        colr().hex("#00ffff", "    [3]  mdk3            [4]  mdk4"),
+        colr().hex("#00ffff", "              [24]  bluelog        [25]  ubertooth"),
+    )
+    print(
+        colr().hex("#00ffff", "    [5]  wifite          [6]  reaver"),
+        colr().hex("#00ffff", "            [26]  redfang        [27] spooftooph"),
+    )
+    print(
+        colr().hex("#00ffff", "    [7]  kismet          [8]  asleap"),
+        colr().hex("#00ffff", "            [28]  btscanner      [29] blueranger"),
+    )
+    print(
+        colr().hex("#00ffff", "    [9]  pixiewps        [10] hashcat"),
+        colr().hex("#00ffff", "           [30]  bluesnarfer    [31] bluez-hcidump"),
+    )
+    print(
+        colr().hex("#00ffff", "    [11] cowpatty        [12] wireshark"),
+        colr().hex("#00ffff", "         [32] All "),
+    )
+    print(colr().hex("#00ffff", "    [13] airgeddon       [14] wifi-honey "))
+    print(colr().hex("#00ffff", "    [15] macchanger      [16] aircrack-ng "))
+    print(colr().hex("#00ffff", "    [17] eapmd5pass      [18] freeradius-wpe "))
+    print(colr().hex("#00ffff", "    [19] hostapd-wpe     [20] fern-wifi-cracker "))
+    print(colr().hex("#00ffff", "    [21] All "))
+    # Radio Frequency IDentification tools  and Software Defined Radio tools
+    print(
+        colr().hex("#0000ff", "\n    SOFTWARE DEFINED RADIO TOOLS"),
+        colr().hex("#0000ff", "              RADIO FREQUENCY IDENTIFICATION TOOLS"),
+    )
+    print(
+        colr().hex("#00ffff", "\n    [33] chirp           [34] hackrf"),
+        colr().hex("#00ffff", "            [47] mfoc           [48] mfcuk"),
+    )
+    print(
+        colr().hex("#00ffff", "    [35] uhd-host        [36] gr-iqbal"),
+        colr().hex("#00ffff", "          [49] mfterm         [50] rfdump"),
+    )
+    print(
+        colr().hex("#00ffff", "    [37] gqrx-sdr        [38] gnuradio"),
+        colr().hex("#00ffff", "          [51] gnuradio       [52] libnfc-bin"),
+    )
+    print(
+        colr().hex("#00ffff", "    [39] inspectrum      [40] uhd-images"),
+        colr().hex("#00ffff", "        [53] proxmark3      [54] libfreefare-bin"),
+    )
+    print(
+        colr().hex("#00ffff", "    [41] gr-air-modes    [42] gr-osmosdr"),
+        colr().hex("#00ffff", "        [55] All "),
+    )
+    print(colr().hex("#00ffff", "    [43] kalibrate-rtl   [44] multimon-ng "))
+    print(colr().hex("#00ffff", "    [45] rtlsdr-scanner  [46] All"))
+    # Other's and Include exit,back
+    print(colr().hex("#0000ff", " \n          OTHER  WIRELESS TOOLS"))
+    print(colr().hex("#00ffff", "\n    [56] Rfcat           [57] Rfkill"))
+    print(colr().hex("#00ffff", "    [58] Sakis3g         [59] Spectools"))
+    print(colr().hex("#00ffff", "    [60] All             [61] Back"))
+    print(colr().hex("#00ffff", "    [62] Exit"))
+    colors.red("\n \nEnter The Tool Number To  install ??")
+    choice = input(colr().hex("#ff0000", "> ", rgb_mode=True))
+
+    switch = {
+        1: Wireless.WifiHacking.iw,
+        2: Wireless.WifiHacking.bully,
+        3: Wireless.WifiHacking.mdk3,
+        4: Wireless.WifiHacking.mdk4,
+        5: Wireless.WifiHacking.wifite,
+        6: Wireless.WifiHacking.reaver,
+        7: Wireless.WifiHacking.kismet,
+        8: Wireless.WifiHacking.asleap,
+        9: Wireless.WifiHacking.pixiewps,
+        10: Wireless.WifiHacking.hashcat,
+        11: Wireless.WifiHacking.cowpatty,
+        12: Wireless.WifiHacking.wireshark,
+        13: Wireless.WifiHacking.airgeddon,
+        14: Wireless.WifiHacking.wifi_honey,
+        15: Wireless.WifiHacking.macchanger,
+        16: Wireless.WifiHacking.aircrack_ng,
+        17: Wireless.WifiHacking.eapmd5pass,
+        18: Wireless.WifiHacking.freeradius_wpe,
+        19: Wireless.WifiHacking.hostapd_wpe,
+        20: Wireless.WifiHacking.fern_wifi_cracker,
+        21: Wireless.WifiHacking.wifi_hacking_loop,
+        22: Wireless.Bluetooth.bluez,
+        23: Wireless.Bluetooth.crackle,
+        24: Wireless.Bluetooth.bluelog,
+        25: Wireless.Bluetooth.ubertooth,
+        26: Wireless.Bluetooth.redfang,
+        27: Wireless.Bluetooth.spooftooph,
+        28: Wireless.Bluetooth.btscanner,
+        29: Wireless.Bluetooth.blueranger,
+        30: Wireless.Bluetooth.bluesnarfer,
+        31: Wireless.Bluetooth.bluez_hcidump,
+        32: Wireless.Bluetooth.bluetooth_tools_loop,
+        33: Wireless.Sdr.chirp,
+        34: Wireless.Sdr.hackrf,
+        35: Wireless.Sdr.uhd_host,
+        36: Wireless.Sdr.gr_iqbal,
+        37: Wireless.Sdr.gqrx_sdr,
+        38: Wireless.Sdr.gnuradio,
+        39: Wireless.Sdr.inspectrum,
+        40: Wireless.Sdr.uhd_images,
+        41: Wireless.Sdr.gr_air_modes,
+        42: Wireless.Sdr.gr_osmosdr,
+        43: Wireless.Sdr.kalibrate_rtl,
+        44: Wireless.Sdr.multimon_ng,
+        45: Wireless.Sdr.rtlsdr_scanner,
+        46: Wireless.Sdr.sdr_tools_loop,
+        47: Wireless.Rfid.mfoc,
+        48: Wireless.Rfid.mfcuk,
+        49: Wireless.Rfid.mfterm,
+        50: Wireless.Rfid.rfdump,
+        51: Wireless.Rfid.gnuradio,
+        52: Wireless.Rfid.libnfc_bin,
+        53: Wireless.Rfid.proxmark3,
+        54: Wireless.Rfid.libfreefare_bin,
+        55: Wireless.Rfid.rfid_tools_loop,
+        56: Wireless.rfcat,
+        57: Wireless.rfkill,
+        58: Wireless.sakis3g,
+        59: Wireless.spectools,
+        60: Wireless.wireless_install_all,
+        61: Operators.back,
+        62: Operators.exit,
+    }
+    try:
+        switch_case = switch.get(int(choice), Operators.case_default)
+        switch_case()
+    except ValueError:
+        Operators.case_default()
+
+
 # Main Entry Choices ?
 def choices():
     colors.green("\n \nEnter which one to install ??")
@@ -2911,6 +3499,7 @@ def choices():
         6: exploitation_tools,
         7: vulnerability_tools,
         8: web_application_tools,
+        9: wireless_tools,
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
