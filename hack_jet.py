@@ -59,34 +59,65 @@ def the_end():
     print(colr().hex("#ff0000", banner, rgb_mode=True))
 
 
-# # Add Repository
-# # def add_repo():
-# #     with open("/etc/apt/sources.list", "a") as file:
-# #         file.write(
-# #             "\n".join(
-# #                 [
-# #                     "#KALI LINUX REPOSITORY ",
-# #                     "deb http://http.kali.org/kali kali-rolling main contrib non-free",
-# #                 ]
-# #             )
-# #         )
+# Check kali linux repository already exist or not
+# kali linux リポジトリが既に存在するかどうかを確認します
+# file_path = "/etc/apt/sources.list"
+# one_string = "deb http://http.kali.org/kali kali-rolling main contrib non-free"
+# second_string = "#deb http://http.kali.org/kali kali-rolling main contrib non-free"
 
-# #     os.system(
-# #         "sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys ED444FF07D8D0BF6",
-# #     )
+# with open(file_path, "r") as f:
+#     file_contents = f.read()
 
-# #     os.system("sudo apt-get update")
+# # Check if the line is found in the file
+# if second_string in file_contents:
+#     # Comment Repository
+#     def comment_repo():
+#         replace = ["deb http://http.kali.org/kali kali-rolling main contrib non-free"]
 
-# # add_repo()
+#         with open("/etc/apt/sources.list", "r") as file:
+#             Commandrepo = file.read()
+
+#             Commandrepo = Commandrepo.replace(
+#                 "#deb http://http.kali.org/kali kali-rolling main contrib non-free",
+#                 replace[0],
+#             )
+#         with open("/etc/apt/sources.list", "w") as file:
+#             file.write("" + Commandrepo)
+#         os.system("sudo apt-get update")
+
+#     comment_repo()
+
+# elif one_string in file_contents:
+#     os.system("sudo apt-get update")
+# else:
+#     # Add Repository
+#     def add_repo():
+#         with open("/etc/apt/sources.list", "a") as file:
+#             file.write(
+#                 "\n".join(
+#                     [
+#                         "#KALI LINUX REPOSITORY ",
+#                         "deb http://http.kali.org/kali kali-rolling main contrib non-free",
+#                     ]
+#                 )
+#             )
+
+#         os.system(
+#             "sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys ED444FF07D8D0BF6",
+#         )
+
+#         os.system("sudo apt-get update")
+
+#     add_repo()
 
 
 # List of Category
 def tools_category():
-    colors.rose(" \n \n [1] KALI TOP 10 TOOLS            [2] SOCIAL ENGINEERING TOOLS")
-    colors.red(" [3] INFORMATION GATHERING TOOLS  [4] PASSWORDS CRACKING TOOLS")
-    colors.green(" [5] FORENSICS TOOLS              [6] EXPLOITATION TOOLS")
-    colors.violet(" [7] VULNERABILITY TOOLS          [8] WEB APPLICATION TOOLS")
-    colors.orange(" [9] WIRELESS TOOLS")
+    colors.rose(" \n \n [1] KALI TOP 10 TOOLS            [2]  SOCIAL ENGINEERING TOOLS")
+    colors.red(" [3] INFORMATION GATHERING TOOLS  [4]  PASSWORDS CRACKING TOOLS")
+    colors.green(" [5] FORENSICS TOOLS              [6]  EXPLOITATION TOOLS")
+    colors.violet(" [7] VULNERABILITY TOOLS          [8]  WEB APPLICATION TOOLS")
+    colors.orange(" [9] WIRELESS TOOLS               [10] HARDWARE TOOLS")
 
 
 tools_category()
@@ -2663,6 +2694,52 @@ class Wireless:
         wireless_tools()
 
 
+# Hardware tools
+class Hardware:
+    def qemu_system_x86():
+        os.system("sudo apt-get install -y qemu-system-x86")
+
+    def rizin_cutter():
+        os.system("sudo apt-get install -y rizin-cutter")
+
+    def flashrom():
+        os.system("sudo apt-get install -y flashrom")
+
+    def radare2():
+        os.system("sudo apt-get install -y radare2")
+
+    def openocd():
+        os.system("sudo apt-get install -y openocd")
+
+    def cutecom():
+        os.system("sudo apt-get install -y cutecom")
+
+    def binwalk():
+        os.system("sudo apt-get install -y binwalk")
+
+    def minicom():
+        os.system("sudo apt-get install -y minicom")
+
+    def qemu_user():
+        os.system("sudo apt-get install -y qemu-user")
+
+    # Hardware tool loop install function
+    def hardware_tool():
+        tools = [
+            "binwalk",
+            "cutecom",
+            "flashrom",
+            "minicom",
+            "openocd",
+            "qemu-system-x86",
+            "qemu-user",
+            "radare2",
+            "rizin-cutter ",
+        ]
+        for tool in tools:
+            os.system(f"sudo apt install -y {tool}")
+
+
 # Kali_top 10 tools call function
 def kali_top10_tools():
     colors.red("\n             KALI TOP 10 TOOLS ")
@@ -3486,6 +3563,39 @@ def wireless_tools():
         Operators.case_default()
 
 
+# Hardware tool call function
+def hardware_tools():
+    colors.red("\n             HARDWARE TOOLS")
+    colors.rose("\n   [1]  Binwalk         [2]  Cutecom")
+    colors.rose("   [3]  Radare2         [4]  Minicom")
+    colors.rose("   [5]  Flashrom        [6]  Openocd")
+    colors.rose("   [7]  Qemu-user       [8]  Qemu-system-x86  ")
+    colors.rose("   [9]  Rizin-cutter    [10] All")
+    colors.rose("   [11] Back            [12] Exit")
+
+    colors.dark_orange("\n \nEnter which one to install ??")
+    choice = input(colr().hex("#cf301b", "> ", rgb_mode=True))
+    switch = {
+        1: Hardware.binwalk,
+        2: Hardware.cutecom,
+        3: Hardware.radare2,
+        4: Hardware.minicom,
+        5: Hardware.flashrom,
+        6: Hardware.openocd,
+        7: Hardware.qemu_user,
+        8: Hardware.qemu_system_x86,
+        9: Hardware.rizin_cutter,
+        10: Hardware.hardware_tool,
+        11: Operators.back,
+        12: Operators.exit,
+    }
+    try:
+        switch_case = switch.get(int(choice), Operators.case_default)
+        switch_case()
+    except ValueError:
+        Operators.case_default()
+
+
 # Main Entry Choices ?
 def choices():
     colors.green("\n \nEnter which one to install ??")
@@ -3500,6 +3610,7 @@ def choices():
         7: vulnerability_tools,
         8: web_application_tools,
         9: wireless_tools,
+        10: hardware_tools,
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
