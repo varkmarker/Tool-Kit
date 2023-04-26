@@ -30,7 +30,7 @@ class colors:
         print(colr().hex("#7ed666", data, rgb_mode=True))
 
     def violet(data):
-        print(colr().hex("#9f5fa7", data, rgb_mode=True))
+        print(colr().hex("#cc33ff", data, rgb_mode=True))
 
     def light_green(data):
         print(colr().hex("#21ff00", data, rgb_mode=True))
@@ -46,6 +46,9 @@ class colors:
 
     def blue(data):
         print(colr().hex("#0000ff", data, rgb_mode=True))
+
+    def cream(data):
+        print(colr().hex("#ff9999", data, rgb_mode=True))
 
 
 # Main Banner
@@ -113,11 +116,22 @@ def the_end():
 
 # List of Category
 def tools_category():
-    colors.rose(" \n \n [1] KALI TOP 10 TOOLS            [2]  SOCIAL ENGINEERING TOOLS")
-    colors.red(" [3] INFORMATION GATHERING TOOLS  [4]  PASSWORDS CRACKING TOOLS")
-    colors.green(" [5] FORENSICS TOOLS              [6]  EXPLOITATION TOOLS")
-    colors.violet(" [7] VULNERABILITY TOOLS          [8]  WEB APPLICATION TOOLS")
-    colors.orange(" [9] WIRELESS TOOLS               [10] HARDWARE TOOLS")
+    colors.rose(
+        " \n \n [1] KALI TOP 10 TOOLS                           [2]  SOCIAL ENGINEERING TOOLS"
+    )
+    colors.red(
+        " [3] INFORMATION GATHERING TOOLS                 [4]  PASSWORDS CRACKING TOOLS"
+    )
+    colors.green(
+        " [5] FORENSICS TOOLS                             [6]  EXPLOITATION TOOLS"
+    )
+    colors.violet(
+        " [7] VULNERABILITY TOOLS                         [8]  WEB APPLICATION TOOLS"
+    )
+    colors.orange(
+        " [9] WIRELESS TOOLS                              [10] HARDWARE TOOLS"
+    )
+    colors.blue(" [11]  CRYPTOGRAPHY AND STEGANOGRAPHY TOOLS")
 
 
 tools_category()
@@ -2698,30 +2712,39 @@ class Wireless:
 class Hardware:
     def qemu_system_x86():
         os.system("sudo apt-get install -y qemu-system-x86")
+        hardware_tools()
 
     def rizin_cutter():
         os.system("sudo apt-get install -y rizin-cutter")
+        hardware_tools()
 
     def flashrom():
         os.system("sudo apt-get install -y flashrom")
+        hardware_tools()
 
     def radare2():
         os.system("sudo apt-get install -y radare2")
+        hardware_tools()
 
     def openocd():
         os.system("sudo apt-get install -y openocd")
+        hardware_tools()
 
     def cutecom():
         os.system("sudo apt-get install -y cutecom")
+        hardware_tools()
 
     def binwalk():
         os.system("sudo apt-get install -y binwalk")
+        hardware_tools()
 
     def minicom():
         os.system("sudo apt-get install -y minicom")
+        hardware_tools()
 
     def qemu_user():
         os.system("sudo apt-get install -y qemu-user")
+        hardware_tools()
 
     # Hardware tool loop install function
     def hardware_tool():
@@ -2738,6 +2761,48 @@ class Hardware:
         ]
         for tool in tools:
             os.system(f"sudo apt install -y {tool}")
+        hardware_tools()
+
+
+# Cryptography and Steganography tools
+class CryptoStegano:
+    def stegsnow():
+        os.system("sudo apt install -y stegsnow")
+        cyptography_steganography()
+
+    def ccrypt():
+        os.system("sudo apt install -y ccrypt")
+        cyptography_steganography()
+
+    def steghide():
+        os.system("sudo apt install -y steghide")
+        cyptography_steganography()
+
+    def aeskeyfind():
+        os.system("sudo apt install -y aeskeyfind")
+        cyptography_steganography()
+
+    def outguess():
+        os.system("sudo apt install -y outguess")
+        cyptography_steganography()
+
+    def aesfix():
+        os.system("sudo apt install -y aesfix")
+        cyptography_steganography()
+
+    # Cryptography and Steganography tools loop function
+    def cryptography_steganography_tools():
+        tools = [
+            "aesfix",
+            "aeskeyfind",
+            "ccrypt",
+            "outguess",
+            "steghide",
+            "stegsnow",
+        ]
+        for tool in tools:
+            os.system(f"sudo apt install -y {tool}")
+        cyptography_steganography()
 
 
 # Kali_top 10 tools call function
@@ -2750,7 +2815,7 @@ def kali_top10_tools():
     colors.green("      [9]  Burpsuite   [10] Metasploit-framework  ")
     colors.green("      [11] ALL         [12] Back ")
     colors.green("      [13] Exit")
-    colors.gnome_green("\n \nEnter The Tool Number To  install ??")
+    colors.gnome_green("\nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#2ed1b4", "> ", rgb_mode=True))
 
     switch = {
@@ -2782,7 +2847,7 @@ def social_engineering_tools():
     colors.dark_orange("    [3] Beef-xss            [4] Msfpc   ")
     colors.dark_orange("    [5] Backdoor-factory    [6] All ")
     colors.dark_orange("    [7] Back                [8] Exit ")
-    colors.gnome_green("\n \nEnter The Tool Number To  install ??")
+    colors.gnome_green("\nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#2ed1b4", "> ", rgb_mode=True))
 
     switch = {
@@ -2834,7 +2899,7 @@ def information_gathering_tools():
     colors.yellow_green("       [47] Unicornscan      [48]  Smtp-user-enum  ")
     colors.yellow_green("       [49] ALL              [50]  Back ")
     colors.yellow_green("       [51] Exit")
-    colors.red("\n \nEnter The Tool Number To  install ??")
+    colors.red("\nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#ff0000", "> ", rgb_mode=True))
 
     switch = {
@@ -2933,7 +2998,7 @@ def password_cracking_tools():
     colors.yellow_green("   [49] ALL                   [50]  Back ")
     colors.yellow_green("   [51] Exit")
 
-    colors.gnome_green("\n \nEnter The Tool Number To  install ??")
+    colors.gnome_green("\nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#2ed1b4", "> ", rgb_mode=True))
 
     switch = {
@@ -3050,7 +3115,7 @@ def forensics_tools():
     colors.yellow("    [97]  Python3-capstone          [98]  Forensic-artifacts")
     colors.yellow("    [99]  Python3-dfdatetime        [100] All")
     colors.yellow("    [101] Back                      [102] Exit")
-    colors.orange("\n \nEnter The Tool Number To  install ??")
+    colors.orange("\nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#ff8e35", "> ", rgb_mode=True))
 
     switch = {
@@ -3176,7 +3241,7 @@ def exploitation_tools():
     colors.violet("     [7]  Termineter            [8]  Shellnoob")
     colors.violet("     [9]  Metasploit-framework  [10] All")
     colors.violet("     [11] Back                  [12] Exit")
-    colors.dark_orange("\n \nEnter The Tool Number To  install ??")
+    colors.dark_orange("\nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#cf301b", "> ", rgb_mode=True))
 
     switch = {
@@ -3226,7 +3291,7 @@ def vulnerability_tools():
     colors.light_green("       [37] cisco-global-exploiter       [38]  ALL ")
     colors.light_green("       [39] Back                         [40]  Exit  ")
 
-    colors.red("\n \nEnter The Tool Number To  install ??")
+    colors.red("\nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#ff0000", "> ", rgb_mode=True))
 
     switch = {
@@ -3324,7 +3389,7 @@ def web_application_tools():
     colors.orange("      [81] All                        [82]  Back ")
     colors.orange("      [83] Exit    ")
 
-    colors.light_green("\n \nEnter The Tool Number To  install ??")
+    colors.light_green("\nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#21ff00", "> ", rgb_mode=True))
 
     switch = {
@@ -3489,7 +3554,7 @@ def wireless_tools():
     print(colr().hex("#00ffff", "    [58] Sakis3g         [59] Spectools"))
     print(colr().hex("#00ffff", "    [60] All             [61] Back"))
     print(colr().hex("#00ffff", "    [62] Exit"))
-    colors.red("\n \nEnter The Tool Number To  install ??")
+    colors.red("\nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#ff0000", "> ", rgb_mode=True))
 
     switch = {
@@ -3565,15 +3630,15 @@ def wireless_tools():
 
 # Hardware tool call function
 def hardware_tools():
-    colors.red("\n             HARDWARE TOOLS")
-    colors.rose("\n   [1]  Binwalk         [2]  Cutecom")
-    colors.rose("   [3]  Radare2         [4]  Minicom")
-    colors.rose("   [5]  Flashrom        [6]  Openocd")
-    colors.rose("   [7]  Qemu-user       [8]  Qemu-system-x86  ")
-    colors.rose("   [9]  Rizin-cutter    [10] All")
-    colors.rose("   [11] Back            [12] Exit")
+    colors.red("\n                HARDWARE TOOLS")
+    colors.rose("\n       [1]  Binwalk         [2]  Cutecom")
+    colors.rose("       [3]  Radare2         [4]  Minicom")
+    colors.rose("       [5]  Flashrom        [6]  Openocd")
+    colors.rose("       [7]  Qemu-user       [8]  Qemu-system-x86  ")
+    colors.rose("       [9]  Rizin-cutter    [10] All")
+    colors.rose("       [11] Back            [12] Exit")
 
-    colors.dark_orange("\n \nEnter which one to install ??")
+    colors.dark_orange("\nEnter which one to install ??")
     choice = input(colr().hex("#cf301b", "> ", rgb_mode=True))
     switch = {
         1: Hardware.binwalk,
@@ -3588,6 +3653,35 @@ def hardware_tools():
         10: Hardware.hardware_tool,
         11: Operators.back,
         12: Operators.exit,
+    }
+    try:
+        switch_case = switch.get(int(choice), Operators.case_default)
+        switch_case()
+    except ValueError:
+        Operators.case_default()
+
+
+# Cryptography and Steganography tools call function
+def cyptography_steganography():
+    colors.red("\n     CRYPTOGRAPHY AND STEGANOGRAPHY TOOLS ")
+    colors.cream("\n        [1]  Ccrypt         [2]  Aesfix")
+    colors.cream("        [3]  Steghide       [4]  Stegsnow")
+    colors.cream("        [5]  Aeskeyfind     [6]  Outguess")
+    colors.cream("        [7]  All            [8]  Back ")
+    colors.cream("        [9]  Exit")
+
+    colors.blue("\n \nEnter which one to install ??")
+    choice = input(colr().hex("#0000ff", "> ", rgb_mode=True))
+    switch = {
+        1: CryptoStegano.ccrypt,
+        2: CryptoStegano.aesfix,
+        3: CryptoStegano.steghide,
+        4: CryptoStegano.stegsnow,
+        5: CryptoStegano.aeskeyfind,
+        6: CryptoStegano.outguess,
+        7: CryptoStegano.cryptography_steganography_tools,
+        8: Operators.back,
+        9: Operators.exit,
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
@@ -3611,6 +3705,7 @@ def choices():
         8: web_application_tools,
         9: wireless_tools,
         10: hardware_tools,
+        11: cyptography_steganography,
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
