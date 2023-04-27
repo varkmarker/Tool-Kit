@@ -51,16 +51,17 @@ class colors:
         print(colr().hex("#ff9999", data, rgb_mode=True))
 
     def dark_rose(data):
-        print(colr().hex("#cc0066",data,rgb_mode=True))
+        print(colr().hex("#cc0066", data, rgb_mode=True))
+
 
 # Main Banner
 banner = pyfiglet.figlet_format("\n                 HACK JET")
-print(colr().hex("#ff0000", banner , rgb_mode=True))
+print(colr().hex("#ff0000", banner, rgb_mode=True))
 
 
 # End Banner
 def the_end():
-    banner = pyfiglet.figlet_format(" THE END")
+    banner = pyfiglet.figlet_format("\n                  THE END")
     print(colr().hex("#ff0000", banner, rgb_mode=True))
 
 
@@ -119,21 +120,22 @@ def the_end():
 # List of Category
 def tools_category():
     colors.rose(
-        " \n \n [1] KALI TOP 10 TOOLS                           [2]  SOCIAL ENGINEERING TOOLS"
+        " \n \n [1]  KALI TOP 10 TOOLS                           [2]  SOCIAL ENGINEERING TOOLS"
     )
     colors.red(
-        " [3] INFORMATION GATHERING TOOLS                 [4]  PASSWORDS CRACKING TOOLS"
+        " [3]  INFORMATION GATHERING TOOLS                 [4]  PASSWORDS CRACKING TOOLS"
     )
     colors.green(
-        " [5] FORENSICS TOOLS                             [6]  EXPLOITATION TOOLS"
+        " [5]  FORENSICS TOOLS                             [6]  EXPLOITATION TOOLS"
     )
     colors.violet(
-        " [7] VULNERABILITY TOOLS                         [8]  WEB APPLICATION TOOLS"
+        " [7]  VULNERABILITY TOOLS                         [8]  WEB APPLICATION TOOLS"
     )
     colors.orange(
-        " [9] WIRELESS TOOLS                              [10] HARDWARE TOOLS"
+        " [9]  WIRELESS TOOLS                              [10] HARDWARE TOOLS"
     )
-    colors.blue(" [11]  CRYPTOGRAPHY AND STEGANOGRAPHY TOOLS      [12] DATABASE TOOLS")
+    colors.blue(" [11] CRYPTOGRAPHY AND STEGANOGRAPHY TOOLS        [12] DATABASE TOOLS")
+    colors.light_green(" [13] DETECT TOOLS")
 
 
 tools_category()
@@ -2868,6 +2870,27 @@ class Database:
         database_tools()
 
 
+# Detection tools
+class Detect:
+    def grokevt():
+        os.system("sudo apt install -y grokevt")
+        detect_tools()
+
+    def sentrypeer():
+        os.system("sudo apt install -y sentrypeer")
+        detect_tools()
+
+    # Detection tools loop install function
+    def detect_tools():
+        tools = [
+            "grokevt",
+            "sentrypeer",
+        ]
+        for tool in tools:
+            os.system(f"sudo apt install -y {tool}")
+        detect_tools()
+
+
 # Kali_top 10 tools call function
 def kali_top10_tools():
     colors.red("\n             KALI TOP 10 TOOLS ")
@@ -3755,7 +3778,7 @@ def cyptography_steganography():
 
 # Database tools call function
 def database_tools():
-    colors.red("\n DATABASE TOOLS")
+    colors.red("\n              DATABASE TOOLS")
     colors.dark_rose("\n    [1]  Sqlsus           [2]  Sqlmap")
     colors.dark_rose("    [3]  Sqlninja         [4]  Sqldict ")
     colors.dark_rose("    [5]  Oscanner         [6]  Mdbtools")
@@ -3766,19 +3789,41 @@ def database_tools():
     colors.orange("\n \nEnter which one to install ??")
     choice = input(colr().hex("#ff8e35", "> ", rgb_mode=True))
     switch = {
-        1:  Database.sqlsus,
-        2:  Database.sqlmap,
-        3:  Database.sqlninja,
-        4:  Database.sqldict,
-        5:  Database.oscanner,
-        6:  Database.mdbtools,
-        7:  Database.sidguesser,
-        8:  Database.tnscmd10g,
-        9:  Database.jsql_injection,
+        1: Database.sqlsus,
+        2: Database.sqlmap,
+        3: Database.sqlninja,
+        4: Database.sqldict,
+        5: Database.oscanner,
+        6: Database.mdbtools,
+        7: Database.sidguesser,
+        8: Database.tnscmd10g,
+        9: Database.jsql_injection,
         10: Database.sqlitebrowser,
         11: Database.database_tools,
         12: Operators.back,
-        13: Operators.exit
+        13: Operators.exit,
+    }
+    try:
+        switch_case = switch.get(int(choice), Operators.case_default)
+        switch_case()
+    except ValueError:
+        Operators.case_default()
+
+
+# Detection tools call function
+def detect_tools():
+    colors.red("\n            DETECT TOOLS")
+    colors.orange("\n     [1] Grokevt      [2] Sentrypeer")
+    colors.orange("     [3] All          [4] Back")
+    colors.orange("     [5] Exit")
+    colors.red("\n \nEnter which one to install ??")
+    choice = input(colr().hex("#ff0000", "> ", rgb_mode=True))
+    switch = {
+        1: Detect.grokevt,
+        2: Detect.sentrypeer,
+        3: Detect.detect_tools,
+        4: Operators.back,
+        5: Operators.exit,
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
@@ -3804,6 +3849,7 @@ def choices():
         10: hardware_tools,
         11: cyptography_steganography,
         12: database_tools,
+        13: detect_tools,
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
