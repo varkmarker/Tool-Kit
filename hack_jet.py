@@ -50,10 +50,12 @@ class colors:
     def cream(data):
         print(colr().hex("#ff9999", data, rgb_mode=True))
 
+    def dark_rose(data):
+        print(colr().hex("#cc0066",data,rgb_mode=True))
 
 # Main Banner
-banner = pyfiglet.figlet_format(" HACK JET")
-print(colr().hex("#ff0000", banner, rgb_mode=True))
+banner = pyfiglet.figlet_format("\n                 HACK JET")
+print(colr().hex("#ff0000", banner , rgb_mode=True))
 
 
 # End Banner
@@ -131,7 +133,7 @@ def tools_category():
     colors.orange(
         " [9] WIRELESS TOOLS                              [10] HARDWARE TOOLS"
     )
-    colors.blue(" [11]  CRYPTOGRAPHY AND STEGANOGRAPHY TOOLS")
+    colors.blue(" [11]  CRYPTOGRAPHY AND STEGANOGRAPHY TOOLS      [12] DATABASE TOOLS")
 
 
 tools_category()
@@ -2805,6 +2807,67 @@ class CryptoStegano:
         cyptography_steganography()
 
 
+# Database tools
+class Database:
+    def jsql_injection():
+        os.system("sudo apt install -y jsql-injection")
+        database_tools()
+
+    def sidguesser():
+        os.system("sudo apt install -y sidguesser")
+        database_tools()
+
+    def sqlmap():
+        os.system("sudo apt install -y sqlmap")
+        database_tools()
+
+    def tnscmd10g():
+        os.system("sudo apt install -y tnscmd10g")
+        database_tools()
+
+    def mdbtools():
+        os.system("sudo apt install -y mdbtools")
+        database_tools()
+
+    def sqldict():
+        os.system("sudo apt install -y sqldict")
+        database_tools()
+
+    def sqlninja():
+        os.system("sudo apt install -y sqlninja")
+        database_tools()
+
+    def oscanner():
+        os.system("sudo apt install -y oscanner")
+        database_tools()
+
+    def sqlitebrowser():
+        os.system("sudo apt install -y sqlitebrowser")
+        database_tools()
+
+    def sqlsus():
+        os.system("sudo apt install -y sqlsus")
+        database_tools()
+
+    # Database tools loop install function
+    def database_tools():
+        tools = [
+            "jsql-injection",
+            "mdbtools",
+            "oscanner",
+            "sidguesser",
+            "sqldict",
+            "sqlitebrowser",
+            "sqlmap",
+            "sqlninja",
+            "sqlsus",
+            "tnscmd10g",
+        ]
+        for tool in tools:
+            os.system(f"sudo apt install -y {tool}")
+        database_tools()
+
+
 # Kali_top 10 tools call function
 def kali_top10_tools():
     colors.red("\n             KALI TOP 10 TOOLS ")
@@ -3690,6 +3753,40 @@ def cyptography_steganography():
         Operators.case_default()
 
 
+# Database tools call function
+def database_tools():
+    colors.red("\n DATABASE TOOLS")
+    colors.dark_rose("\n    [1]  Sqlsus           [2]  Sqlmap")
+    colors.dark_rose("    [3]  Sqlninja         [4]  Sqldict ")
+    colors.dark_rose("    [5]  Oscanner         [6]  Mdbtools")
+    colors.dark_rose("    [7]  Sidguesser       [8]  Tnscmd10g")
+    colors.dark_rose("    [9]  Jsql-injection   [10] Sqlitebrowser")
+    colors.dark_rose("    [11] All              [12] Back")
+    colors.dark_rose("    [13] Exit ")
+    colors.orange("\n \nEnter which one to install ??")
+    choice = input(colr().hex("#ff8e35", "> ", rgb_mode=True))
+    switch = {
+        1:  Database.sqlsus,
+        2:  Database.sqlmap,
+        3:  Database.sqlninja,
+        4:  Database.sqldict,
+        5:  Database.oscanner,
+        6:  Database.mdbtools,
+        7:  Database.sidguesser,
+        8:  Database.tnscmd10g,
+        9:  Database.jsql_injection,
+        10: Database.sqlitebrowser,
+        11: Database.database_tools,
+        12: Operators.back,
+        13: Operators.exit
+    }
+    try:
+        switch_case = switch.get(int(choice), Operators.case_default)
+        switch_case()
+    except ValueError:
+        Operators.case_default()
+
+
 # Main Entry Choices ?
 def choices():
     colors.green("\n \nEnter which one to install ??")
@@ -3706,6 +3803,7 @@ def choices():
         9: wireless_tools,
         10: hardware_tools,
         11: cyptography_steganography,
+        12: database_tools,
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
