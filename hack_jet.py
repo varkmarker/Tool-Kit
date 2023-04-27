@@ -3890,7 +3890,7 @@ def choices():
         11: cyptography_steganography,
         12: database_tools,
         13: detect_tools,
-        14: kali_labs,
+        14: labs_tools,
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
