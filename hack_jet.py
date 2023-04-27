@@ -52,17 +52,39 @@ class colors:
 
     def dark_rose(data):
         print(colr().hex("#cc0066", data, rgb_mode=True))
+
     def dark_red(data):
-        print(colr().hex("#cc0000",data,rgb_mode=True))
+        print(colr().hex("#cc0000", data, rgb_mode=True))
+
+    def dark_green(data):
+        print(colr().hex("#009933", data, rgb_mode=True))
+
 
 # Main Banner
-banner = pyfiglet.figlet_format("\n                 HACK JET")
-print(colr().hex("#ff0000", banner, rgb_mode=True))
 
+print(
+    colr().hex(
+        "#ff0000",
+        """\n 
+     __    __   ______    ______   __    __           _____  ________  ________ 
+    /  |  /  | /      \  /      \ /  |  /  |         /     |/        |/        |
+    $$ |  $$ |/$$$$$$  |/$$$$$$  |$$ | /$$/          $$$$$ |$$$$$$$$/ $$$$$$$$/ 
+    $$ |__$$ |$$ |__$$ |$$ |  $$/ $$ |/$$/              $$ |$$ |__       $$ |   
+    $$    $$ |$$    $$ |$$ |      $$  $$<          __   $$ |$$    |      $$ |   
+    $$$$$$$$ |$$$$$$$$ |$$ |   __ $$$$$  \        /  |  $$ |$$$$$/       $$ |   
+    $$ |  $$ |$$ |  $$ |$$ \__/  |$$ |$$  \       $$ \__$$ |$$ |_____    $$ |   
+    $$ |  $$ |$$ |  $$ |$$    $$/ $$ | $$  |      $$    $$/ $$       |   $$ |   
+    $$/   $$/ $$/   $$/  $$$$$$/  $$/   $$/        $$$$$$/  $$$$$$$$/    $$/    
+                                                                                
+                                                                            
+                                                                            
+""",
+    )
+)
 
 # End Banner
 def the_end():
-    banner = pyfiglet.figlet_format("\n                  THE END")
+    banner = pyfiglet.figlet_format("                   THE END")
     print(colr().hex("#ff0000", banner, rgb_mode=True))
 
 
@@ -121,7 +143,7 @@ def the_end():
 # List of Category
 def tools_category():
     colors.rose(
-        " \n \n [1]  KALI TOP 10 TOOLS                           [2]  SOCIAL ENGINEERING TOOLS"
+        " \n [1]  KALI TOP 10 TOOLS                           [2]  SOCIAL ENGINEERING TOOLS"
     )
     colors.red(
         " [3]  INFORMATION GATHERING TOOLS                 [4]  PASSWORDS CRACKING TOOLS"
@@ -136,9 +158,8 @@ def tools_category():
         " [9]  WIRELESS TOOLS                              [10] HARDWARE TOOLS"
     )
     colors.blue(" [11] CRYPTOGRAPHY AND STEGANOGRAPHY TOOLS        [12] DATABASE TOOLS")
-    colors.yellow(
-        " [13] DETECT TOOLS                                [14] LABS"
-    )
+    colors.yellow(" [13] DETECT TOOLS                                [14] LABS")
+    colors.cream(" [15] FUZZING TOOLS")
 
 
 tools_category()
@@ -157,7 +178,18 @@ class Operators:
         the_end()
 
     def case_default():
-        colors.red("Invalid option")
+        print(
+            colr().hex(
+                "#00ffff",
+                """                 (__) 
+                 (oo) 
+           /------\/ 
+          / |    ||   
+         *  /\---/\ 
+            ~~   ~~""",
+            )
+        )
+        colors.red("    ....Invalid option....")
 
 
 # Kali top10 tools
@@ -2894,7 +2926,7 @@ class Detect:
         detect_tools()
 
 
-# Labs tools 
+# Labs tools
 class Labs:
     def dvwa():
         os.system("sudo apt install -y dvwa")
@@ -2910,6 +2942,37 @@ class Labs:
         for tool in tools:
             os.system(f"sudo apt install -y {tool}")
         labs_tools()
+
+
+# FUZZING TOOLS
+class Fuzzing:
+    def afl():
+        os.system("sudo apt install -y afl++")
+        fuzzing_tools()
+
+    def wfuzz():
+        os.system("sudo apt install -y wfuzz")
+        fuzzing_tools()
+
+    def sfuzz():
+        os.system("sudo apt install -y sfuzz")
+        fuzzing_tools()
+
+    def spike():
+        os.system("sudo apt install -y spike")
+        fuzzing_tools()
+
+    # Fuzzing tools loop installation function
+    def fuzzing_tools():
+        tools = [
+            "afl++",
+            "sfuzz",
+            "spike",
+            "wfuzz",
+        ]
+        for tool in tools:
+            os.system(f"sudo apt install -y {tool}")
+        fuzzing_tools()
 
 
 # Kali_top 10 tools call function
@@ -3777,7 +3840,7 @@ def cyptography_steganography():
     colors.cream("        [7]  All            [8]  Back ")
     colors.cream("        [9]  Exit")
 
-    colors.blue("\n \nEnter which one to install ??")
+    colors.blue("\nEnter which one to install ??")
     choice = input(colr().hex("#0000ff", "> ", rgb_mode=True))
     switch = {
         1: CryptoStegano.ccrypt,
@@ -3807,7 +3870,7 @@ def database_tools():
     colors.dark_rose("    [9]  Jsql-injection   [10] Sqlitebrowser")
     colors.dark_rose("    [11] All              [12] Back")
     colors.dark_rose("    [13] Exit ")
-    colors.orange("\n \nEnter which one to install ??")
+    colors.orange("\nEnter which one to install ??")
     choice = input(colr().hex("#ff8e35", "> ", rgb_mode=True))
     switch = {
         1: Database.sqlsus,
@@ -3837,7 +3900,7 @@ def detect_tools():
     colors.orange("\n     [1] Grokevt      [2] Sentrypeer")
     colors.orange("     [3] All          [4] Back")
     colors.orange("     [5] Exit")
-    colors.red("\n \nEnter which one to install ??")
+    colors.red("\nEnter which one to install ??")
     choice = input(colr().hex("#ff0000", "> ", rgb_mode=True))
     switch = {
         1: Detect.grokevt,
@@ -3851,13 +3914,15 @@ def detect_tools():
         switch_case()
     except ValueError:
         Operators.case_default()
+
+
 # Labs tools call function
 def labs_tools():
     colors.orange("\n           KALI TOOLS")
     colors.dark_red("\n     [1] Dvwa   [2] Juice-shop")
     colors.dark_red("     [3] All    [4] Back")
     colors.dark_red("     [5] Exit")
-    colors.yellow("\n \nEnter which one to install ??")
+    colors.yellow("\nEnter which one to install ??")
     choice = input(colr().hex("#fff300", "> ", rgb_mode=True))
     switch = {
         1: Labs.dvwa,
@@ -3871,10 +3936,36 @@ def labs_tools():
         switch_case()
     except ValueError:
         Operators.case_default()
-    
+
+
+# Fuzzing tools call function
+def fuzzing_tools():
+    colors.red("\n        FUZZING TOOLS")
+    colors.dark_green("\n     [1] Afl++  [2] Spike")
+    colors.dark_green("     [3] Wfuzz  [4] Sfuzz")
+    colors.dark_green("     [5] All    [6] Back")
+    colors.dark_green("     [7] Exit")
+    colors.orange("\nEnter which one to install ??")
+    choice = input(colr().hex("#ff8e35", "> ", rgb_mode=True))
+    switch = {
+        1: Fuzzing.afl,
+        2: Fuzzing.spike,
+        3: Fuzzing.wfuzz,
+        4: Fuzzing.sfuzz,
+        5: Fuzzing.fuzzing_tools,
+        6: Operators.back,
+        7: Operators.exit,
+    }
+    try:
+        switch_case = switch.get(int(choice), Operators.case_default)
+        switch_case()
+    except ValueError:
+        Operators.case_default()
+
+
 # Main Entry Choices ?
 def choices():
-    colors.green("\n \nEnter which one to install ??")
+    colors.green("\nEnter which one to install ??")
     choice = input(colr().hex("#00ff8d", "> ", rgb_mode=True))
     switch = {
         1: kali_top10_tools,
@@ -3891,6 +3982,7 @@ def choices():
         12: database_tools,
         13: detect_tools,
         14: labs_tools,
+        15: fuzzing_tools,
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
