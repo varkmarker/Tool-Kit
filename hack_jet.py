@@ -52,7 +52,8 @@ class colors:
 
     def dark_rose(data):
         print(colr().hex("#cc0066", data, rgb_mode=True))
-
+    def dark_red(data):
+        print(colr().hex("#cc0000",data,rgb_mode=True))
 
 # Main Banner
 banner = pyfiglet.figlet_format("\n                 HACK JET")
@@ -135,7 +136,9 @@ def tools_category():
         " [9]  WIRELESS TOOLS                              [10] HARDWARE TOOLS"
     )
     colors.blue(" [11] CRYPTOGRAPHY AND STEGANOGRAPHY TOOLS        [12] DATABASE TOOLS")
-    colors.light_green(" [13] DETECT TOOLS")
+    colors.yellow(
+        " [13] DETECT TOOLS                                [14] LABS"
+    )
 
 
 tools_category()
@@ -2891,6 +2894,24 @@ class Detect:
         detect_tools()
 
 
+# Labs tools 
+class Labs:
+    def dvwa():
+        os.system("sudo apt install -y dvwa")
+        labs_tools()
+
+    def juice_shop():
+        os.system("sudo apt install juice-shop")
+        labs_tools()
+
+    # Labs loop install function
+    def labs_tools():
+        tools = ["dvwa", "juice-shop"]
+        for tool in tools:
+            os.system(f"sudo apt install -y {tool}")
+        labs_tools()
+
+
 # Kali_top 10 tools call function
 def kali_top10_tools():
     colors.red("\n             KALI TOP 10 TOOLS ")
@@ -3830,8 +3851,27 @@ def detect_tools():
         switch_case()
     except ValueError:
         Operators.case_default()
-
-
+# Labs tools call function
+def labs_tools():
+    colors.orange("\n           KALI TOOLS")
+    colors.dark_red("\n     [1] Dvwa   [2] Juice-shop")
+    colors.dark_red("     [3] All    [4] Back")
+    colors.dark_red("     [5] Exit")
+    colors.yellow("\n \nEnter which one to install ??")
+    choice = input(colr().hex("#fff300", "> ", rgb_mode=True))
+    switch = {
+        1: Labs.dvwa,
+        2: Labs.juice_shop,
+        3: Labs.labs_tools,
+        4: Operators.back,
+        5: Operators.exit,
+    }
+    try:
+        switch_case = switch.get(int(choice), Operators.case_default)
+        switch_case()
+    except ValueError:
+        Operators.case_default()
+    
 # Main Entry Choices ?
 def choices():
     colors.green("\n \nEnter which one to install ??")
@@ -3850,6 +3890,7 @@ def choices():
         11: cyptography_steganography,
         12: database_tools,
         13: detect_tools,
+        14: kali_labs,
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
