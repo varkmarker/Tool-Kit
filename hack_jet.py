@@ -171,7 +171,7 @@ def tools_category():
     colors.dark_rose(
         " [19] REPORTING TOOLS                             [20] REVERSE ENGINEERING TOOLS"
     )
-    colors.light_blue(" [21] RESPONSE TOOLS")
+    colors.light_blue(" [21] RESPONSE TOOLS                              [22] SNIFFING AND SPOOFING TOOLS")
 
 
 tools_category()
@@ -3323,6 +3323,141 @@ class Response:
         response_tools()
 
 
+# Sniffing and Spoofing tools
+class SniffingSpoofing:
+    def bettercap():
+        os.system("sudo apt install -y bettercap")
+        sniffing_spoofing_tools()
+
+    def driftnet():
+        os.system("sudo apt install -y driftnet")
+        sniffing_spoofing_tools()
+
+    def ferret_sidejack():
+        os.system("sudo apt install -y ferret-sidejack")
+        sniffing_spoofing_tools()
+
+    def hexinject():
+        os.system("sudo apt install -y hexinject")
+        sniffing_spoofing_tools()
+
+    def mitmproxy():
+        os.system("sudo apt install -y mitmproxy")
+        sniffing_spoofing_tools()
+
+    def responder():
+        os.system("sudo apt install -y responder")
+        sniffing_spoofing_tools()
+
+    def sslsplit():
+        os.system("sudo apt install -y sslsplit")
+        sniffing_spoofing_tools()
+
+    def wifi_honey():
+        os.system("sudo apt install -y wifi-honey")
+        sniffing_spoofing_tools()
+
+    def darkstat():
+        os.system("sudo apt install -y darkstat")
+        sniffing_spoofing_tools()
+
+    def dsniff():
+        os.system("sudo apt install -y dsniff")
+        sniffing_spoofing_tools()
+
+    def fiked():
+        os.system("sudo apt install -y fiked")
+        sniffing_spoofing_tools()
+
+    def isr_evilgrade():
+        os.system("sudo apt install -y isr-evilgrade")
+        sniffing_spoofing_tools()
+
+    def netsniff_ng():
+        os.system("sudo apt install -y netsniff-ng")
+        sniffing_spoofing_tools()
+
+    def sniffjoke():
+        os.system("sudo apt install -y sniffjoke")
+        sniffing_spoofing_tools()
+
+    def tcpflow():
+        os.system("sudo apt install -y tcpflow")
+        sniffing_spoofing_tools()
+
+    def wireshark():
+        os.system("sudo apt install -y wireshark")
+        sniffing_spoofing_tools()
+
+    def dnschef():
+        os.system("sudo apt install -y dnschef")
+        sniffing_spoofing_tools()
+
+    def hamster_sidejack():
+        os.system("sudo apt install -y hamster-sidejack")
+        sniffing_spoofing_tools()
+
+    def macchanger():
+        os.system("sudo apt install -y macchanger")
+        sniffing_spoofing_tools()
+
+    def rebind():
+        os.system("sudo apt install -y rebind")
+        sniffing_spoofing_tools()
+
+    def sslsniff():
+        os.system("sudo apt install -y sslsniff")
+        sniffing_spoofing_tools()
+
+    def tcpreplay():
+        os.system("sudo apt install -y tcpreplay")
+        sniffing_spoofing_tools()
+
+    def yersinia():
+        os.system("sudo apt install -y yersinia")
+        sniffing_spoofing_tools()
+
+    def ettercap_tools():
+        os.system(
+            "sudo apt install -y ettercap-common ettercap-graphical ettercap-text-only"
+        )
+        sniffing_spoofing_tools()
+
+    # Sniffing And Spoofing tools loop install function
+    def sniffing_spoofing_tools():
+        tools = [
+            "bettercap",
+            "darkstat",
+            "dnschef",
+            "driftnet",
+            "dsniff",
+            "ettercap-graphical",
+            "ettercap-text-only",
+            "ettercap-common",
+            "ferret-sidejack",
+            "fiked",
+            "hamster-sidejack",
+            "hexinject",
+            "isr-evilgrade",
+            "macchanger",
+            "mitmproxy",
+            "netsniff-ng",
+            "rebind",
+            "responder",
+            "sniffjoke",
+            "sslsniff",
+            "sslsplit",
+            "tcpflow",
+            "tcpreplay",
+            "wifi-honey",
+            "wireshark",
+            "yersinia",
+        ]
+        for tool in tools:
+            os.system(f"sudo apt install -y {tool}")
+        sniffing_spoofing_tools()
+
+
 # Kali_top 10 tools call function
 def kali_top10_tools():
     colors.red("\n             KALI TOP 10 TOOLS ")
@@ -4505,6 +4640,63 @@ def response_tools():
         Operators.case_default()
 
 
+# Sniffing and Spoofing tools call function
+def sniffing_spoofing_tools():
+    colors.red("\n                SNIFFING AND SPOOFING  TOOLS ")
+    colors.sky_blue(" \n       [1]  Fiked                      [2]   Dsniff  ")
+    colors.sky_blue("       [3]  Sslsplit                   [4]   Rebind ")
+    colors.sky_blue("       [5]  Driftnet                   [6]   Dnschef")
+    colors.sky_blue("       [7]  Hexinject                  [8]   Yersinia   ")
+    colors.sky_blue("       [9]  Responder                  [10]  Sslsniff   ")
+    colors.sky_blue("       [11] Mitmproxy                  [12]  Darkstat    ")
+    colors.sky_blue("       [13] Wireshark                  [14]  Tcpflow")
+    colors.sky_blue("       [15] Wifi-honey                 [16]  Bettercap")
+    colors.sky_blue("       [17] Netsniff-ng                [18]  Sniffjoke ")
+    colors.sky_blue("       [19] Isr-evilgrade              [20]  Tcpreplay  ")
+    colors.sky_blue("       [21] Ettercap-tools             [22]  Macchanger   ")
+    colors.sky_blue("       [23] Hamster-sidejack           [24]  Ferret-sidejack  ")
+    colors.sky_blue("       [25] All                        [26]  Back ")
+    colors.sky_blue("       [27] Exit  ")
+
+    colors.light_blue("\nEnter The Tool Number To  install ??")
+    choice = input(colr().hex("#6666ff", "> ", rgb_mode=True))
+
+    switch = {
+        1: SniffingSpoofing.fiked,
+        2: SniffingSpoofing.dsniff,
+        3: SniffingSpoofing.sslsplit,
+        4: SniffingSpoofing.rebind,
+        5: SniffingSpoofing.driftnet,
+        6: SniffingSpoofing.dnschef,
+        7: SniffingSpoofing.hexinject,
+        8: SniffingSpoofing.yersinia,
+        9: SniffingSpoofing.responder,
+        10: SniffingSpoofing.sslsniff,
+        11: SniffingSpoofing.mitmproxy,
+        12: SniffingSpoofing.darkstat,
+        13: SniffingSpoofing.wireshark,
+        14: SniffingSpoofing.tcpflow,
+        15: SniffingSpoofing.wifi_honey,
+        16: SniffingSpoofing.bettercap,
+        17: SniffingSpoofing.netsniff_ng,
+        18: SniffingSpoofing.sniffjoke,
+        19: SniffingSpoofing.isr_evilgrade,
+        20: SniffingSpoofing.tcpreplay,
+        21: SniffingSpoofing.ettercap_tools,
+        22: SniffingSpoofing.macchanger,
+        23: SniffingSpoofing.hamster_sidejack,
+        24: SniffingSpoofing.ferret_sidejack,
+        25: SniffingSpoofing.sniffing_spoofing_tools,
+        26: Operators.back,
+        27: Operators.exit,
+    }
+    try:
+        switch_case = switch.get(int(choice), Operators.case_default)
+        switch_case()
+    except ValueError:
+        Operators.case_default()
+
+
 # Main Entry Choices ?
 def choices():
     colors.red("\n Enter which one to install ??")
@@ -4531,6 +4723,7 @@ def choices():
         19: reporting_tools,
         20: reverse_engineering_tools,
         21: response_tools,
+        22:sniffing_spoofing_tools
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
