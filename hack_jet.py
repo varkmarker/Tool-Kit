@@ -42,7 +42,7 @@ class colors:
         print(colr().hex("#fff300", data, rgb_mode=True))
 
     def sky_blue(data):
-        print(colr().hex("#00ffff", data, rgb_mode=True))
+        print(colr().hex("#00ccff", data, rgb_mode=True))
 
     def blue(data):
         print(colr().hex("#0000ff", data, rgb_mode=True))
@@ -159,7 +159,9 @@ def tools_category():
     )
     colors.blue(" [11] CRYPTOGRAPHY AND STEGANOGRAPHY TOOLS        [12] DATABASE TOOLS")
     colors.yellow(" [13] DETECT TOOLS                                [14] LABS")
-    colors.cream(" [15] FUZZING TOOLS")
+    colors.cream(
+        " [15] FUZZING TOOLS                               [16] IDENTIFICATION TOOLS"
+    )
 
 
 tools_category()
@@ -2975,6 +2977,92 @@ class Fuzzing:
         fuzzing_tools()
 
 
+# Identification tools
+class Identification:
+    def amass():
+        os.system("sudo apt install -y amass")
+        identification_tools()
+
+    def defectdojo():
+        os.system("sudo apt install -y defectdojo")
+        identification_tools()
+
+    def maltego():
+        os.system("sudo apt install -y maltego")
+        identification_tools()
+
+    def osrframework():
+        os.system("sudo apt install -y osrframework")
+        identification_tools()
+
+    def wapiti():
+        os.system("sudo apt install -y wapiti")
+        identification_tools()
+
+    def assetfinder():
+        os.system("sudo apt install -y assetfinder")
+        identification_tools()
+
+    def exploitdb():
+        os.system("sudo apt install -y exploitdb")
+        identification_tools()
+
+    def maryam():
+        os.system("sudo apt install -y maryam")
+        identification_tools()
+
+    def spiderfoot():
+        os.system("sudo apt install -y spiderfoot")
+        identification_tools()
+
+    def witnessme():
+        os.system("sudo apt install -y witnessme")
+        identification_tools()
+
+    def cisco_auditing_tool():
+        os.system("sudo apt install -y cisco-auditing-tool")
+        identification_tools()
+
+    def hb_honeypot():
+        os.system("sudo apt install -y hb-honeypot")
+        identification_tools()
+
+    def nipper_ng():
+        os.system("sudo apt install -y nipper-ng")
+        identification_tools()
+
+    def tiger():
+        os.system("sudo apt install -y tiger")
+        identification_tools()
+
+    def zaproxy():
+        os.system("sudo apt install -y zaproxy")
+        identification_tools()
+
+    # Identification tools loop install function
+    def identification_tools():
+        tools = [
+            "amass",
+            "assetfinder",
+            "cisco-auditing-tool",
+            "defectdojo",
+            "exploitdb",
+            "hb-honeypot",
+            "maltego",
+            "maryam",
+            "nipper-ng",
+            "osrframework",
+            "spiderfoot",
+            "tiger",
+            "wapiti",
+            "witnessme",
+            "zaproxy",
+        ]
+        for tool in tools:
+            os.system(f"sudo apt install -y {tool}")
+        identification_tools()
+
+
 # Kali_top 10 tools call function
 def kali_top10_tools():
     colors.red("\n             KALI TOP 10 TOOLS ")
@@ -3919,9 +4007,9 @@ def detect_tools():
 # Labs tools call function
 def labs_tools():
     colors.orange("\n           KALI TOOLS")
-    colors.dark_red("\n     [1] Dvwa   [2] Juice-shop")
-    colors.dark_red("     [3] All    [4] Back")
-    colors.dark_red("     [5] Exit")
+    colors.red("\n     [1] Dvwa   [2] Juice-shop")
+    colors.red("     [3] All    [4] Back")
+    colors.red("     [5] Exit")
     colors.yellow("\nEnter which one to install ??")
     choice = input(colr().hex("#fff300", "> ", rgb_mode=True))
     switch = {
@@ -3963,6 +4051,47 @@ def fuzzing_tools():
         Operators.case_default()
 
 
+# Identification tools call function
+def identification_tools():
+    colors.red("\n              IDENTIFICATION TOOLS")
+    colors.sky_blue("  \n    [1]  Tiger                 [2]  Amass")
+    colors.sky_blue("    [3]  Wapiti                [4]  Maryam")
+    colors.sky_blue("    [5]  Zaproxy               [6]  Maltego ")
+    colors.sky_blue("    [7]  Nipper-ng             [8]  Exploitdb")
+    colors.sky_blue("    [9]  Witnessme             [10] Defectdojo")
+    colors.sky_blue("    [11] Spiderfoot            [12] Assetfinder")
+    colors.sky_blue("    [13] Osrframework          [14] Hb-honeypot")
+    colors.sky_blue("    [15] Cisco-auditing-tool   [16] All")
+    colors.sky_blue("    [17] Back                  [18] Exit")
+    colors.orange("\nEnter which one to install ??")
+    choice = input(colr().hex("#ff8e35", "> ", rgb_mode=True))
+    switch = {
+        1: Identification.tiger,
+        2: Identification.amass,
+        3: Identification.wapiti,
+        4: Identification.maryam,
+        5: Identification.zaproxy,
+        6: Identification.maltego,
+        7: Identification.nipper_ng,
+        8: Identification.exploitdb,
+        9: Identification.witnessme,
+        10: Identification.defectdojo,
+        11: Identification.spiderfoot,
+        12: Identification.assetfinder,
+        13: Identification.osrframework,
+        14: Identification.hb_honeypot,
+        15: Identification.cisco_auditing_tool,
+        16: Identification.identification_tools,
+        17: Operators.back,
+        18: Operators.exit,
+    }
+    try:
+        switch_case = switch.get(int(choice), Operators.case_default)
+        switch_case()
+    except ValueError:
+        Operators.case_default()
+
+
 # Main Entry Choices ?
 def choices():
     colors.green("\nEnter which one to install ??")
@@ -3983,6 +4112,7 @@ def choices():
         13: detect_tools,
         14: labs_tools,
         15: fuzzing_tools,
+        16: identification_tools,
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
