@@ -162,7 +162,10 @@ def tools_category():
     colors.cream(
         " [15] FUZZING TOOLS                               [16] IDENTIFICATION TOOLS"
     )
-    colors.gnome_green(" [17] PROTECTION TOOLS                            [18] RECOVERY TOOLS")
+    colors.gnome_green(
+        " [17] PROTECTION TOOLS                            [18] RECOVERY TOOLS"
+    )
+    colors.dark_rose(" [19] REPORTING TOOLS")
 
 
 tools_category()
@@ -3151,6 +3154,57 @@ class Recovery:
         recovery_tools()
 
 
+# Reporting tools
+class Reporting:
+    def recordmydesktop():
+        os.system("sudo apt install -y recordmydesktop")
+        reporting_tools()
+
+    def metagoofil():
+        os.system("sudo apt install -y metagoofil")
+        reporting_tools()
+
+    def eyewitness():
+        os.system("sudo apt install -y eyewitness")
+        reporting_tools()
+
+    def maltego():
+        os.system("sudo apt install -y maltego")
+        reporting_tools()
+
+    def dradis():
+        os.system("sudo apt install -y dradis")
+        reporting_tools()
+
+    def pipal():
+        os.system("sudo apt install -y pipal")
+        reporting_tools()
+
+    def faraday():
+        os.system("sudo apt install -y faraday")
+        reporting_tools()
+
+    def cutycapt():
+        os.system("sudo apt install -y cutycapt")
+        reporting_tools()
+
+    # Reporting tools loop install function
+    def reporting_tools():
+        tools = [
+            "cutycapt",
+            "dradis",
+            "eyewitness",
+            "faraday",
+            "maltego",
+            "metagoofil",
+            "pipal",
+            "recordmydesktop",
+        ]
+        for tool in tools:
+            os.system(f"sudo apt install -y {tool}")
+        reporting_tools()
+
+
 # Kali_top 10 tools call function
 def kali_top10_tools():
     colors.red("\n             KALI TOP 10 TOOLS ")
@@ -4214,7 +4268,7 @@ def recovery_tools():
     colors.gnome_green("    [5]  Recoverdm      [6]  Recoverjpeg ")
     colors.gnome_green("    [7]  Scrounge-ntfs  [8]  Extundelete")
     colors.gnome_green("    [9]  All            [10] Back")
-    colors.gnome_green( "    [11] Exit")
+    colors.gnome_green("    [11] Exit")
     colors.orange("\nEnter which one to install ??")
     choice = input(colr().hex("#ff8e35", "> ", rgb_mode=True))
     switch = {
@@ -4227,6 +4281,37 @@ def recovery_tools():
         7: Recovery.scrounge_ntfs,
         8: Recovery.extundelete,
         9: Recovery.recovery_tools,
+        10: Operators.back,
+        11: Operators.exit,
+    }
+    try:
+        switch_case = switch.get(int(choice), Operators.case_default)
+        switch_case()
+    except ValueError:
+        Operators.case_default()
+
+
+# Reporting tools call function
+def reporting_tools():
+    colors.red("\n              REPROTING TOOLS")
+    colors.cream("  \n    [1]  Pipal            [2]  Dradis")
+    colors.cream("    [3]  Maltego          [4]  faraday")
+    colors.cream("    [5]  Cutycapt         [6]  Metagoofil ")
+    colors.cream("    [7]  Recordmydesktop  [8]  Eyewitness")
+    colors.cream("    [9]  All              [10] Back")
+    colors.cream("    [11] Exit")
+    colors.light_green("\nEnter which one to install ??")
+    choice = input(colr().hex("#21ff00", "> ", rgb_mode=True))
+    switch = {
+        1: Reporting.pipal,
+        2: Reporting.dradis,
+        3: Reporting.maltego,
+        4: Reporting.faraday,
+        5: Reporting.cutycapt,
+        6: Reporting.metagoofil,
+        7: Reporting.recordmydesktop,
+        8: Reporting.eyewitness,
+        9: Reporting.reporting_tools,
         10: Operators.back,
         11: Operators.exit,
     }
@@ -4260,6 +4345,7 @@ def choices():
         16: identification_tools,
         17: protection_tools,
         18: recovery_tools,
+        19: reporting_tools,
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
