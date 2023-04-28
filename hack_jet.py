@@ -165,7 +165,9 @@ def tools_category():
     colors.gnome_green(
         " [17] PROTECTION TOOLS                            [18] RECOVERY TOOLS"
     )
-    colors.dark_rose(" [19] REPORTING TOOLS")
+    colors.dark_rose(
+        " [19] REPORTING TOOLS                             [20] REVERSE ENGINEERING TOOLS"
+    )
 
 
 tools_category()
@@ -3205,6 +3207,77 @@ class Reporting:
         reporting_tools()
 
 
+# Reverse engineering tools
+class ReverseEngineering:
+    def metasploit_framework():
+        os.system("sudo apt install -y metasploit-framework")
+        reverse_engineering_tools()
+
+    def rizin_cutter():
+        os.system("sudo apt install -y rizin-cutter")
+        reverse_engineering_tools()
+
+    def jadx():
+        os.system("sudo apt install -y jadx")
+        reverse_engineering_tools()
+
+    def clang():
+        os.system("sudo apt install -y clang")
+        reverse_engineering_tools()
+
+    def radare2():
+        os.system("sudo apt install -y radare2")
+        reverse_engineering_tools()
+
+    def jd_gui():
+        os.system("sudo apt install -y jd-gui")
+        reverse_engineering_tools()
+
+    def edb_debugger():
+        os.system("sudo apt install -y edb-debugger")
+        reverse_engineering_tools()
+
+    def bytecode_viewer():
+        os.system("sudo apt install -y bytecode-viewer")
+        reverse_engineering_tools()
+
+    def ollydbg():
+        os.system("sudo apt install -y ollydbg")
+        reverse_engineering_tools()
+
+    def javasnoop():
+        os.system("sudo apt install -y javasnoop")
+        reverse_engineering_tools()
+
+    def dex2jar():
+        os.system("sudo apt install -y dex2jar")
+        reverse_engineering_tools()
+
+    def apktool():
+        os.system("sudo apt install -y apktool")
+        reverse_engineering_tools()
+
+    # Reverse Engineering tools loop install function
+    def reverse_engineering_tools():
+        tools = [
+            "apktool",
+            "bytecode-viewer",
+            "clang",
+            "dex2jar",
+            "edb-debugger",
+            "jadx",
+            "javasnoop",
+            "jd-gui",
+            "metasploit-framework",
+            "ollydbg",
+            "radare2",
+            "rizin-cutter",
+        ]
+        for tool in tools:
+            os.system(f" sudo apt install -y {tool}")
+        reverse_engineering_tools()
+
+
 # Kali_top 10 tools call function
 def kali_top10_tools():
     colors.red("\n             KALI TOP 10 TOOLS ")
@@ -4322,6 +4395,43 @@ def reporting_tools():
         Operators.case_default()
 
 
+# Reverse-engineering tools
+def reverse_engineering_tools():
+    colors.red("\n              REVERSE ENGINEERING TOOLS")
+    colors.sky_blue("  \n    [1]  Jadx                [2]  Clang")
+    colors.sky_blue("    [3]  Jd-gui              [4]  Ollydbg")
+    colors.sky_blue("    [5]  Dex2jar             [6]  Apktool ")
+    colors.sky_blue("    [7]  Radare2             [8]  Rizin-cutter")
+    colors.sky_blue("    [9]  Javasnoop           [10] Edb-debugger")
+    colors.sky_blue("    [11] Bytecode-viewer     [12] Metasploit-framework")
+    colors.sky_blue("    [13] All                 [14] Back")
+    colors.sky_blue("    [15] Exit")
+    colors.orange("\nEnter which one to install ??")
+    choice = input(colr().hex("#ff8e35", "> ", rgb_mode=True))
+    switch = {
+        1: ReverseEngineering.jadx,
+        2: ReverseEngineering.clang,
+        3: ReverseEngineering.jd_gui,
+        4: ReverseEngineering.ollydbg,
+        5: ReverseEngineering.dex2jar,
+        6: ReverseEngineering.apktool,
+        7: ReverseEngineering.radare2,
+        8: ReverseEngineering.rizin_cutter,
+        9: ReverseEngineering.javasnoop,
+        10: ReverseEngineering.edb_debugger,
+        11: ReverseEngineering.bytecode_viewer,
+        12: ReverseEngineering.metasploit_framework,
+        13: ReverseEngineering.reverse_engineering_tools,
+        14: Operators.back,
+        15: Operators.exit,
+    }
+    try:
+        switch_case = switch.get(int(choice), Operators.case_default)
+        switch_case()
+    except ValueError:
+        Operators.case_default()
+
+
 # Main Entry Choices ?
 def choices():
     colors.red("\n Enter which one to install ??")
@@ -4346,6 +4456,7 @@ def choices():
         17: protection_tools,
         18: recovery_tools,
         19: reporting_tools,
+        20: reverse_engineering_tools,
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
