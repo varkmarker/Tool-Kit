@@ -162,7 +162,7 @@ def tools_category():
     colors.cream(
         " [15] FUZZING TOOLS                               [16] IDENTIFICATION TOOLS"
     )
-    colors.gnome_green(" [17] PROTECTION TOOLS")
+    colors.gnome_green(" [17] PROTECTION TOOLS                            [18] RECOVERY TOOLS")
 
 
 tools_category()
@@ -3100,6 +3100,57 @@ class Protection:
         protection_tools()
 
 
+# Recovery tools
+class Recovery:
+    def recoverjpeg():
+        os.system("sudo apt install -y recoverjpeg")
+        recovery_tools()
+
+    def extundelete():
+        os.system("sudo apt install -y extundelete")
+        recovery_tools()
+
+    def undbx():
+        os.system("sudo apt install -y undbx")
+        recovery_tools()
+
+    def recoverdm():
+        os.system("sudo apt install -y recoverdm")
+        recovery_tools()
+
+    def ext3grep():
+        os.system("sudo apt install -y ext3grep")
+        recovery_tools()
+
+    def scrounge_ntfs():
+        os.system("sudo apt install -y scrounge-ntfs")
+        recovery_tools()
+
+    def myrescue():
+        os.system("sudo apt install -y myrescue")
+        recovery_tools()
+
+    def ddrescue():
+        os.system("sudo apt install -y ddrescue")
+        recovery_tools()
+
+    # Recovery tools loop install function
+    def recovery_tools():
+        tools = [
+            "ddrescue",
+            "ext3grep",
+            "extundelete",
+            "myrescue",
+            "recoverdm",
+            "recoverjpeg",
+            "scrounge-ntfs",
+            "undbx",
+        ]
+        for tool in tools:
+            os.system(f" sudo apt install -y {tool}")
+        recovery_tools()
+
+
 # Kali_top 10 tools call function
 def kali_top10_tools():
     colors.red("\n             KALI TOP 10 TOOLS ")
@@ -4155,6 +4206,37 @@ def protection_tools():
         Operators.case_default()
 
 
+# Recovery tools call function
+def recovery_tools():
+    colors.red("\n              RECOVERY TOOLS")
+    colors.gnome_green("  \n    [1]  Undbx          [2]  Ddrescue")
+    colors.gnome_green("    [3]  Myrescue       [4]  Ext3grep")
+    colors.gnome_green("    [5]  Recoverdm      [6]  Recoverjpeg ")
+    colors.gnome_green("    [7]  Scrounge-ntfs  [8]  Extundelete")
+    colors.gnome_green("    [9]  All            [10] Back")
+    colors.gnome_green( "    [11] Exit")
+    colors.orange("\nEnter which one to install ??")
+    choice = input(colr().hex("#ff8e35", "> ", rgb_mode=True))
+    switch = {
+        1: Recovery.undbx,
+        2: Recovery.ddrescue,
+        3: Recovery.myrescue,
+        4: Recovery.ext3grep,
+        5: Recovery.recoverdm,
+        6: Recovery.recoverjpeg,
+        7: Recovery.scrounge_ntfs,
+        8: Recovery.extundelete,
+        9: Recovery.recovery_tools,
+        10: Operators.back,
+        11: Operators.exit,
+    }
+    try:
+        switch_case = switch.get(int(choice), Operators.case_default)
+        switch_case()
+    except ValueError:
+        Operators.case_default()
+
+
 # Main Entry Choices ?
 def choices():
     colors.red("\n Enter which one to install ??")
@@ -4177,6 +4259,7 @@ def choices():
         15: fuzzing_tools,
         16: identification_tools,
         17: protection_tools,
+        18: recovery_tools,
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
