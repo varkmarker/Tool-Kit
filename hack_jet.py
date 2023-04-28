@@ -59,6 +59,9 @@ class colors:
     def dark_green(data):
         print(colr().hex("#009933", data, rgb_mode=True))
 
+    def light_blue(data):
+        print(colr().hex("#6666ff", data, rgb_mode=True))
+
 
 # Main Banner
 
@@ -168,6 +171,7 @@ def tools_category():
     colors.dark_rose(
         " [19] REPORTING TOOLS                             [20] REVERSE ENGINEERING TOOLS"
     )
+    colors.light_blue(" [21] RESPONSE TOOLS")
 
 
 tools_category()
@@ -3278,6 +3282,47 @@ class ReverseEngineering:
         reverse_engineering_tools()
 
 
+# Response tools
+class Response:
+    def guymager():
+        os.system("sudo apt install -y guymager")
+        response_tools()
+
+    def impacket_scripts():
+        os.system("sudo apt install -y impacket-scripts")
+        response_tools()
+
+    def ghidra():
+        os.system("sudo apt install -y ghidra")
+        response_tools()
+
+    def netsniff_ng():
+        os.system("sudo apt install -y netsniff-ng")
+        response_tools()
+
+    def hashrat():
+        os.system("sudo apt install -y hashrat")
+        response_tools()
+
+    def ewf_tools():
+        os.system("sudo apt install -y ewf-tools")
+        response_tools()
+
+    # Response tools loop install function
+    def response_tools():
+        tools = [
+            "ewf-tools",
+            "ghidra",
+            "guymager",
+            "hashrat",
+            "impacket-scripts",
+            "netsniff-ng",
+        ]
+        for tool in tools:
+            os.system(f"sudo apt install -y {tool}")
+        response_tools()
+
+
 # Kali_top 10 tools call function
 def kali_top10_tools():
     colors.red("\n             KALI TOP 10 TOOLS ")
@@ -4397,7 +4442,7 @@ def reporting_tools():
 
 # Reverse-engineering tools
 def reverse_engineering_tools():
-    colors.red("\n              REVERSE ENGINEERING TOOLS")
+    colors.red("\n           REVERSE ENGINEERING TOOLS")
     colors.sky_blue("  \n    [1]  Jadx                [2]  Clang")
     colors.sky_blue("    [3]  Jd-gui              [4]  Ollydbg")
     colors.sky_blue("    [5]  Dex2jar             [6]  Apktool ")
@@ -4432,6 +4477,34 @@ def reverse_engineering_tools():
         Operators.case_default()
 
 
+# Response tools call function
+def response_tools():
+    colors.red("\n              RESPONSE TOOLS")
+    colors.cream("  \n    [1] Ghidra       [2]  Hashrat")
+    colors.cream("    [3] Ewf-tools    [4] Netsniff-ng ")
+    colors.cream("    [5] Guymager     [6] Impacket-scripts ")
+    colors.cream("    [7] All          [8] Back  ")
+    colors.cream("    [9] Exit")
+    colors.sky_blue("\nEnter which one to install ??")
+    choice = input(colr().hex("#00ccff", "> ", rgb_mode=True))
+    switch = {
+        1: Response.ghidra,
+        2: Response.hashrat,
+        3: Response.ewf_tools,
+        4: Response.netsniff_ng,
+        5: Response.guymager,
+        6: Response.impacket_scripts,
+        7: Response.response_tools,
+        8: Operators.back,
+        9: Operators.exit,
+    }
+    try:
+        switch_case = switch.get(int(choice), Operators.case_default)
+        switch_case()
+    except ValueError:
+        Operators.case_default()
+
+
 # Main Entry Choices ?
 def choices():
     colors.red("\n Enter which one to install ??")
@@ -4457,6 +4530,7 @@ def choices():
         18: recovery_tools,
         19: reporting_tools,
         20: reverse_engineering_tools,
+        21: response_tools,
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
