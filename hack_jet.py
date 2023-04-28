@@ -162,6 +162,7 @@ def tools_category():
     colors.cream(
         " [15] FUZZING TOOLS                               [16] IDENTIFICATION TOOLS"
     )
+    colors.gnome_green(" [17] PROTECTION TOOLS")
 
 
 tools_category()
@@ -3063,6 +3064,42 @@ class Identification:
         identification_tools()
 
 
+# Protection tools
+class Protection:
+    def clamav():
+        os.system("sudo apt install -y clamav")
+        protection_tools()
+
+    def fwbuilder():
+        os.system("sudo apt install -y fwbuilder")
+        protection_tools()
+
+    def cryptsetup():
+        os.system("sudo apt install -y cryptsetup")
+        protection_tools()
+
+    def cryptsetup_initramfs():
+        os.system("sudo apt install -y cryptsetup-initramfs")
+        protection_tools()
+
+    def cryptsetup_nuke_password():
+        os.system("sudo apt install -y cryptsetup-nuke-password")
+        protection_tools()
+
+    # Protection tools install loop function
+    def protection_tools():
+        tools = [
+            "clamav",
+            "cryptsetup",
+            "cryptsetup-initramfs",
+            "cryptsetup-nuke-password",
+            "fwbuilder",
+        ]
+        for tool in tools:
+            os.system(f"sudo apt install -y {tool}")
+        protection_tools()
+
+
 # Kali_top 10 tools call function
 def kali_top10_tools():
     colors.red("\n             KALI TOP 10 TOOLS ")
@@ -4092,10 +4129,36 @@ def identification_tools():
         Operators.case_default()
 
 
+# Protection tools call function
+def protection_tools():
+    colors.red("\n              PROTECTION TOOLS")
+    colors.yellow("  \n    [1]  Clamav                     [2]  Fwbuilder")
+    colors.yellow("    [3]  Cryptsetup-initramfs       [4]  Cryptsetup")
+    colors.yellow("    [5]  Cryptsetup-nuke-password   [6]  All ")
+    colors.yellow("    [7]  Back                       [8]  Exit")
+    colors.orange("\nEnter which one to install ??")
+    choice = input(colr().hex("#ff8e35", "> ", rgb_mode=True))
+    switch = {
+        1: Protection.clamav,
+        2: Protection.fwbuilder,
+        3: Protection.cryptsetup_initramfs,
+        4: Protection.cryptsetup,
+        5: Protection.cryptsetup_nuke_password,
+        6: Protection.protection_tools,
+        7: Operators.back,
+        8: Operators.exit,
+    }
+    try:
+        switch_case = switch.get(int(choice), Operators.case_default)
+        switch_case()
+    except ValueError:
+        Operators.case_default()
+
+
 # Main Entry Choices ?
 def choices():
-    colors.green("\nEnter which one to install ??")
-    choice = input(colr().hex("#00ff8d", "> ", rgb_mode=True))
+    colors.red("\n Enter which one to install ??")
+    choice = input(colr().hex("#ff0000", " > ", rgb_mode=True))
     switch = {
         1: kali_top10_tools,
         2: social_engineering_tools,
@@ -4113,6 +4176,7 @@ def choices():
         14: labs_tools,
         15: fuzzing_tools,
         16: identification_tools,
+        17: protection_tools,
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
