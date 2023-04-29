@@ -171,7 +171,10 @@ def tools_category():
     colors.dark_rose(
         " [19] REPORTING TOOLS                             [20] REVERSE ENGINEERING TOOLS"
     )
-    colors.light_blue(" [21] RESPONSE TOOLS                              [22] SNIFFING AND SPOOFING TOOLS")
+    colors.light_blue(
+        " [21] RESPONSE TOOLS                              [22] SNIFFING AND SPOOFING TOOLS"
+    )
+    colors.dark_green(" [23] VOICE OVER IP TOOLS OR [ VOIP TOOLS]")
 
 
 tools_category()
@@ -3458,6 +3461,107 @@ class SniffingSpoofing:
         sniffing_spoofing_tools()
 
 
+# Voice over ip tools
+class Voip:
+    def wireshark():
+        os.system("sudo apt install -y wireshark")
+        voip_tools()
+
+    def sipp():
+        os.system("sudo apt install -y sipp")
+        voip_tools()
+
+    def sctpscan():
+        os.system("sudo apt install -y sctpscan")
+        voip_tools()
+
+    def rtpflood():
+        os.system("sudo apt install -y rtpflood")
+        voip_tools()
+
+    def ohrwurm():
+        os.system("sudo apt install -y ohrwurm")
+        voip_tools()
+
+    def inviteflood():
+        os.system("sudo apt install -y inviteflood")
+        voip_tools()
+
+    def voiphopper():
+        os.system("sudo apt install -y voiphopper")
+        voip_tools()
+
+    def sipcrack():
+        os.system("sudo apt install -y sipcrack")
+        voip_tools()
+
+    def rtpmixsound():
+        os.system("sudo apt install -y rtpmixsound")
+        voip_tools()
+
+    def rtpbreak():
+        os.system("sudo apt install -y rtpbreak")
+        voip_tools()
+
+    def nmap():
+        os.system("sudo apt install -y nmap")
+        voip_tools()
+
+    def iaxflood():
+        os.system("sudo apt install -y iaxflood")
+        voip_tools()
+
+    def sipvicious():
+        os.system("sudo apt install -y sipvicious")
+        voip_tools()
+
+    def siparmyknife():
+        os.system("sudo apt install -y siparmyknife")
+        voip_tools()
+
+    def rtpinsertsound():
+        os.system("sudo apt install -y rtpinsertsound")
+        voip_tools()
+
+    def protos_sip():
+        os.system("sudo apt install -y protos-sip")
+        voip_tools()
+
+    def libfindrtp():
+        os.system("sudo apt install -y libfindrtp")
+        voip_tools()
+
+    def enumiax():
+        os.system("sudo apt install -y enumiax")
+        voip_tools()
+
+    # Voice over ip tools loop install function
+    def voip_tools():
+        tools = [
+            "enumiax",
+            "iaxflood",
+            "inviteflood",
+            "libfindrtp",
+            "nmap",
+            "ohrwurm",
+            "protos-sip",
+            "rtpbreak",
+            "rtpflood",
+            "rtpinsertsound",
+            "rtpmixsound",
+            "sctpscan",
+            "siparmyknife",
+            "sipcrack",
+            "sipp",
+            "sipvicious",
+            "voiphopper",
+            "wireshark",
+        ]
+        for tool in tools:
+            os.system(f"sudo apt install -y {tool}")
+        voip_tools()
+
+
 # Kali_top 10 tools call function
 def kali_top10_tools():
     colors.red("\n             KALI TOP 10 TOOLS ")
@@ -4697,6 +4801,54 @@ def sniffing_spoofing_tools():
         Operators.case_default()
 
 
+# Voice over ip tools
+def voip_tools():
+    colors.red("\n              VOICE OVER IP TOOLS ")
+    colors.light_blue(" \n       [1]  Nmap         [2]   Sipp   ")
+    colors.light_blue("       [3]  Enumiax      [4]   Rtpbreak   ")
+    colors.light_blue("       [5]  Rtpflood     [6]   Protos-sip  ")
+    colors.light_blue("       [7]  Iaxflood     [8]   Wireshark    ")
+    colors.light_blue("       [9]  Sipcrack     [10]  Inviteflood   ")
+    colors.light_blue("       [11] Sctpscan     [12]  Voiphopper    ")
+    colors.light_blue("       [13] Ohrwurm      [14]  Rtpmixsound")
+    colors.light_blue("       [15] Sipvicious   [16]  Siparmyknife")
+    colors.light_blue("       [17] Libfindrtp   [18]  Rtpinsertsound ")
+    colors.light_blue("       [19] All          [20]  Back ")
+    colors.light_blue("       [21] Exit  ")
+
+    colors.rose("\nEnter The Tool Number To  install ??")
+    choice = input(colr().hex("#ff0066", "> ", rgb_mode=True))
+
+    switch = {
+        1: Voip.nmap,
+        2: Voip.sipp,
+        3: Voip.enumiax,
+        4: Voip.rtpbreak,
+        5: Voip.rtpflood,
+        6: Voip.protos_sip,
+        7: Voip.iaxflood,
+        8: Voip.wireshark,
+        9: Voip.sipcrack,
+        10: Voip.inviteflood,
+        11: Voip.sctpscan,
+        12: Voip.voiphopper,
+        13: Voip.ohrwurm,
+        14: Voip.rtpmixsound,
+        15: Voip.sipvicious,
+        16: Voip.siparmyknife,
+        17: Voip.libfindrtp,
+        18: Voip.rtpinsertsound,
+        19: Voip.voip_tools,
+        20: Operators.back,
+        21: Operators.exit,
+    }
+    try:
+        switch_case = switch.get(int(choice), Operators.case_default)
+        switch_case()
+    except ValueError:
+        Operators.case_default()
+
+
 # Main Entry Choices ?
 def choices():
     colors.red("\n Enter which one to install ??")
@@ -4723,7 +4875,8 @@ def choices():
         19: reporting_tools,
         20: reverse_engineering_tools,
         21: response_tools,
-        22:sniffing_spoofing_tools
+        22: sniffing_spoofing_tools,
+        23: voip_tools,
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
