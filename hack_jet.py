@@ -174,7 +174,9 @@ def tools_category():
     colors.light_blue(
         " [21] RESPONSE TOOLS                              [22] SNIFFING AND SPOOFING TOOLS"
     )
-    colors.dark_green(" [23] VOICE OVER IP TOOLS OR [ VOIP TOOLS]")
+    colors.dark_green(
+        " [23] VOICE OVER IP TOOLS OR [ VOIP TOOLS]        [24] WINDOWS RESOURCES TOOLS"
+    )
 
 
 tools_category()
@@ -3562,6 +3564,98 @@ class Voip:
         voip_tools()
 
 
+# Windows resources tools
+class WindowsResources:
+    def dbd():
+        os.system("sudo apt install -y dbd")
+        windows_resources()
+
+    def hyperion():
+        os.system("sudo apt install -y hyperion")
+        windows_resources()
+
+    def ollydbg():
+        os.system("sudo apt install -y ollydbg")
+        windows_resources()
+
+    def sbd():
+        os.system("sudo apt install -y sbd")
+        windows_resources()
+
+    def tftpd32():
+        os.system("sudo apt install -y tftpd32")
+        windows_resources()
+
+    def windows_privesc_check():
+        os.system("sudo apt install -y windows-privesc-check")
+        windows_resources()
+
+    def dnschef():
+        os.system("sudo apt install -y dnschef")
+        windows_resources()
+
+    def mimikatz():
+        os.system("sudo apt install -y mimikatz")
+        windows_resources()
+
+    def powercat():
+        os.system("sudo apt install -y powercat")
+        windows_resources()
+
+    def secure_socket_funneling_windows_binaries():
+        os.system("sudo apt install -y secure-socket-funneling-windows-binaries")
+        windows_resources()
+
+    def wce():
+        os.system("sudo apt install -y wce")
+        windows_resources()
+
+    def heartleech():
+        os.system("sudo apt install -y heartleech")
+        windows_resources()
+
+    def ncat_w32():
+        os.system("sudo apt install -y ncat-w32")
+        windows_resources()
+
+    def regripper():
+        os.system("sudo apt install -y regripper")
+        windows_resources()
+
+    def shellter():
+        os.system("sudo apt install -y shellter")
+        windows_resources()
+
+    def windows_binaries():
+        os.system("sudo apt install -y windows-binaries")
+        windows_resources()
+
+    # Windows resources tool loop install function
+    def windows_resources_tools():
+        tools = [
+            "dbd",
+            "dnschef",
+            "heartleech",
+            "hyperion",
+            "mimikatz",
+            "ncat-w32",
+            "ollydbg",
+            "powercat",
+            "regripper",
+            "sbd",
+            "secure-socket-funneling-windows-binaries",
+            "shellter",
+            "tftpd32",
+            "wce",
+            "windows-binaries",
+            "windows-privesc-check",
+        ]
+
+        for tool in tools:
+            os.system(f"sudo apt install -y {tool}")
+        windows_resources()
+
+
 # Kali_top 10 tools call function
 def kali_top10_tools():
     colors.red("\n             KALI TOP 10 TOOLS ")
@@ -4849,6 +4943,53 @@ def voip_tools():
         Operators.case_default()
 
 
+# Windows resources tools
+def windows_resources():
+    colors.red("\n                WINDOWS RESOURCES ")
+    colors.violet(" \n       [1]  Dbd                [2]  Sbd   ")
+    colors.violet("       [3]  Wce                [4]  Ollydbg    ")
+    colors.violet("       [5]  Shellter           [6]  Tftpd32   ")
+    colors.violet("       [7]  Powercat           [8]  Dnschef     ")
+    colors.violet("       [9]  Ncat-w32           [10] Mimikatz    ")
+    colors.violet("       [11] Regripper          [12] Hyperion    ")
+    colors.violet("       [13] Heartleech         [14] Windows-privesc-check ")
+    colors.violet(
+        "       [15] Windows-binaries   [16] Secure-socket-funneling-windows-binaries "
+    )
+    colors.violet("       [17] All                [18] Back ")
+    colors.violet("       [19] Exit  ")
+
+    colors.light_gnome("\nEnter The Tool Number To  install ??")
+    choice = input(colr().hex("#2ed1b4", "> ", rgb_mode=True))
+
+    switch = {
+        1: WindowsResources.dbd,
+        2: WindowsResources.sbd,
+        3: WindowsResources.wce,
+        4: WindowsResources.ollydbg,
+        5: WindowsResources.shellter,
+        6: WindowsResources.tftpd32,
+        7: WindowsResources.powercat,
+        8: WindowsResources.dnschef,
+        9: WindowsResources.ncat_w32,
+        10: WindowsResources.mimikatz,
+        11: WindowsResources.regripper,
+        12: WindowsResources.hyperion,
+        13: WindowsResources.heartleech,
+        14: WindowsResources.windows_privesc_check,
+        15: WindowsResources.windows_binaries,
+        16: WindowsResources.secure_socket_funneling_windows_binaries,
+        17: WindowsResources.windows_resources_tools,
+        18: Operators.back,
+        19: Operators.exit,
+    }
+    try:
+        switch_case = switch.get(int(choice), Operators.case_default)
+        switch_case()
+    except ValueError:
+        Operators.case_default()
+
+
 # Main Entry Choices ?
 def choices():
     colors.red("\n Enter which one to install ??")
@@ -4877,6 +5018,7 @@ def choices():
         21: response_tools,
         22: sniffing_spoofing_tools,
         23: voip_tools,
+        24: windows_resources,
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
