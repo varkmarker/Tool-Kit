@@ -4,7 +4,7 @@ from colr import Colr as colr
 
 
 # Color's functions
-class colors:
+class Colors:
     def red(data):
         print(colr().hex("#ff0000", data, rgb_mode=True))
 
@@ -62,28 +62,25 @@ class colors:
     def light_blue(data):
         print(colr().hex("#6666ff", data, rgb_mode=True))
 
-
 # Main Banner
 
 print(
-    colr().hex(
-        "#ff0000",
-        """\n 
-     __    __   ______    ______   __    __           _____  ________  ________ 
-    /  |  /  | /      \  /      \ /  |  /  |         /     |/        |/        |
-    $$ |  $$ |/$$$$$$  |/$$$$$$  |$$ | /$$/          $$$$$ |$$$$$$$$/ $$$$$$$$/ 
-    $$ |__$$ |$$ |__$$ |$$ |  $$/ $$ |/$$/              $$ |$$ |__       $$ |   
-    $$    $$ |$$    $$ |$$ |      $$  $$<          __   $$ |$$    |      $$ |   
-    $$$$$$$$ |$$$$$$$$ |$$ |   __ $$$$$  \        /  |  $$ |$$$$$/       $$ |   
-    $$ |  $$ |$$ |  $$ |$$ \__/  |$$ |$$  \       $$ \__$$ |$$ |_____    $$ |   
-    $$ |  $$ |$$ |  $$ |$$    $$/ $$ | $$  |      $$    $$/ $$       |   $$ |   
-    $$/   $$/ $$/   $$/  $$$$$$/  $$/   $$/        $$$$$$/  $$$$$$$$/    $$/    
-                                                                                
+        
+    colr().hex("#00ccff","""\n     __    __   ______    ______   __    __ """),colr().hex("#ff0000","""          _____  ________  ________ """),
+    colr().hex("#00ccff","""\n    /  |  /  | /      \  /      \ /  |  /  |"""),colr().hex("#ff0000","""         /     |/        |/        |"""),
+    colr().hex("#00ccff","""\n    $$ |  $$ |/$$$$$$  |/$$$$$$  |$$ | /$$/ """),colr().hex("#ff0000","""         $$$$$ |$$$$$$$$/ $$$$$$$$/ """),
+    colr().hex("#00ccff","""\n    $$ |__$$ |$$ |__$$ |$$ |  $$/ $$ |/$$/ """),colr().hex("#ff0000","""             $$ |$$ |__       $$ |  """), 
+    colr().hex("#00ccff","""\n    $$    $$ |$$    $$ |$$ |      $$  $$<  """),colr().hex("#ff0000","""        __   $$ |$$    |      $$ |   """),
+    colr().hex("#00ccff","""\n    $$$$$$$$ |$$$$$$$$ |$$ |   __ $$$$$  \ """),colr().hex("#ff0000","""       /  |  $$ |$$$$$/       $$ |  """), 
+    colr().hex("#00ccff","""\n    $$ |  $$ |$$ |  $$ |$$ \__/  |$$ |$$  \ """),colr().hex("#ff0000","""      $$ \__$$ |$$ |_____    $$ |  """), 
+    colr().hex("#00ccff","""\n    $$ |  $$ |$$ |  $$ |$$    $$/ $$ | $$  | """),colr().hex("#ff0000","""     $$    $$/ $$       |   $$ |  """), 
+    colr().hex("#00ccff","""\n    $$/   $$/ $$/   $$/  $$$$$$/  $$/   $$/ """),colr().hex("#ff0000","""       $$$$$$/  $$$$$$$$/    $$/   """), 
+                                                                                 
                                                                             
                                                                             
-""",
+
     )
-)
+
 
 # End Banner
 def the_end():
@@ -145,36 +142,36 @@ def the_end():
 
 # List of Category
 def tools_category():
-    colors.rose(
+    Colors.rose(
         " \n [1]  KALI TOP 10 TOOLS                           [2]  SOCIAL ENGINEERING TOOLS"
     )
-    colors.red(
+    Colors.red(
         " [3]  INFORMATION GATHERING TOOLS                 [4]  PASSWORDS CRACKING TOOLS"
     )
-    colors.green(
+    Colors.green(
         " [5]  FORENSICS TOOLS                             [6]  EXPLOITATION TOOLS"
     )
-    colors.violet(
+    Colors.violet(
         " [7]  VULNERABILITY TOOLS                         [8]  WEB APPLICATION TOOLS"
     )
-    colors.orange(
+    Colors.orange(
         " [9]  WIRELESS TOOLS                              [10] HARDWARE TOOLS"
     )
-    colors.blue(" [11] CRYPTOGRAPHY AND STEGANOGRAPHY TOOLS        [12] DATABASE TOOLS")
-    colors.yellow(" [13] DETECT TOOLS                                [14] LABS")
-    colors.cream(
+    Colors.blue(" [11] CRYPTOGRAPHY AND STEGANOGRAPHY TOOLS        [12] DATABASE TOOLS")
+    Colors.yellow(" [13] DETECT TOOLS                                [14] LABS")
+    Colors.cream(
         " [15] FUZZING TOOLS                               [16] IDENTIFICATION TOOLS"
     )
-    colors.gnome_green(
+    Colors.gnome_green(
         " [17] PROTECTION TOOLS                            [18] RECOVERY TOOLS"
     )
-    colors.dark_rose(
+    Colors.dark_rose(
         " [19] REPORTING TOOLS                             [20] REVERSE ENGINEERING TOOLS"
     )
-    colors.light_blue(
+    Colors.light_blue(
         " [21] RESPONSE TOOLS                              [22] SNIFFING AND SPOOFING TOOLS"
     )
-    colors.dark_green(
+    Colors.light_green(
         " [23] VOICE OVER IP TOOLS OR [ VOIP TOOLS]        [24] WINDOWS RESOURCES TOOLS"
     )
 
@@ -206,7 +203,7 @@ class Operators:
             ~~   ~~""",
             )
         )
-        colors.red("    ....Invalid option....")
+        Colors.red("    ....Invalid option....")
 
 
 # Kali top10 tools
@@ -3658,15 +3655,15 @@ class WindowsResources:
 
 # Kali_top 10 tools call function
 def kali_top10_tools():
-    colors.red("\n             KALI TOP 10 TOOLS ")
-    colors.green(" \n      [1]  Nmap        [2]  Aircrack-ng ")
-    colors.green("      [3]  John        [4]  Sqlmap ")
-    colors.green("      [5]  Hydra       [6]  Wireshark ")
-    colors.green("      [7]  Responder   [8]  Crackmapexec ")
-    colors.green("      [9]  Burpsuite   [10] Metasploit-framework  ")
-    colors.green("      [11] ALL         [12] Back ")
-    colors.green("      [13] Exit")
-    colors.gnome_green("\nEnter The Tool Number To  install ??")
+    Colors.red("\n             KALI TOP 10 TOOLS ")
+    Colors.green(" \n      [1]  Nmap        [2]  Aircrack-ng ")
+    Colors.green("      [3]  John        [4]  Sqlmap ")
+    Colors.green("      [5]  Hydra       [6]  Wireshark ")
+    Colors.green("      [7]  Responder   [8]  Crackmapexec ")
+    Colors.green("      [9]  Burpsuite   [10] Metasploit-framework  ")
+    Colors.green("      [11] ALL         [12] Back ")
+    Colors.green("      [13] Exit")
+    Colors.gnome_green("\nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#2ed1b4", "> ", rgb_mode=True))
 
     switch = {
@@ -3693,12 +3690,12 @@ def kali_top10_tools():
 
 # Social engineering tools call function
 def social_engineering_tools():
-    colors.red("\n        SOCIAL ENGINEERING TOOLS ")
-    colors.dark_orange(" \n    [1] Set                 [2] Veil ")
-    colors.dark_orange("    [3] Beef-xss            [4] Msfpc   ")
-    colors.dark_orange("    [5] Backdoor-factory    [6] All ")
-    colors.dark_orange("    [7] Back                [8] Exit ")
-    colors.gnome_green("\nEnter The Tool Number To  install ??")
+    Colors.red("\n        SOCIAL ENGINEERING TOOLS ")
+    Colors.dark_orange(" \n    [1] Set                 [2] Veil ")
+    Colors.dark_orange("    [3] Beef-xss            [4] Msfpc   ")
+    Colors.dark_orange("    [5] Backdoor-factory    [6] All ")
+    Colors.dark_orange("    [7] Back                [8] Exit ")
+    Colors.gnome_green("\nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#2ed1b4", "> ", rgb_mode=True))
 
     switch = {
@@ -3723,34 +3720,34 @@ def social_engineering_tools():
 
 # Information gathering call function
 def information_gathering_tools():
-    colors.red("\n          INFORMATION GATHERING TOOLS ")
-    colors.yellow_green(" \n       [1]  P0f              [2]   Lbd ")
-    colors.yellow_green("       [3]  Ncat             [4]   Swaks")
-    colors.yellow_green("       [5]  Braa             [6]   Twofi   ")
-    colors.yellow_green("       [7]  Nmap             [8]   Fping      ")
-    colors.yellow_green("       [9]  Sslh             [10]  Dnsmap   ")
-    colors.yellow_green("       [11] Irpas            [12]  Arping     ")
-    colors.yellow_green("       [13] 0trace           [14]  Dmitry      ")
-    colors.yellow_green("       [15] Fierce           [16]  Smbmap      ")
-    colors.yellow_green("       [17] Legion           [18]  Sslyze  ")
-    colors.yellow_green("       [19] Ssldump          [20]  Hping3   ")
-    colors.yellow_green("       [21] Dnsenum          [22]  Sslscan    ")
-    colors.yellow_green("       [23] Masscan          [24]  Dnswalk   ")
-    colors.yellow_green("       [25] Nbtscan          [26]  Wafw00f ")
-    colors.yellow_green("       [27] Maltego          [28]  Intrace")
-    colors.yellow_green("       [29] Netmask          [30]  Tlssled")
-    colors.yellow_green("       [31] Thc-ipv6         [32]  Ftester     ")
-    colors.yellow_green("       [33] Dnsrecon         [34]  Urlcrazy ")
-    colors.yellow_green("       [35] Dnstracer        [36]  Recon-ng ")
-    colors.yellow_green("       [37] Snmpcheck        [38]  Firewalk  ")
-    colors.yellow_green("       [39] Metagoofil       [40]  Ike-scan ")
-    colors.yellow_green("       [41] Enum4linux       [42]  Onesixtyone ")
-    colors.yellow_green("       [43] Fragrouter       [44]  Netdiscover")
-    colors.yellow_green("       [45] Qsslcaudit       [46]  Theharvester  ")
-    colors.yellow_green("       [47] Unicornscan      [48]  Smtp-user-enum  ")
-    colors.yellow_green("       [49] ALL              [50]  Back ")
-    colors.yellow_green("       [51] Exit")
-    colors.red("\nEnter The Tool Number To  install ??")
+    Colors.red("\n          INFORMATION GATHERING TOOLS ")
+    Colors.yellow_green(" \n       [1]  P0f              [2]   Lbd ")
+    Colors.yellow_green("       [3]  Ncat             [4]   Swaks")
+    Colors.yellow_green("       [5]  Braa             [6]   Twofi   ")
+    Colors.yellow_green("       [7]  Nmap             [8]   Fping      ")
+    Colors.yellow_green("       [9]  Sslh             [10]  Dnsmap   ")
+    Colors.yellow_green("       [11] Irpas            [12]  Arping     ")
+    Colors.yellow_green("       [13] 0trace           [14]  Dmitry      ")
+    Colors.yellow_green("       [15] Fierce           [16]  Smbmap      ")
+    Colors.yellow_green("       [17] Legion           [18]  Sslyze  ")
+    Colors.yellow_green("       [19] Ssldump          [20]  Hping3   ")
+    Colors.yellow_green("       [21] Dnsenum          [22]  Sslscan    ")
+    Colors.yellow_green("       [23] Masscan          [24]  Dnswalk   ")
+    Colors.yellow_green("       [25] Nbtscan          [26]  Wafw00f ")
+    Colors.yellow_green("       [27] Maltego          [28]  Intrace")
+    Colors.yellow_green("       [29] Netmask          [30]  Tlssled")
+    Colors.yellow_green("       [31] Thc-ipv6         [32]  Ftester     ")
+    Colors.yellow_green("       [33] Dnsrecon         [34]  Urlcrazy ")
+    Colors.yellow_green("       [35] Dnstracer        [36]  Recon-ng ")
+    Colors.yellow_green("       [37] Snmpcheck        [38]  Firewalk  ")
+    Colors.yellow_green("       [39] Metagoofil       [40]  Ike-scan ")
+    Colors.yellow_green("       [41] Enum4linux       [42]  Onesixtyone ")
+    Colors.yellow_green("       [43] Fragrouter       [44]  Netdiscover")
+    Colors.yellow_green("       [45] Qsslcaudit       [46]  Theharvester  ")
+    Colors.yellow_green("       [47] Unicornscan      [48]  Smtp-user-enum  ")
+    Colors.yellow_green("       [49] ALL              [50]  Back ")
+    Colors.yellow_green("       [51] Exit")
+    Colors.red("\nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#ff0000", "> ", rgb_mode=True))
 
     switch = {
@@ -3818,38 +3815,38 @@ def information_gathering_tools():
 
 # Passwords cracking tools call function
 def password_cracking_tools():
-    colors.red("\n          PASSWORDS CRACKING TOOLS")
-    colors.yellow_green("\n   [1]  Cewl                  [2]   John ")
-    colors.yellow_green("   [3]  Pack                  [4]   Hydra  ")
-    colors.yellow_green("   [5]  Smbmap                [6]   Pipal     ")
-    colors.yellow_green("   [7]  Ncrack                [8]   Twofi     ")
-    colors.yellow_green("   [9]  Chntpw                [10]  Medusa      ")
-    colors.yellow_green("   [11] Crunch                [12]  Crackle   ")
-    colors.yellow_green("   [13] Hashid                [14]  Sucrack    ")
-    colors.yellow_green("   [15] Johnny                [16]  Cmospwd    ")
-    colors.yellow_green("   [17] Polenum               [18]  Patator  ")
-    colors.yellow_green("   [19] Hashcat               [20]  Sqldict    ")
-    colors.yellow_green("   [21] Ophcrack              [22]  Rarcrack    ")
-    colors.yellow_green("   [23] rcracki-mt            [24]  Seclists  ")
-    colors.yellow_green("   [25] Gpp-decrypt           [26]  Samdump2 ")
-    colors.yellow_green("   [27] Onesixtyone           [28]  Pdfcrack  ")
-    colors.yellow_green("   [29] Freerdp2-x11          [30]  Sipcrack ")
-    colors.yellow_green("   [31] Rainbowcrack          [32]  Mimikatz    ")
-    colors.yellow_green("   [33] Ophcrack-cli          [34]  Rsmangler")
-    colors.yellow_green("   [35] Hashcat-utils         [36]  Creddump7")
+    Colors.red("\n          PASSWORDS CRACKING TOOLS")
+    Colors.yellow_green("\n   [1]  Cewl                  [2]   John ")
+    Colors.yellow_green("   [3]  Pack                  [4]   Hydra  ")
+    Colors.yellow_green("   [5]  Smbmap                [6]   Pipal     ")
+    Colors.yellow_green("   [7]  Ncrack                [8]   Twofi     ")
+    Colors.yellow_green("   [9]  Chntpw                [10]  Medusa      ")
+    Colors.yellow_green("   [11] Crunch                [12]  Crackle   ")
+    Colors.yellow_green("   [13] Hashid                [14]  Sucrack    ")
+    Colors.yellow_green("   [15] Johnny                [16]  Cmospwd    ")
+    Colors.yellow_green("   [17] Polenum               [18]  Patator  ")
+    Colors.yellow_green("   [19] Hashcat               [20]  Sqldict    ")
+    Colors.yellow_green("   [21] Ophcrack              [22]  Rarcrack    ")
+    Colors.yellow_green("   [23] rcracki-mt            [24]  Seclists  ")
+    Colors.yellow_green("   [25] Gpp-decrypt           [26]  Samdump2 ")
+    Colors.yellow_green("   [27] Onesixtyone           [28]  Pdfcrack  ")
+    Colors.yellow_green("   [29] Freerdp2-x11          [30]  Sipcrack ")
+    Colors.yellow_green("   [31] Rainbowcrack          [32]  Mimikatz    ")
+    Colors.yellow_green("   [33] Ophcrack-cli          [34]  Rsmangler")
+    Colors.yellow_green("   [35] Hashcat-utils         [36]  Creddump7")
     print(
         colr().hex("#7ed666", "   [37] Oclgausscrack"),
         colr().hex("#ff0000", "        [38]  Wordlists "),
     )
-    colors.yellow_green("   [39] Maskprocessor         [40]  Hydra-gtk")
-    colors.yellow_green("   [41] Statsprocessor        [42]  Truecrack  ")
-    colors.yellow_green("   [43] Thc-pptp-bruter       [44]  Fcrackzip ")
-    colors.yellow_green("   [45] Hash-identifier       [46]  Sipvicious")
-    colors.yellow_green("   [47] Passing-the-hash      [48]  Cisco-auditing-tool")
-    colors.yellow_green("   [49] ALL                   [50]  Back ")
-    colors.yellow_green("   [51] Exit")
+    Colors.yellow_green("   [39] Maskprocessor         [40]  Hydra-gtk")
+    Colors.yellow_green("   [41] Statsprocessor        [42]  Truecrack  ")
+    Colors.yellow_green("   [43] Thc-pptp-bruter       [44]  Fcrackzip ")
+    Colors.yellow_green("   [45] Hash-identifier       [46]  Sipvicious")
+    Colors.yellow_green("   [47] Passing-the-hash      [48]  Cisco-auditing-tool")
+    Colors.yellow_green("   [49] ALL                   [50]  Back ")
+    Colors.yellow_green("   [51] Exit")
 
-    colors.gnome_green("\nEnter The Tool Number To  install ??")
+    Colors.gnome_green("\nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#2ed1b4", "> ", rgb_mode=True))
 
     switch = {
@@ -3914,59 +3911,59 @@ def password_cracking_tools():
 
 # Forensics tools call function
 def forensics_tools():
-    colors.orange("\n               FORENSICS TOOLS")
-    colors.yellow(" \n    [1]   Pev                       [2]   Wce")
-    colors.yellow("    [3]   Nasm                      [4]   Gdb  ")
-    colors.yellow("    [5]   Plaso                     [6]   Lvm2 ")
-    colors.yellow("    [7]   Gpart                     [8]   Yara ")
-    colors.yellow("    [9]   Exiv2                     [10]  Lynis")
-    colors.yellow("    [11]  Undbx                     [12]  Unrar  ")
-    colors.yellow("    [13]  Dc3dd                     [14]  Jadx ")
-    colors.yellow("    [15]  Pasco                     [16]  Nasty ")
-    colors.yellow("    [17]  Parted                    [18]  Pdfid ")
-    colors.yellow("    [19]  Xplico                    [20]  Dcfldd")
-    colors.yellow("    [21]  Unhide                    [22]  Ssdeep ")
-    colors.yellow("    [23]  Xmount                    [24]  binwalk ")
-    colors.yellow("    [25]  Tcpdump                   [26]  Ollydbg ")
-    colors.yellow("    [27]  Gparted                   [28]  Metacam ")
-    colors.yellow("    [29]  Inetsim                   [30]  Md5deep")
-    colors.yellow("    [31]  Autopsy                   [32]  Polenum ")
-    colors.yellow("    [33]  Inetsim                   [34]  Scalpel ")
-    colors.yellow("    [35]  Rifiuti                   [36]  Foremost")
-    colors.yellow("    [37]  Memdump                   [38]  Guymager")
-    colors.yellow("    [39]  Apktool                   [40]  Rephrase ")
-    colors.yellow("    [41]  Galleta                   [42]  Ddrescue ")
-    colors.yellow("    [43]  Vinetto                   [44]  Mdbtools ")
-    colors.yellow("    [45]  Upx-ucl                   [46]  Hashdeep ")
-    colors.yellow("    [47]  Radare2                   [48]  Rkhunter")
-    colors.yellow("    [49]  Tcpflow                   [50]  Winregfs")
-    colors.yellow("    [51]  Grokevt                   [52]  Ext3grep ")
-    colors.yellow("    [53]  Samdump2                  [54]  Myrescue ")
-    colors.yellow("    [55]  Rifiuti2                  [56]  Ewf-tools")
-    colors.yellow("    [57]  Safecopy                  [58]  Ext4magic")
-    colors.yellow("    [59]  Reglookup                 [60]  Recoverdm")
-    colors.yellow("    [61]  Sleuthkit                 [62]  Tcpreplay")
-    colors.yellow("    [63]  Regripper                 [64]  Exifprobe ")
-    colors.yellow("    [65]  Dumpzilla                 [66]  Truecrack")
-    colors.yellow("    [67]  Javasnoop                 [68]  Pst-utils ")
-    colors.yellow("    [69]  Wireshark                 [70]  Fcrackzip  ")
-    colors.yellow("    [71]  Cabextract                [72]  Creddump7  ")
-    colors.yellow("    [73]  Mac-robber                [74]  Pdf-parser  ")
-    colors.yellow("    [75]  Extundelete               [76]  Chkrootkit")
-    colors.yellow("    [77]  Magicrescue               [78]  Rsakeyfind  ")
-    colors.yellow("    [79]  Afflib-tools              [80]  P7zip-full ")
-    colors.yellow("    [81]  Rizin-cutter              [82]  Recoverjpeg")
-    colors.yellow("    [83]  Edb-debugger              [84]  Missidentify")
-    colors.yellow("    [85]  Python3-dfvfs             [86]  Libhivex-bin")
-    colors.yellow("    [87]  Sqlitebrowser             [88]  Libsmali-java")
-    colors.yellow("    [89]  Bulk-extractor            [90]  Scrounge-ntfs")
-    colors.yellow("    [91]  Lime-forensics            [92]  Firmware-mod-kit ")
-    colors.yellow("    [93]  Bytecode-viewer           [94]  Python3-distorm3")
-    colors.yellow("    [95]  Python3-dfwinreg          [96]  Forensics-colorize")
-    colors.yellow("    [97]  Python3-capstone          [98]  Forensic-artifacts")
-    colors.yellow("    [99]  Python3-dfdatetime        [100] All")
-    colors.yellow("    [101] Back                      [102] Exit")
-    colors.orange("\nEnter The Tool Number To  install ??")
+    Colors.orange("\n               FORENSICS TOOLS")
+    Colors.yellow(" \n    [1]   Pev                       [2]   Wce")
+    Colors.yellow("    [3]   Nasm                      [4]   Gdb  ")
+    Colors.yellow("    [5]   Plaso                     [6]   Lvm2 ")
+    Colors.yellow("    [7]   Gpart                     [8]   Yara ")
+    Colors.yellow("    [9]   Exiv2                     [10]  Lynis")
+    Colors.yellow("    [11]  Undbx                     [12]  Unrar  ")
+    Colors.yellow("    [13]  Dc3dd                     [14]  Jadx ")
+    Colors.yellow("    [15]  Pasco                     [16]  Nasty ")
+    Colors.yellow("    [17]  Parted                    [18]  Pdfid ")
+    Colors.yellow("    [19]  Xplico                    [20]  Dcfldd")
+    Colors.yellow("    [21]  Unhide                    [22]  Ssdeep ")
+    Colors.yellow("    [23]  Xmount                    [24]  binwalk ")
+    Colors.yellow("    [25]  Tcpdump                   [26]  Ollydbg ")
+    Colors.yellow("    [27]  Gparted                   [28]  Metacam ")
+    Colors.yellow("    [29]  Inetsim                   [30]  Md5deep")
+    Colors.yellow("    [31]  Autopsy                   [32]  Polenum ")
+    Colors.yellow("    [33]  Inetsim                   [34]  Scalpel ")
+    Colors.yellow("    [35]  Rifiuti                   [36]  Foremost")
+    Colors.yellow("    [37]  Memdump                   [38]  Guymager")
+    Colors.yellow("    [39]  Apktool                   [40]  Rephrase ")
+    Colors.yellow("    [41]  Galleta                   [42]  Ddrescue ")
+    Colors.yellow("    [43]  Vinetto                   [44]  Mdbtools ")
+    Colors.yellow("    [45]  Upx-ucl                   [46]  Hashdeep ")
+    Colors.yellow("    [47]  Radare2                   [48]  Rkhunter")
+    Colors.yellow("    [49]  Tcpflow                   [50]  Winregfs")
+    Colors.yellow("    [51]  Grokevt                   [52]  Ext3grep ")
+    Colors.yellow("    [53]  Samdump2                  [54]  Myrescue ")
+    Colors.yellow("    [55]  Rifiuti2                  [56]  Ewf-tools")
+    Colors.yellow("    [57]  Safecopy                  [58]  Ext4magic")
+    Colors.yellow("    [59]  Reglookup                 [60]  Recoverdm")
+    Colors.yellow("    [61]  Sleuthkit                 [62]  Tcpreplay")
+    Colors.yellow("    [63]  Regripper                 [64]  Exifprobe ")
+    Colors.yellow("    [65]  Dumpzilla                 [66]  Truecrack")
+    Colors.yellow("    [67]  Javasnoop                 [68]  Pst-utils ")
+    Colors.yellow("    [69]  Wireshark                 [70]  Fcrackzip  ")
+    Colors.yellow("    [71]  Cabextract                [72]  Creddump7  ")
+    Colors.yellow("    [73]  Mac-robber                [74]  Pdf-parser  ")
+    Colors.yellow("    [75]  Extundelete               [76]  Chkrootkit")
+    Colors.yellow("    [77]  Magicrescue               [78]  Rsakeyfind  ")
+    Colors.yellow("    [79]  Afflib-tools              [80]  P7zip-full ")
+    Colors.yellow("    [81]  Rizin-cutter              [82]  Recoverjpeg")
+    Colors.yellow("    [83]  Edb-debugger              [84]  Missidentify")
+    Colors.yellow("    [85]  Python3-dfvfs             [86]  Libhivex-bin")
+    Colors.yellow("    [87]  Sqlitebrowser             [88]  Libsmali-java")
+    Colors.yellow("    [89]  Bulk-extractor            [90]  Scrounge-ntfs")
+    Colors.yellow("    [91]  Lime-forensics            [92]  Firmware-mod-kit ")
+    Colors.yellow("    [93]  Bytecode-viewer           [94]  Python3-distorm3")
+    Colors.yellow("    [95]  Python3-dfwinreg          [96]  Forensics-colorize")
+    Colors.yellow("    [97]  Python3-capstone          [98]  Forensic-artifacts")
+    Colors.yellow("    [99]  Python3-dfdatetime        [100] All")
+    Colors.yellow("    [101] Back                      [102] Exit")
+    Colors.orange("\nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#ff8e35", "> ", rgb_mode=True))
 
     switch = {
@@ -4085,14 +4082,14 @@ def forensics_tools():
 
 # Exploitation tool call function
 def exploitation_tools():
-    colors.red("\n                EXPLOITATION TOOLS ")
-    colors.violet("\n     [1]  Set                   [2]  Msfpc")
-    colors.violet("     [3]  Sqlmap                [4]  Armitage ")
-    colors.violet("     [5]  Beef-xss              [6]  Exploitdb")
-    colors.violet("     [7]  Termineter            [8]  Shellnoob")
-    colors.violet("     [9]  Metasploit-framework  [10] All")
-    colors.violet("     [11] Back                  [12] Exit")
-    colors.dark_orange("\nEnter The Tool Number To  install ??")
+    Colors.red("\n                EXPLOITATION TOOLS ")
+    Colors.violet("\n     [1]  Set                   [2]  Msfpc")
+    Colors.violet("     [3]  Sqlmap                [4]  Armitage ")
+    Colors.violet("     [5]  Beef-xss              [6]  Exploitdb")
+    Colors.violet("     [7]  Termineter            [8]  Shellnoob")
+    Colors.violet("     [9]  Metasploit-framework  [10] All")
+    Colors.violet("     [11] Back                  [12] Exit")
+    Colors.dark_orange("\nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#cf301b", "> ", rgb_mode=True))
 
     switch = {
@@ -4118,31 +4115,31 @@ def exploitation_tools():
 
 # Vulnerability tools call function
 def vulnerability_tools():
-    colors.red("\n                    VULNERABILITY TOOLS ")
-    colors.light_green(" \n       [1]  T50                          [2]   Gvm  ")
-    colors.light_green("       [3]  Sfuzz                        [4]   Bed ")
-    colors.light_green("       [5]  Sipsak                       [6]   Nikto")
-    colors.light_green("       [7]  Legion                       [8]   Afl++    ")
-    colors.light_green("       [9]  Dhcpig                       [10]  Nmap  ")
-    colors.light_green("       [11] Iaxflood                     [12]  Sipp    ")
-    colors.light_green("       [13] Rtpbreak                     [14]  Spike  ")
-    colors.light_green("       [15] Sctpscan                     [16]  Siege")
-    colors.light_green("       [17] Voiphopper                   [18]  Peass  ")
-    colors.light_green("       [19] Sipvicious                   [20]  Lynis")
-    colors.light_green("       [21] Cisco-torch                  [22]  Enumiax  ")
-    colors.light_green("       [23] Thc-ssl-dos                  [24]  Ohrwurm")
-    colors.light_green("       [25] Inviteflood                  [26]  Yersinia ")
-    colors.light_green("       [27] Rtpmixsound                  [28]  Rtpflood  ")
-    colors.light_green("       [29] Siparmyknife                 [30]  Cisco-ocs ")
-    colors.light_green("       [31] Slowhttptest                 [32]  Protos-sip  ")
-    colors.light_green("       [33] Unix-privesc-check           [34]  Rtpinsertsound")
-    colors.light_green(
+    Colors.red("\n                    VULNERABILITY TOOLS ")
+    Colors.light_green(" \n       [1]  T50                          [2]   Gvm  ")
+    Colors.light_green("       [3]  Sfuzz                        [4]   Bed ")
+    Colors.light_green("       [5]  Sipsak                       [6]   Nikto")
+    Colors.light_green("       [7]  Legion                       [8]   Afl++    ")
+    Colors.light_green("       [9]  Dhcpig                       [10]  Nmap  ")
+    Colors.light_green("       [11] Iaxflood                     [12]  Sipp    ")
+    Colors.light_green("       [13] Rtpbreak                     [14]  Spike  ")
+    Colors.light_green("       [15] Sctpscan                     [16]  Siege")
+    Colors.light_green("       [17] Voiphopper                   [18]  Peass  ")
+    Colors.light_green("       [19] Sipvicious                   [20]  Lynis")
+    Colors.light_green("       [21] Cisco-torch                  [22]  Enumiax  ")
+    Colors.light_green("       [23] Thc-ssl-dos                  [24]  Ohrwurm")
+    Colors.light_green("       [25] Inviteflood                  [26]  Yersinia ")
+    Colors.light_green("       [27] Rtpmixsound                  [28]  Rtpflood  ")
+    Colors.light_green("       [29] Siparmyknife                 [30]  Cisco-ocs ")
+    Colors.light_green("       [31] Slowhttptest                 [32]  Protos-sip  ")
+    Colors.light_green("       [33] Unix-privesc-check           [34]  Rtpinsertsound")
+    Colors.light_green(
         "       [35] Cisco-auditing-tool          [36]  Copy-router-config"
     )
-    colors.light_green("       [37] cisco-global-exploiter       [38]  ALL ")
-    colors.light_green("       [39] Back                         [40]  Exit  ")
+    Colors.light_green("       [37] cisco-global-exploiter       [38]  ALL ")
+    Colors.light_green("       [39] Back                         [40]  Exit  ")
 
-    colors.red("\nEnter The Tool Number To  install ??")
+    Colors.red("\nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#ff0000", "> ", rgb_mode=True))
 
     switch = {
@@ -4196,51 +4193,51 @@ def vulnerability_tools():
 
 # Web application tools call function
 def web_application_tools():
-    colors.red("\n                  WEB APPLICATION TOOLS ")
-    colors.orange(" \n      [1]  lbd                        [2]   php      ")
-    colors.orange("      [3]  nmap                       [4]   dirb ")
-    colors.orange("      [5]  paros                      [6]   sslh  ")
-    colors.orange("      [7]  wfuzz                      [8]   nikto     ")
-    colors.orange("      [9]  hydra                      [10]  siege   ")
-    colors.orange("      [11] xsser                      [12]  wapiti     ")
-    colors.orange("      [13] medusa                     [14]  wpscan ")
-    colors.orange("      [15] commix                     [16]  sslyze ")
-    colors.orange("      [17] ncrack                     [18]  sqlmap   ")
-    colors.orange("      [19] cadaver                    [20]  sqlsus")
-    colors.orange("      [21] maltego                    [22]  watobo   ")
-    colors.orange("      [23] ftester                    [24]  patator  ")
-    colors.orange("      [25] plecost                    [26]  tlssled")
-    colors.orange("      [27] nishang                    [28]  sqldict")
-    colors.orange("      [29] webacoo                    [30]  davtest")
-    colors.orange("      [31] uniscan                    [32]  ssldump ")
-    colors.orange("      [33] sslscan                    [34]  wafw00f ")
-    colors.orange("      [35] cutycapt                   [36]  weevely")
-    colors.orange("      [37] httprint                   [38]  whatweb ")
-    colors.orange("      [39] beef-xss                   [40]  httrack ")
-    colors.orange("      [41] stunnel4                   [42]  zaproxy ")
-    colors.orange("      [43] sqlninja                   [44]  apache2 ")
-    colors.orange("      [45] redsocks                   [46]  skipfish  ")
-    colors.orange("      [47] gobuster                   [48]  sslsplit")
-    colors.orange("      [49] oscanner                   [50]  sslsniff")
-    colors.orange("      [51] dirbuster                  [52]  laudanum ")
-    colors.orange("      [53] webshells                  [54]  joomscan ")
-    colors.orange("      [55] dotdotpwn                  [56]  hakrawler ")
-    colors.orange("      [57] padbuster                  [58]  php-mysql")
-    colors.orange("      [59] burpsuite                  [60]  wireshark  ")
-    colors.orange("      [61] hydra-gtk                  [62]  tnscmd10g")
-    colors.orange("      [63] mitmproxy                  [64]  webscarab")
-    colors.orange("      [65] eyewitness                 [66]  sidguesser")
-    colors.orange("      [67] heartleech                 [68]  qsslcaudit")
-    colors.orange("      [69] slowhttptest               [70]  proxytunnel ")
-    colors.orange("      [71] apache-users               [72]  thc-ssl-dos ")
-    colors.orange("      [73] jboss-autopwn              [74]  proxychains4")
-    colors.orange("      [75] jsql-injection             [76]  sqlitebrowser ")
-    colors.orange("      [77] ferret-sidejack            [78]  owasp-mantra-ff ")
-    colors.orange("      [79] default-mysql-server       [80]  hamster-sidejack")
-    colors.orange("      [81] All                        [82]  Back ")
-    colors.orange("      [83] Exit    ")
+    Colors.red("\n                  WEB APPLICATION TOOLS ")
+    Colors.orange(" \n      [1]  lbd                        [2]   php      ")
+    Colors.orange("      [3]  nmap                       [4]   dirb ")
+    Colors.orange("      [5]  paros                      [6]   sslh  ")
+    Colors.orange("      [7]  wfuzz                      [8]   nikto     ")
+    Colors.orange("      [9]  hydra                      [10]  siege   ")
+    Colors.orange("      [11] xsser                      [12]  wapiti     ")
+    Colors.orange("      [13] medusa                     [14]  wpscan ")
+    Colors.orange("      [15] commix                     [16]  sslyze ")
+    Colors.orange("      [17] ncrack                     [18]  sqlmap   ")
+    Colors.orange("      [19] cadaver                    [20]  sqlsus")
+    Colors.orange("      [21] maltego                    [22]  watobo   ")
+    Colors.orange("      [23] ftester                    [24]  patator  ")
+    Colors.orange("      [25] plecost                    [26]  tlssled")
+    Colors.orange("      [27] nishang                    [28]  sqldict")
+    Colors.orange("      [29] webacoo                    [30]  davtest")
+    Colors.orange("      [31] uniscan                    [32]  ssldump ")
+    Colors.orange("      [33] sslscan                    [34]  wafw00f ")
+    Colors.orange("      [35] cutycapt                   [36]  weevely")
+    Colors.orange("      [37] httprint                   [38]  whatweb ")
+    Colors.orange("      [39] beef-xss                   [40]  httrack ")
+    Colors.orange("      [41] stunnel4                   [42]  zaproxy ")
+    Colors.orange("      [43] sqlninja                   [44]  apache2 ")
+    Colors.orange("      [45] redsocks                   [46]  skipfish  ")
+    Colors.orange("      [47] gobuster                   [48]  sslsplit")
+    Colors.orange("      [49] oscanner                   [50]  sslsniff")
+    Colors.orange("      [51] dirbuster                  [52]  laudanum ")
+    Colors.orange("      [53] webshells                  [54]  joomscan ")
+    Colors.orange("      [55] dotdotpwn                  [56]  hakrawler ")
+    Colors.orange("      [57] padbuster                  [58]  php-mysql")
+    Colors.orange("      [59] burpsuite                  [60]  wireshark  ")
+    Colors.orange("      [61] hydra-gtk                  [62]  tnscmd10g")
+    Colors.orange("      [63] mitmproxy                  [64]  webscarab")
+    Colors.orange("      [65] eyewitness                 [66]  sidguesser")
+    Colors.orange("      [67] heartleech                 [68]  qsslcaudit")
+    Colors.orange("      [69] slowhttptest               [70]  proxytunnel ")
+    Colors.orange("      [71] apache-users               [72]  thc-ssl-dos ")
+    Colors.orange("      [73] jboss-autopwn              [74]  proxychains4")
+    Colors.orange("      [75] jsql-injection             [76]  sqlitebrowser ")
+    Colors.orange("      [77] ferret-sidejack            [78]  owasp-mantra-ff ")
+    Colors.orange("      [79] default-mysql-server       [80]  hamster-sidejack")
+    Colors.orange("      [81] All                        [82]  Back ")
+    Colors.orange("      [83] Exit    ")
 
-    colors.light_green("\nEnter The Tool Number To  install ??")
+    Colors.light_green("\nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#21ff00", "> ", rgb_mode=True))
 
     switch = {
@@ -4337,7 +4334,7 @@ def web_application_tools():
 
 # Wireless tool call function
 def wireless_tools():
-    colors.red(" \n \n                                 WIRELESS TOOLS")
+    Colors.red(" \n \n                                 WIRELESS TOOLS")
     # Wifi and Bluetooth tools
     print(
         colr().hex("#0000ff", " \n              WIFI TOOLS"),
@@ -4405,7 +4402,7 @@ def wireless_tools():
     print(colr().hex("#00ffff", "    [58] Sakis3g         [59] Spectools"))
     print(colr().hex("#00ffff", "    [60] All             [61] Back"))
     print(colr().hex("#00ffff", "    [62] Exit"))
-    colors.red("\nEnter The Tool Number To  install ??")
+    Colors.red("\nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#ff0000", "> ", rgb_mode=True))
 
     switch = {
@@ -4481,15 +4478,15 @@ def wireless_tools():
 
 # Hardware tool call function
 def hardware_tools():
-    colors.red("\n                HARDWARE TOOLS")
-    colors.rose("\n       [1]  Binwalk         [2]  Cutecom")
-    colors.rose("       [3]  Radare2         [4]  Minicom")
-    colors.rose("       [5]  Flashrom        [6]  Openocd")
-    colors.rose("       [7]  Qemu-user       [8]  Qemu-system-x86  ")
-    colors.rose("       [9]  Rizin-cutter    [10] All")
-    colors.rose("       [11] Back            [12] Exit")
+    Colors.red("\n                HARDWARE TOOLS")
+    Colors.rose("\n       [1]  Binwalk         [2]  Cutecom")
+    Colors.rose("       [3]  Radare2         [4]  Minicom")
+    Colors.rose("       [5]  Flashrom        [6]  Openocd")
+    Colors.rose("       [7]  Qemu-user       [8]  Qemu-system-x86  ")
+    Colors.rose("       [9]  Rizin-cutter    [10] All")
+    Colors.rose("       [11] Back            [12] Exit")
 
-    colors.dark_orange("\nEnter which one to install ??")
+    Colors.dark_orange("\nEnter which one to install ??")
     choice = input(colr().hex("#cf301b", "> ", rgb_mode=True))
     switch = {
         1: Hardware.binwalk,
@@ -4514,14 +4511,14 @@ def hardware_tools():
 
 # Cryptography and Steganography tools call function
 def cyptography_steganography():
-    colors.red("\n     CRYPTOGRAPHY AND STEGANOGRAPHY TOOLS ")
-    colors.cream("\n        [1]  Ccrypt         [2]  Aesfix")
-    colors.cream("        [3]  Steghide       [4]  Stegsnow")
-    colors.cream("        [5]  Aeskeyfind     [6]  Outguess")
-    colors.cream("        [7]  All            [8]  Back ")
-    colors.cream("        [9]  Exit")
+    Colors.red("\n     CRYPTOGRAPHY AND STEGANOGRAPHY TOOLS ")
+    Colors.cream("\n        [1]  Ccrypt         [2]  Aesfix")
+    Colors.cream("        [3]  Steghide       [4]  Stegsnow")
+    Colors.cream("        [5]  Aeskeyfind     [6]  Outguess")
+    Colors.cream("        [7]  All            [8]  Back ")
+    Colors.cream("        [9]  Exit")
 
-    colors.blue("\nEnter which one to install ??")
+    Colors.blue("\nEnter which one to install ??")
     choice = input(colr().hex("#0000ff", "> ", rgb_mode=True))
     switch = {
         1: CryptoStegano.ccrypt,
@@ -4543,15 +4540,15 @@ def cyptography_steganography():
 
 # Database tools call function
 def database_tools():
-    colors.red("\n              DATABASE TOOLS")
-    colors.dark_rose("\n    [1]  Sqlsus           [2]  Sqlmap")
-    colors.dark_rose("    [3]  Sqlninja         [4]  Sqldict ")
-    colors.dark_rose("    [5]  Oscanner         [6]  Mdbtools")
-    colors.dark_rose("    [7]  Sidguesser       [8]  Tnscmd10g")
-    colors.dark_rose("    [9]  Jsql-injection   [10] Sqlitebrowser")
-    colors.dark_rose("    [11] All              [12] Back")
-    colors.dark_rose("    [13] Exit ")
-    colors.orange("\nEnter which one to install ??")
+    Colors.red("\n              DATABASE TOOLS")
+    Colors.dark_rose("\n    [1]  Sqlsus           [2]  Sqlmap")
+    Colors.dark_rose("    [3]  Sqlninja         [4]  Sqldict ")
+    Colors.dark_rose("    [5]  Oscanner         [6]  Mdbtools")
+    Colors.dark_rose("    [7]  Sidguesser       [8]  Tnscmd10g")
+    Colors.dark_rose("    [9]  Jsql-injection   [10] Sqlitebrowser")
+    Colors.dark_rose("    [11] All              [12] Back")
+    Colors.dark_rose("    [13] Exit ")
+    Colors.orange("\nEnter which one to install ??")
     choice = input(colr().hex("#ff8e35", "> ", rgb_mode=True))
     switch = {
         1: Database.sqlsus,
@@ -4577,11 +4574,11 @@ def database_tools():
 
 # Detection tools call function
 def detect_tools():
-    colors.red("\n            DETECT TOOLS")
-    colors.orange("\n     [1] Grokevt      [2] Sentrypeer")
-    colors.orange("     [3] All          [4] Back")
-    colors.orange("     [5] Exit")
-    colors.red("\nEnter which one to install ??")
+    Colors.red("\n            DETECT TOOLS")
+    Colors.orange("\n     [1] Grokevt      [2] Sentrypeer")
+    Colors.orange("     [3] All          [4] Back")
+    Colors.orange("     [5] Exit")
+    Colors.red("\nEnter which one to install ??")
     choice = input(colr().hex("#ff0000", "> ", rgb_mode=True))
     switch = {
         1: Detect.grokevt,
@@ -4599,11 +4596,11 @@ def detect_tools():
 
 # Labs tools call function
 def labs_tools():
-    colors.orange("\n           KALI TOOLS")
-    colors.red("\n     [1] Dvwa   [2] Juice-shop")
-    colors.red("     [3] All    [4] Back")
-    colors.red("     [5] Exit")
-    colors.yellow("\nEnter which one to install ??")
+    Colors.orange("\n           KALI TOOLS")
+    Colors.red("\n     [1] Dvwa   [2] Juice-shop")
+    Colors.red("     [3] All    [4] Back")
+    Colors.red("     [5] Exit")
+    Colors.yellow("\nEnter which one to install ??")
     choice = input(colr().hex("#fff300", "> ", rgb_mode=True))
     switch = {
         1: Labs.dvwa,
@@ -4621,12 +4618,12 @@ def labs_tools():
 
 # Fuzzing tools call function
 def fuzzing_tools():
-    colors.red("\n        FUZZING TOOLS")
-    colors.dark_green("\n     [1] Afl++  [2] Spike")
-    colors.dark_green("     [3] Wfuzz  [4] Sfuzz")
-    colors.dark_green("     [5] All    [6] Back")
-    colors.dark_green("     [7] Exit")
-    colors.orange("\nEnter which one to install ??")
+    Colors.red("\n        FUZZING TOOLS")
+    Colors.dark_green("\n     [1] Afl++  [2] Spike")
+    Colors.dark_green("     [3] Wfuzz  [4] Sfuzz")
+    Colors.dark_green("     [5] All    [6] Back")
+    Colors.dark_green("     [7] Exit")
+    Colors.orange("\nEnter which one to install ??")
     choice = input(colr().hex("#ff8e35", "> ", rgb_mode=True))
     switch = {
         1: Fuzzing.afl,
@@ -4646,17 +4643,17 @@ def fuzzing_tools():
 
 # Identification tools call function
 def identification_tools():
-    colors.red("\n              IDENTIFICATION TOOLS")
-    colors.sky_blue("  \n    [1]  Tiger                 [2]  Amass")
-    colors.sky_blue("    [3]  Wapiti                [4]  Maryam")
-    colors.sky_blue("    [5]  Zaproxy               [6]  Maltego ")
-    colors.sky_blue("    [7]  Nipper-ng             [8]  Exploitdb")
-    colors.sky_blue("    [9]  Witnessme             [10] Defectdojo")
-    colors.sky_blue("    [11] Spiderfoot            [12] Assetfinder")
-    colors.sky_blue("    [13] Osrframework          [14] Hb-honeypot")
-    colors.sky_blue("    [15] Cisco-auditing-tool   [16] All")
-    colors.sky_blue("    [17] Back                  [18] Exit")
-    colors.orange("\nEnter which one to install ??")
+    Colors.red("\n              IDENTIFICATION TOOLS")
+    Colors.sky_blue("  \n    [1]  Tiger                 [2]  Amass")
+    Colors.sky_blue("    [3]  Wapiti                [4]  Maryam")
+    Colors.sky_blue("    [5]  Zaproxy               [6]  Maltego ")
+    Colors.sky_blue("    [7]  Nipper-ng             [8]  Exploitdb")
+    Colors.sky_blue("    [9]  Witnessme             [10] Defectdojo")
+    Colors.sky_blue("    [11] Spiderfoot            [12] Assetfinder")
+    Colors.sky_blue("    [13] Osrframework          [14] Hb-honeypot")
+    Colors.sky_blue("    [15] Cisco-auditing-tool   [16] All")
+    Colors.sky_blue("    [17] Back                  [18] Exit")
+    Colors.orange("\nEnter which one to install ??")
     choice = input(colr().hex("#ff8e35", "> ", rgb_mode=True))
     switch = {
         1: Identification.tiger,
@@ -4687,12 +4684,12 @@ def identification_tools():
 
 # Protection tools call function
 def protection_tools():
-    colors.red("\n              PROTECTION TOOLS")
-    colors.yellow("  \n    [1]  Clamav                     [2]  Fwbuilder")
-    colors.yellow("    [3]  Cryptsetup-initramfs       [4]  Cryptsetup")
-    colors.yellow("    [5]  Cryptsetup-nuke-password   [6]  All ")
-    colors.yellow("    [7]  Back                       [8]  Exit")
-    colors.orange("\nEnter which one to install ??")
+    Colors.red("\n              PROTECTION TOOLS")
+    Colors.yellow("  \n    [1]  Clamav                     [2]  Fwbuilder")
+    Colors.yellow("    [3]  Cryptsetup-initramfs       [4]  Cryptsetup")
+    Colors.yellow("    [5]  Cryptsetup-nuke-password   [6]  All ")
+    Colors.yellow("    [7]  Back                       [8]  Exit")
+    Colors.orange("\nEnter which one to install ??")
     choice = input(colr().hex("#ff8e35", "> ", rgb_mode=True))
     switch = {
         1: Protection.clamav,
@@ -4713,14 +4710,14 @@ def protection_tools():
 
 # Recovery tools call function
 def recovery_tools():
-    colors.red("\n              RECOVERY TOOLS")
-    colors.gnome_green("  \n    [1]  Undbx          [2]  Ddrescue")
-    colors.gnome_green("    [3]  Myrescue       [4]  Ext3grep")
-    colors.gnome_green("    [5]  Recoverdm      [6]  Recoverjpeg ")
-    colors.gnome_green("    [7]  Scrounge-ntfs  [8]  Extundelete")
-    colors.gnome_green("    [9]  All            [10] Back")
-    colors.gnome_green("    [11] Exit")
-    colors.orange("\nEnter which one to install ??")
+    Colors.red("\n              RECOVERY TOOLS")
+    Colors.gnome_green("  \n    [1]  Undbx          [2]  Ddrescue")
+    Colors.gnome_green("    [3]  Myrescue       [4]  Ext3grep")
+    Colors.gnome_green("    [5]  Recoverdm      [6]  Recoverjpeg ")
+    Colors.gnome_green("    [7]  Scrounge-ntfs  [8]  Extundelete")
+    Colors.gnome_green("    [9]  All            [10] Back")
+    Colors.gnome_green("    [11] Exit")
+    Colors.orange("\nEnter which one to install ??")
     choice = input(colr().hex("#ff8e35", "> ", rgb_mode=True))
     switch = {
         1: Recovery.undbx,
@@ -4744,14 +4741,14 @@ def recovery_tools():
 
 # Reporting tools call function
 def reporting_tools():
-    colors.red("\n              REPROTING TOOLS")
-    colors.cream("  \n    [1]  Pipal            [2]  Dradis")
-    colors.cream("    [3]  Maltego          [4]  faraday")
-    colors.cream("    [5]  Cutycapt         [6]  Metagoofil ")
-    colors.cream("    [7]  Recordmydesktop  [8]  Eyewitness")
-    colors.cream("    [9]  All              [10] Back")
-    colors.cream("    [11] Exit")
-    colors.light_green("\nEnter which one to install ??")
+    Colors.red("\n              REPROTING TOOLS")
+    Colors.cream("  \n    [1]  Pipal            [2]  Dradis")
+    Colors.cream("    [3]  Maltego          [4]  faraday")
+    Colors.cream("    [5]  Cutycapt         [6]  Metagoofil ")
+    Colors.cream("    [7]  Recordmydesktop  [8]  Eyewitness")
+    Colors.cream("    [9]  All              [10] Back")
+    Colors.cream("    [11] Exit")
+    Colors.light_green("\nEnter which one to install ??")
     choice = input(colr().hex("#21ff00", "> ", rgb_mode=True))
     switch = {
         1: Reporting.pipal,
@@ -4775,16 +4772,16 @@ def reporting_tools():
 
 # Reverse-engineering tools
 def reverse_engineering_tools():
-    colors.red("\n           REVERSE ENGINEERING TOOLS")
-    colors.sky_blue("  \n    [1]  Jadx                [2]  Clang")
-    colors.sky_blue("    [3]  Jd-gui              [4]  Ollydbg")
-    colors.sky_blue("    [5]  Dex2jar             [6]  Apktool ")
-    colors.sky_blue("    [7]  Radare2             [8]  Rizin-cutter")
-    colors.sky_blue("    [9]  Javasnoop           [10] Edb-debugger")
-    colors.sky_blue("    [11] Bytecode-viewer     [12] Metasploit-framework")
-    colors.sky_blue("    [13] All                 [14] Back")
-    colors.sky_blue("    [15] Exit")
-    colors.orange("\nEnter which one to install ??")
+    Colors.red("\n           REVERSE ENGINEERING TOOLS")
+    Colors.sky_blue("  \n    [1]  Jadx                [2]  Clang")
+    Colors.sky_blue("    [3]  Jd-gui              [4]  Ollydbg")
+    Colors.sky_blue("    [5]  Dex2jar             [6]  Apktool ")
+    Colors.sky_blue("    [7]  Radare2             [8]  Rizin-cutter")
+    Colors.sky_blue("    [9]  Javasnoop           [10] Edb-debugger")
+    Colors.sky_blue("    [11] Bytecode-viewer     [12] Metasploit-framework")
+    Colors.sky_blue("    [13] All                 [14] Back")
+    Colors.sky_blue("    [15] Exit")
+    Colors.orange("\nEnter which one to install ??")
     choice = input(colr().hex("#ff8e35", "> ", rgb_mode=True))
     switch = {
         1: ReverseEngineering.jadx,
@@ -4812,13 +4809,13 @@ def reverse_engineering_tools():
 
 # Response tools call function
 def response_tools():
-    colors.red("\n              RESPONSE TOOLS")
-    colors.cream("  \n    [1] Ghidra       [2]  Hashrat")
-    colors.cream("    [3] Ewf-tools    [4] Netsniff-ng ")
-    colors.cream("    [5] Guymager     [6] Impacket-scripts ")
-    colors.cream("    [7] All          [8] Back  ")
-    colors.cream("    [9] Exit")
-    colors.sky_blue("\nEnter which one to install ??")
+    Colors.red("\n              RESPONSE TOOLS")
+    Colors.cream("  \n    [1] Ghidra       [2]  Hashrat")
+    Colors.cream("    [3] Ewf-tools    [4] Netsniff-ng ")
+    Colors.cream("    [5] Guymager     [6] Impacket-scripts ")
+    Colors.cream("    [7] All          [8] Back  ")
+    Colors.cream("    [9] Exit")
+    Colors.sky_blue("\nEnter which one to install ??")
     choice = input(colr().hex("#00ccff", "> ", rgb_mode=True))
     switch = {
         1: Response.ghidra,
@@ -4840,23 +4837,23 @@ def response_tools():
 
 # Sniffing and Spoofing tools call function
 def sniffing_spoofing_tools():
-    colors.red("\n                SNIFFING AND SPOOFING  TOOLS ")
-    colors.sky_blue(" \n       [1]  Fiked                      [2]   Dsniff  ")
-    colors.sky_blue("       [3]  Sslsplit                   [4]   Rebind ")
-    colors.sky_blue("       [5]  Driftnet                   [6]   Dnschef")
-    colors.sky_blue("       [7]  Hexinject                  [8]   Yersinia   ")
-    colors.sky_blue("       [9]  Responder                  [10]  Sslsniff   ")
-    colors.sky_blue("       [11] Mitmproxy                  [12]  Darkstat    ")
-    colors.sky_blue("       [13] Wireshark                  [14]  Tcpflow")
-    colors.sky_blue("       [15] Wifi-honey                 [16]  Bettercap")
-    colors.sky_blue("       [17] Netsniff-ng                [18]  Sniffjoke ")
-    colors.sky_blue("       [19] Isr-evilgrade              [20]  Tcpreplay  ")
-    colors.sky_blue("       [21] Ettercap-tools             [22]  Macchanger   ")
-    colors.sky_blue("       [23] Hamster-sidejack           [24]  Ferret-sidejack  ")
-    colors.sky_blue("       [25] All                        [26]  Back ")
-    colors.sky_blue("       [27] Exit  ")
+    Colors.red("\n                SNIFFING AND SPOOFING  TOOLS ")
+    Colors.sky_blue(" \n       [1]  Fiked                      [2]   Dsniff  ")
+    Colors.sky_blue("       [3]  Sslsplit                   [4]   Rebind ")
+    Colors.sky_blue("       [5]  Driftnet                   [6]   Dnschef")
+    Colors.sky_blue("       [7]  Hexinject                  [8]   Yersinia   ")
+    Colors.sky_blue("       [9]  Responder                  [10]  Sslsniff   ")
+    Colors.sky_blue("       [11] Mitmproxy                  [12]  Darkstat    ")
+    Colors.sky_blue("       [13] Wireshark                  [14]  Tcpflow")
+    Colors.sky_blue("       [15] Wifi-honey                 [16]  Bettercap")
+    Colors.sky_blue("       [17] Netsniff-ng                [18]  Sniffjoke ")
+    Colors.sky_blue("       [19] Isr-evilgrade              [20]  Tcpreplay  ")
+    Colors.sky_blue("       [21] Ettercap-tools             [22]  Macchanger   ")
+    Colors.sky_blue("       [23] Hamster-sidejack           [24]  Ferret-sidejack  ")
+    Colors.sky_blue("       [25] All                        [26]  Back ")
+    Colors.sky_blue("       [27] Exit  ")
 
-    colors.light_blue("\nEnter The Tool Number To  install ??")
+    Colors.light_blue("\nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#6666ff", "> ", rgb_mode=True))
 
     switch = {
@@ -4897,20 +4894,20 @@ def sniffing_spoofing_tools():
 
 # Voice over ip tools
 def voip_tools():
-    colors.red("\n              VOICE OVER IP TOOLS ")
-    colors.light_blue(" \n       [1]  Nmap         [2]   Sipp   ")
-    colors.light_blue("       [3]  Enumiax      [4]   Rtpbreak   ")
-    colors.light_blue("       [5]  Rtpflood     [6]   Protos-sip  ")
-    colors.light_blue("       [7]  Iaxflood     [8]   Wireshark    ")
-    colors.light_blue("       [9]  Sipcrack     [10]  Inviteflood   ")
-    colors.light_blue("       [11] Sctpscan     [12]  Voiphopper    ")
-    colors.light_blue("       [13] Ohrwurm      [14]  Rtpmixsound")
-    colors.light_blue("       [15] Sipvicious   [16]  Siparmyknife")
-    colors.light_blue("       [17] Libfindrtp   [18]  Rtpinsertsound ")
-    colors.light_blue("       [19] All          [20]  Back ")
-    colors.light_blue("       [21] Exit  ")
+    Colors.red("\n              VOICE OVER IP TOOLS ")
+    Colors.light_blue(" \n       [1]  Nmap         [2]   Sipp   ")
+    Colors.light_blue("       [3]  Enumiax      [4]   Rtpbreak   ")
+    Colors.light_blue("       [5]  Rtpflood     [6]   Protos-sip  ")
+    Colors.light_blue("       [7]  Iaxflood     [8]   Wireshark    ")
+    Colors.light_blue("       [9]  Sipcrack     [10]  Inviteflood   ")
+    Colors.light_blue("       [11] Sctpscan     [12]  Voiphopper    ")
+    Colors.light_blue("       [13] Ohrwurm      [14]  Rtpmixsound")
+    Colors.light_blue("       [15] Sipvicious   [16]  Siparmyknife")
+    Colors.light_blue("       [17] Libfindrtp   [18]  Rtpinsertsound ")
+    Colors.light_blue("       [19] All          [20]  Back ")
+    Colors.light_blue("       [21] Exit  ")
 
-    colors.rose("\nEnter The Tool Number To  install ??")
+    Colors.rose("\nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#ff0066", "> ", rgb_mode=True))
 
     switch = {
@@ -4945,21 +4942,21 @@ def voip_tools():
 
 # Windows resources tools
 def windows_resources():
-    colors.red("\n                WINDOWS RESOURCES ")
-    colors.violet(" \n       [1]  Dbd                [2]  Sbd   ")
-    colors.violet("       [3]  Wce                [4]  Ollydbg    ")
-    colors.violet("       [5]  Shellter           [6]  Tftpd32   ")
-    colors.violet("       [7]  Powercat           [8]  Dnschef     ")
-    colors.violet("       [9]  Ncat-w32           [10] Mimikatz    ")
-    colors.violet("       [11] Regripper          [12] Hyperion    ")
-    colors.violet("       [13] Heartleech         [14] Windows-privesc-check ")
-    colors.violet(
+    Colors.red("\n                WINDOWS RESOURCES ")
+    Colors.violet(" \n       [1]  Dbd                [2]  Sbd   ")
+    Colors.violet("       [3]  Wce                [4]  Ollydbg    ")
+    Colors.violet("       [5]  Shellter           [6]  Tftpd32   ")
+    Colors.violet("       [7]  Powercat           [8]  Dnschef     ")
+    Colors.violet("       [9]  Ncat-w32           [10] Mimikatz    ")
+    Colors.violet("       [11] Regripper          [12] Hyperion    ")
+    Colors.violet("       [13] Heartleech         [14] Windows-privesc-check ")
+    Colors.violet(
         "       [15] Windows-binaries   [16] Secure-socket-funneling-windows-binaries "
     )
-    colors.violet("       [17] All                [18] Back ")
-    colors.violet("       [19] Exit  ")
+    Colors.violet("       [17] All                [18] Back ")
+    Colors.violet("       [19] Exit  ")
 
-    colors.light_gnome("\nEnter The Tool Number To  install ??")
+    Colors.light_gnome("\nEnter The Tool Number To  install ??")
     choice = input(colr().hex("#2ed1b4", "> ", rgb_mode=True))
 
     switch = {
@@ -4992,7 +4989,7 @@ def windows_resources():
 
 # Main Entry Choices ?
 def choices():
-    colors.red("\n Enter which one to install ??")
+    Colors.red("\n Enter which one to install ??")
     choice = input(colr().hex("#ff0000", " > ", rgb_mode=True))
     switch = {
         1: kali_top10_tools,
