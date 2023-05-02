@@ -62,6 +62,7 @@ class Colors:
     def light_blue(data):
         print(colr().hex("#6666ff", data, rgb_mode=True))
 
+
 # Main Banner
 
 print(
@@ -142,38 +143,41 @@ def the_end():
 
 # List of Category
 def tools_category():
-    Colors.rose(
-        " \n [1]  KALI TOP 10 TOOLS                           [2]  SOCIAL ENGINEERING TOOLS"
-    )
+    Colors.rose(" \n    [1]  DETECT TOOLS                                [2]  LABS ")
     Colors.red(
-        " [3]  INFORMATION GATHERING TOOLS                 [4]  PASSWORDS CRACKING TOOLS"
+        "    [3]  FUZZING TOOLS                               [4]  RECOVERY TOOLS "
     )
     Colors.green(
-        " [5]  FORENSICS TOOLS                             [6]  EXPLOITATION TOOLS"
+        "    [5]  RESPONSE TOOLS                              [6]  HARDWARE TOOLS "
     )
     Colors.violet(
-        " [7]  VULNERABILITY TOOLS                         [8]  WEB APPLICATION TOOLS"
+        "    [7]  WIRELESS TOOLS                              [8]  DATABASE TOOLS "
     )
     Colors.orange(
-        " [9]  WIRELESS TOOLS                              [10] HARDWARE TOOLS"
+        "    [9]  FORENSICS TOOLS                             [10] EXPLOITATION TOOLS"
     )
-    Colors.blue(" [11] CRYPTOGRAPHY AND STEGANOGRAPHY TOOLS        [12] DATABASE TOOLS")
-    Colors.yellow(" [13] DETECT TOOLS                                [14] LABS")
+    Colors.blue(
+        "    [11] REPORTING TOOLS                             [12] IDENTIFICATION TOOLS "
+    )
+    Colors.yellow(
+        "    [13] PROTECTION TOOLS                            [14] WEB APPLICATION TOOLS"
+    )
     Colors.cream(
-        " [15] FUZZING TOOLS                               [16] IDENTIFICATION TOOLS"
+        "    [15] KALI TOP 10 TOOLS                           [16] SOCIAL ENGINEERING TOOLS"
     )
     Colors.gnome_green(
-        " [17] PROTECTION TOOLS                            [18] RECOVERY TOOLS"
+        "    [17] VULNERABILITY TOOLS                         [18] PASSWORDS CRACKING TOOLS"
     )
     Colors.dark_rose(
-        " [19] REPORTING TOOLS                             [20] REVERSE ENGINEERING TOOLS"
+        "    [19] WINDOWS RESOURCES TOOLS                     [20] REVERSE ENGINEERING TOOLS"
     )
     Colors.light_blue(
-        " [21] RESPONSE TOOLS                              [22] SNIFFING AND SPOOFING TOOLS"
+        "    [21] INFORMATION GATHERING TOOLS                 [22] SNIFFING AND SPOOFING TOOLS"
     )
     Colors.light_green(
-        " [23] VOICE OVER IP TOOLS OR [ VOIP TOOLS]        [24] WINDOWS RESOURCES TOOLS"
+        "    [23] VOICE OVER IP TOOLS OR [ VOIP TOOLS]        [24] CRYPTOGRAPHY AND STEGANOGRAPHY TOOLS"
     )
+    Colors.sky_blue("    [25] ALL                                         [26] EXIT")
 
 
 tools_category()
@@ -1313,9 +1317,11 @@ class Forensics:
         forensics_tools()
 
     def pdfid():
+        os.system("sudo apt install -y pdfid")
         forensics_tools()
 
     def plaso():
+        os.system("sudo apt install -y plaso")
         forensics_tools()
 
     def pst_utils():
@@ -2698,6 +2704,7 @@ class Wireless:
 
             wireless_tools()
 
+    # All wireless tool install loop function
     def wireless_install_all():
         tools = [
             "gnuradio",
@@ -2727,7 +2734,8 @@ class Wireless:
             "reaver",
             "wifi-honey",
             "wifite",
-            "wireshark" "bluelog",
+            "wireshark",
+            "bluelog",
             "blueranger",
             "bluesnarfer",
             "bluez",
@@ -2821,27 +2829,27 @@ class Hardware:
 class CryptoStegano:
     def stegsnow():
         os.system("sudo apt install -y stegsnow")
-        cyptography_steganography()
+        cyptography_steganography_tools()
 
     def ccrypt():
         os.system("sudo apt install -y ccrypt")
-        cyptography_steganography()
+        cyptography_steganography_tools()
 
     def steghide():
         os.system("sudo apt install -y steghide")
-        cyptography_steganography()
+        cyptography_steganography_tools()
 
     def aeskeyfind():
         os.system("sudo apt install -y aeskeyfind")
-        cyptography_steganography()
+        cyptography_steganography_tools()
 
     def outguess():
         os.system("sudo apt install -y outguess")
-        cyptography_steganography()
+        cyptography_steganography_tools()
 
     def aesfix():
         os.system("sudo apt install -y aesfix")
-        cyptography_steganography()
+        cyptography_steganography_tools()
 
     # Cryptography and Steganography tools loop function
     def cryptography_steganography_tools():
@@ -2855,7 +2863,7 @@ class CryptoStegano:
         ]
         for tool in tools:
             os.system(f"sudo apt install -y {tool}")
-        cyptography_steganography()
+        cyptography_steganography_tools()
 
 
 # Database tools
@@ -3565,67 +3573,67 @@ class Voip:
 class WindowsResources:
     def dbd():
         os.system("sudo apt install -y dbd")
-        windows_resources()
+        windows_resources_tools()
 
     def hyperion():
         os.system("sudo apt install -y hyperion")
-        windows_resources()
+        windows_resources_tools()
 
     def ollydbg():
         os.system("sudo apt install -y ollydbg")
-        windows_resources()
+        windows_resources_tools()
 
     def sbd():
         os.system("sudo apt install -y sbd")
-        windows_resources()
+        windows_resources_tools()
 
     def tftpd32():
         os.system("sudo apt install -y tftpd32")
-        windows_resources()
+        windows_resources_tools()
 
     def windows_privesc_check():
         os.system("sudo apt install -y windows-privesc-check")
-        windows_resources()
+        windows_resources_tools()
 
     def dnschef():
         os.system("sudo apt install -y dnschef")
-        windows_resources()
+        windows_resources_tools()
 
     def mimikatz():
         os.system("sudo apt install -y mimikatz")
-        windows_resources()
+        windows_resources_tools()
 
     def powercat():
         os.system("sudo apt install -y powercat")
-        windows_resources()
+        windows_resources_tools()
 
     def secure_socket_funneling_windows_binaries():
         os.system("sudo apt install -y secure-socket-funneling-windows-binaries")
-        windows_resources()
+        windows_resources_tools()
 
     def wce():
         os.system("sudo apt install -y wce")
-        windows_resources()
+        windows_resources_tools()
 
     def heartleech():
         os.system("sudo apt install -y heartleech")
-        windows_resources()
+        windows_resources_tools()
 
     def ncat_w32():
         os.system("sudo apt install -y ncat-w32")
-        windows_resources()
+        windows_resources_tools()
 
     def regripper():
         os.system("sudo apt install -y regripper")
-        windows_resources()
+        windows_resources_tools()
 
     def shellter():
         os.system("sudo apt install -y shellter")
-        windows_resources()
+        windows_resources_tools()
 
     def windows_binaries():
         os.system("sudo apt install -y windows-binaries")
-        windows_resources()
+        windows_resources_tools()
 
     # Windows resources tool loop install function
     def windows_resources_tools():
@@ -3650,7 +3658,609 @@ class WindowsResources:
 
         for tool in tools:
             os.system(f"sudo apt install -y {tool}")
-        windows_resources()
+        windows_resources_tools()
+
+
+class AllKaliLinux:
+    def all_kali_linux_tools():
+        tools = [
+            "nmap",
+            "aircrack-ng",
+            "john",
+            "sqlmap",
+            "hydra",
+            "metasploit-framework",
+            "responder",
+            "wireshark",
+            "burpsuite",
+            "crackmapexec",
+            "backdoor-factory",
+            "beef-xss",
+            "msfpc",
+            "veil",
+            "set",
+            "maltego",
+            "0trace",
+            "arping",
+            "braa",
+            "dmitry",
+            "dnsenum",
+            "dnsmap",
+            "dnsrecon",
+            "dnstracer",
+            "dnswalk",
+            "enum4linux",
+            "fierce",
+            "firewalk",
+            "fping",
+            "fragrouter",
+            "ftester",
+            "hping3",
+            "ike-scan",
+            "intrace",
+            "irpas",
+            "lbd",
+            "legion",
+            "maltego",
+            "masscan",
+            "metagoofil",
+            "nbtscan",
+            "ncat",
+            "netdiscover",
+            "netmask",
+            "onesixtyone",
+            "p0f",
+            "qsslcaudit",
+            "recon-ng",
+            "smbmap",
+            "smtp-user-enum",
+            "snmpcheck",
+            "ssldump",
+            "sslh",
+            "sslscan",
+            "sslyze",
+            "swaks",
+            "thc-ipv6",
+            "theharvester",
+            "tlssled",
+            "twofi",
+            "unicornscan",
+            "urlcrazy",
+            "wafw00f",
+            "cewl",
+            "chntpw",
+            "cisco-auditing-tool",
+            "cmospwd",
+            "crackle",
+            "creddump7",
+            "crunch",
+            "fcrackzip",
+            "freerdp2-x11",
+            "gpp-decrypt",
+            "hash-identifier",
+            "hashcat",
+            "hashcat-utils",
+            "hashid",
+            "hydra",
+            "hydra-gtk",
+            "john",
+            "johnny",
+            "truecrack",
+            "oclgausscrack",
+            "maskprocessor",
+            "medusa",
+            "mimikatz",
+            "ncrack",
+            "onesixtyone",
+            "ophcrack",
+            "ophcrack-cli",
+            "pack",
+            "passing-the-hash",
+            "patator",
+            "pdfcrack",
+            "pipal",
+            "polenum",
+            "rainbowcrack",
+            "rarcrack",
+            "rcracki-mt",
+            "rsmangler",
+            "samdump2",
+            "seclists",
+            "sipcrack",
+            "sipvicious",
+            "smbmap",
+            "sqldict",
+            "statsprocessor",
+            "sucrack",
+            "thc-pptp-bruter",
+            "twofi",
+            "wordlists",
+            "afflib-tools",
+            "apktool",
+            "autopsy",
+            "binwalk",
+            "bulk-extractor",
+            "bytecode-viewer",
+            "cabextract",
+            "chkrootkit",
+            "creddump7",
+            "dc3dd",
+            "dcfldd",
+            "ddrescue",
+            "dumpzilla",
+            "edb-debugger",
+            "ewf-tools",
+            "exifprobe",
+            "exiv2",
+            "ext3grep",
+            "ext4magic",
+            "extundelete",
+            "fcrackzip",
+            "firmware-mod-kit",
+            "foremost",
+            "forensic-artifacts",
+            "forensics-colorize",
+            "galleta",
+            "gdb",
+            "gpart",
+            "gparted",
+            "grokevt",
+            "guymager",
+            "hashdeep",
+            "inetsim",
+            "jadx",
+            "javasnoop",
+            "libhivex-bin",
+            "libsmali-java",
+            "lime-forensics",
+            "lvm2",
+            "lynis",
+            "mac-robber",
+            "magicrescue",
+            "md5deep",
+            "mdbtools",
+            "memdump",
+            "metacam",
+            "missidentify",
+            "myrescue",
+            "nasm",
+            "nasty",
+            "ollydbg",
+            "p7zip-full",
+            "parted",
+            "pasco",
+            "pdf-parser",
+            "pdfid",
+            "pev",
+            "plaso",
+            "polenum",
+            "pst-utils",
+            "python3-capstone",
+            "python3-dfdatetime",
+            "python3-dfvfs",
+            "python3-dfwinreg",
+            "python3-distorm3",
+            "radare2",
+            "recoverdm",
+            "recoverjpeg",
+            "reglookup",
+            "regripper",
+            "rephrase",
+            "rifiuti",
+            "rifiuti2",
+            "rizin-cutter",
+            "rkhunter",
+            "rsakeyfind",
+            "safecopy",
+            "samdump2",
+            "scalpel",
+            "scrounge-ntfs",
+            "sleuthkit",
+            "sqlitebrowser",
+            "ssdeep",
+            "tcpdump",
+            "tcpflow",
+            "tcpick",
+            "tcpreplay",
+            "truecrack",
+            "undbx",
+            "unhide",
+            "unrar",
+            "upx-ucl",
+            "vinetto",
+            "wce",
+            "winregfs",
+            "wireshark",
+            "xmount",
+            "xplico",
+            "yara",
+            "python3-artifacts",
+            "armitage",
+            "beef-xss",
+            "exploitdb",
+            "metasploit-framework",
+            "msfpc",
+            "set",
+            "shellnoob",
+            "sqlmap",
+            "termineter",
+            "afl++",
+            "bed",
+            "cisco-auditing-tool",
+            "cisco-global-exploiter",
+            "cisco-ocs",
+            "cisco-torch",
+            "copy-router-config",
+            "dhcpig",
+            "enumiax",
+            "gvm",
+            "iaxflood",
+            "inviteflood",
+            "legion",
+            "lynis",
+            "nikto",
+            "nmap",
+            "ohrwurm",
+            "peass",
+            "protos-sip",
+            "rtpbreak",
+            "rtpflood",
+            "rtpinsertsound",
+            "rtpmixsound",
+            "sctpscan",
+            "sfuzz",
+            "siege",
+            "siparmyknife",
+            "sipp",
+            "sipsak",
+            "sipvicious",
+            "slowhttptest",
+            "spike",
+            "t50",
+            "thc-ssl-dos",
+            "unix-privesc-check",
+            "voiphopper",
+            "yersinia",
+            "apache-users",
+            "apache2",
+            "beef-xss",
+            "burpsuite",
+            "cadaver",
+            "commix",
+            "cutycapt",
+            "davtest",
+            "default-mysql-server",
+            "dirb",
+            "dirbuster",
+            "dotdotpwn",
+            "eyewitness",
+            "ferret-sidejack",
+            "ftester",
+            "hakrawler",
+            "hamster-sidejack",
+            "heartleech",
+            "httprint",
+            "httrack",
+            "hydra",
+            "hydra-gtk",
+            "jboss-autopwn",
+            "joomscan",
+            "jsql-injection",
+            "laudanum",
+            "lbd",
+            "maltego",
+            "medusa",
+            "mitmproxy",
+            "ncrack",
+            "nikto",
+            "nishang",
+            "nmap",
+            "oscanner",
+            "owasp-mantra-ff",
+            "padbuster",
+            "paros",
+            "patator",
+            "php",
+            "php-mysql",
+            "plecost",
+            "proxychains4",
+            "proxytunnel",
+            "qsslcaudit",
+            "redsocks",
+            "sidguesser",
+            "siege",
+            "skipfish",
+            "slowhttptest",
+            "sqldict",
+            "sqlitebrowser",
+            "sqlmap",
+            "sqlninja",
+            "sqlsus",
+            "ssldump",
+            "sslh",
+            "sslscan",
+            "sslsniff",
+            "sslsplit",
+            "sslyze",
+            "stunnel4",
+            "thc-ssl-dos",
+            "tlssled",
+            "tnscmd10g",
+            "uniscan",
+            "wafw00f",
+            "wapiti",
+            "watobo",
+            "webacoo",
+            "webscarab",
+            "webshells",
+            "weevely",
+            "wfuzz",
+            "whatweb",
+            "wireshark",
+            "wpscan",
+            "xsser",
+            "zaproxy",
+            "gobuster",
+            "chirp",
+            "gnuradio",
+            "gqrx-sdr",
+            "gr-air-modes",
+            "gr-iqbal",
+            "gr-osmosdr",
+            "hackrf",
+            "inspectrum",
+            "kalibrate-rtl",
+            "multimon-ng",
+            "rtlsdr-scanner",
+            "uhd-host",
+            "uhd-images",
+            "sakis3g",
+            "rfkill",
+            "rfcat",
+            "spectools",
+            "airgeddon",
+            "asleap",
+            "bully",
+            "cowpatty",
+            "eapmd5pass",
+            "fern-wifi-cracker",
+            "freeradius-wpe",
+            "hashcat",
+            "hostapd-wpe",
+            "iw",
+            "kismet",
+            "macchanger",
+            "mdk3",
+            "mdk4",
+            "pixiewps",
+            "reaver",
+            "wifi-honey",
+            "wifite",
+            "bluelog",
+            "blueranger",
+            "bluesnarfer",
+            "bluez",
+            "bluez-hcidump",
+            "btscanner",
+            "crackle",
+            "redfang",
+            "spooftooph",
+            "ubertooth",
+            "gnuradio",
+            "libfreefare-bin",
+            "libnfc-bin",
+            "mfcuk",
+            "mfoc",
+            "mfterm",
+            "proxmark3",
+            "rfdump",
+            "gnuradio",
+            "libfreefare-bin",
+            "libnfc-bin",
+            "mfcuk",
+            "mfoc",
+            "mfterm",
+            "proxmark3",
+            "rfdump",
+            "aircrack-ng",
+            "airgeddon",
+            "asleap",
+            "bully",
+            "cowpatty",
+            "eapmd5pass",
+            "fern-wifi-cracker",
+            "freeradius-wpe",
+            "hashcat",
+            "hostapd-wpe",
+            "iw",
+            "kismet",
+            "macchanger",
+            "mdk3",
+            "mdk4",
+            "pixiewps",
+            "reaver",
+            "wifi-honey",
+            "wifite",
+            "wireshark",
+            "bluelog",
+            "blueranger",
+            "bluesnarfer",
+            "bluez",
+            "bluez-hcidump",
+            "btscanner",
+            "crackle",
+            "redfang",
+            "spooftooph",
+            "ubertooth",
+            "chirp",
+            "gnuradio",
+            "gqrx-sdr",
+            "gr-air-modes",
+            "gr-iqbal",
+            "gr-osmosdr",
+            "hackrf",
+            "inspectrum",
+            "kalibrate-rtl",
+            "multimon-ng",
+            "rtlsdr-scanner",
+            "uhd-host",
+            "uhd-images",
+            "spectools",
+            "rfcat",
+            "rfkill",
+            "sakis3g",
+            "binwalk",
+            "cutecom",
+            "flashrom",
+            "minicom",
+            "openocd",
+            "qemu-system-x86",
+            "qemu-user",
+            "radare2",
+            "rizin-cutter ",
+            "aesfix",
+            "aeskeyfind",
+            "ccrypt",
+            "outguess",
+            "steghide",
+            "stegsnow",
+            "jsql-injection",
+            "mdbtools",
+            "oscanner",
+            "sidguesser",
+            "sqldict",
+            "sqlitebrowser",
+            "sqlmap",
+            "sqlninja",
+            "sqlsus",
+            "tnscmd10g",
+            "grokevt",
+            "sentrypeer",
+            "dvwa",
+            "juice-shop",
+            "afl++",
+            "sfuzz",
+            "spike",
+            "wfuzz",
+            "amass",
+            "assetfinder",
+            "cisco-auditing-tool",
+            "defectdojo",
+            "exploitdb",
+            "hb-honeypot",
+            "maltego",
+            "maryam",
+            "nipper-ng",
+            "osrframework",
+            "spiderfoot",
+            "tiger",
+            "wapiti",
+            "witnessme",
+            "zaproxy",
+            "clamav",
+            "cryptsetup",
+            "cryptsetup-initramfs",
+            "cryptsetup-nuke-password",
+            "fwbuilder",
+            "ddrescue",
+            "ext3grep",
+            "extundelete",
+            "myrescue",
+            "recoverdm",
+            "recoverjpeg",
+            "scrounge-ntfs",
+            "undbx",
+            "cutycapt",
+            "dradis",
+            "eyewitness",
+            "faraday",
+            "maltego",
+            "metagoofil",
+            "pipal",
+            "recordmydesktop",
+            "apktool",
+            "bytecode-viewer",
+            "clang",
+            "dex2jar",
+            "edb-debugger",
+            "jadx",
+            "javasnoop",
+            "jd-gui",
+            "metasploit-framework",
+            "ollydbg",
+            "radare2",
+            "rizin-cutter",
+            "ewf-tools",
+            "ghidra",
+            "guymager",
+            "hashrat",
+            "impacket-scripts",
+            "netsniff-ng",
+            "bettercap",
+            "darkstat",
+            "dnschef",
+            "driftnet",
+            "dsniff",
+            "ettercap-graphical",
+            "ettercap-text-only",
+            "ettercap-common",
+            "ferret-sidejack",
+            "fiked",
+            "hamster-sidejack",
+            "hexinject",
+            "isr-evilgrade",
+            "macchanger",
+            "mitmproxy",
+            "netsniff-ng",
+            "rebind",
+            "responder",
+            "sniffjoke",
+            "sslsniff",
+            "sslsplit",
+            "tcpflow",
+            "tcpreplay",
+            "wifi-honey",
+            "wireshark",
+            "yersinia",
+            "enumiax",
+            "iaxflood",
+            "inviteflood",
+            "libfindrtp",
+            "nmap",
+            "ohrwurm",
+            "protos-sip",
+            "rtpbreak",
+            "rtpflood",
+            "rtpinsertsound",
+            "rtpmixsound",
+            "sctpscan",
+            "siparmyknife",
+            "sipcrack",
+            "sipp",
+            "sipvicious",
+            "voiphopper",
+            "wireshark",
+            "dbd",
+            "dnschef",
+            "heartleech",
+            "hyperion",
+            "mimikatz",
+            "ncat-w32",
+            "ollydbg",
+            "powercat",
+            "regripper",
+            "sbd",
+            "secure-socket-funneling-windows-binaries",
+            "shellter",
+            "tftpd32",
+            "wce",
+            "windows-binaries",
+            "windows-privesc-check",
+        ]
+        for tool in tools:
+            os.system(f"sudo apt install -y {tool}")
+        tools_category()
+        choices()
 
 
 # Kali_top 10 tools call function
@@ -4510,7 +5120,7 @@ def hardware_tools():
 
 
 # Cryptography and Steganography tools call function
-def cyptography_steganography():
+def cyptography_steganography_tools():
     Colors.red("\n     CRYPTOGRAPHY AND STEGANOGRAPHY TOOLS ")
     Colors.cream("\n        [1]  Ccrypt         [2]  Aesfix")
     Colors.cream("        [3]  Steghide       [4]  Stegsnow")
@@ -4941,7 +5551,7 @@ def voip_tools():
 
 
 # Windows resources tools
-def windows_resources():
+def windows_resources_tools():
     Colors.red("\n                WINDOWS RESOURCES ")
     Colors.violet(" \n       [1]  Dbd                [2]  Sbd   ")
     Colors.violet("       [3]  Wce                [4]  Ollydbg    ")
@@ -4992,30 +5602,32 @@ def choices():
     Colors.red("\n Enter which one to install ??")
     choice = input(colr().hex("#ff0000", " > ", rgb_mode=True))
     switch = {
-        1: kali_top10_tools,
-        2: social_engineering_tools,
-        3: information_gathering_tools,
-        4: password_cracking_tools,
-        5: forensics_tools,
-        6: exploitation_tools,
-        7: vulnerability_tools,
-        8: web_application_tools,
-        9: wireless_tools,
-        10: hardware_tools,
-        11: cyptography_steganography,
-        12: database_tools,
-        13: detect_tools,
-        14: labs_tools,
-        15: fuzzing_tools,
-        16: identification_tools,
-        17: protection_tools,
-        18: recovery_tools,
-        19: reporting_tools,
+        1: detect_tools,
+        2: labs_tools,
+        3: fuzzing_tools,
+        4: recovery_tools,
+        5: response_tools,
+        6: hardware_tools,
+        7: wireless_tools,
+        8: database_tools,
+        9: forensics_tools,
+        10: exploitation_tools,
+        11: reporting_tools,
+        12: identification_tools,
+        13: protection_tools,
+        14: web_application_tools,
+        15: kali_top10_tools,
+        16: social_engineering_tools,
+        17: vulnerability_tools,
+        18: password_cracking_tools,
+        19: windows_resources_tools,
         20: reverse_engineering_tools,
-        21: response_tools,
+        21: information_gathering_tools,
         22: sniffing_spoofing_tools,
         23: voip_tools,
-        24: windows_resources,
+        24: cyptography_steganography_tools,
+        25: AllKaliLinux.all_kali_linux_tools,
+        26: Operators.exit,
     }
     try:
         switch_case = switch.get(int(choice), Operators.case_default)
