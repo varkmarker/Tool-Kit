@@ -69,24 +69,22 @@ if os.geteuid() != 0:
 else:
     # Main Banner
     print(
-        colr().hex("#00ccff", """\n     __    __   ______    ______   __    __ """),
-        colr().hex("#ff0000", """          _____  ________  ________ """),
-        colr().hex("#00ccff", """\n    /  |  /  | /      \  /      \ /  |  /  |"""),
-        colr().hex("#ff0000", """         /     |/        |/        |"""),
-        colr().hex("#00ccff", """\n    $$ |  $$ |/$$$$$$  |/$$$$$$  |$$ | /$$/ """),
-        colr().hex("#ff0000", """         $$$$$ |$$$$$$$$/ $$$$$$$$/ """),
-        colr().hex("#00ccff", """\n    $$ |__$$ |$$ |__$$ |$$ |  $$/ $$ |/$$/ """),
-        colr().hex("#ff0000", """             $$ |$$ |__       $$ |  """),
-        colr().hex("#00ccff", """\n    $$    $$ |$$    $$ |$$ |      $$  $$<  """),
-        colr().hex("#ff0000", """        __   $$ |$$    |      $$ |   """),
-        colr().hex("#00ccff", """\n    $$$$$$$$ |$$$$$$$$ |$$ |   __ $$$$$  \ """),
-        colr().hex("#ff0000", """       /  |  $$ |$$$$$/       $$ |  """),
-        colr().hex("#00ccff", """\n    $$ |  $$ |$$ |  $$ |$$ \__/  |$$ |$$  \ """),
-        colr().hex("#ff0000", """      $$ \__$$ |$$ |_____    $$ |  """),
-        colr().hex("#00ccff", """\n    $$ |  $$ |$$ |  $$ |$$    $$/ $$ | $$  | """),
-        colr().hex("#ff0000", """     $$    $$/ $$       |   $$ |  """),
-        colr().hex("#00ccff", """\n    $$/   $$/ $$/   $$/  $$$$$$/  $$/   $$/ """),
-        colr().hex("#ff0000", """       $$$$$$/  $$$$$$$$/    $$/   \n"""),
+        colr().hex("#00ccff", """\n     **********   *******      *******    **  """),
+        colr().hex("#ff0000", """                    **   **   **  ********** """),
+        colr().hex("#00ccff", """\n    /////**///   **/////**    **/////**  /** """),
+        colr().hex("#ff0000", """                    /**  **   /** /////**/// """),
+        colr().hex("#00ccff", """\n        /**     **     //**  **     //** /** """),
+        colr().hex("#ff0000", """                    /** **    /**     /**    """),
+        colr().hex("#00ccff", """\n        /**    /**      /** /**      /** /** """),
+        colr().hex("#ff0000", """       *****        /****     /**     /**     """),
+        colr().hex("#00ccff", """\n        /**    /**      /** /**      /** /**        /////"""),
+        colr().hex("#ff0000", """        /**/**    /**     /**    """),
+        colr().hex("#00ccff", """\n        /**    //**     **  //**     **  /** """),
+        colr().hex("#ff0000", """                    /**//**   /**     /**    """),
+        colr().hex("#00ccff", """\n        /**     //*******    //*******   /********"""),
+        colr().hex("#ff0000", """               /** //**  /**     /**    """),
+        colr().hex("#00ccff", """\n        //       ///////      ///////    //////// """),
+        colr().hex("#ff0000", """               //   //   //      //     """),
     )
     print(
         colr().hex(
@@ -100,7 +98,7 @@ else:
 
     # End Banner
     def the_end():
-        banner = pyfiglet.figlet_format("                   THE END")
+        banner = pyfiglet.figlet_format("                   bye,\nhappy hacking ")
         print(colr().hex("#ff0000", banner, rgb_mode=True))
 
     # Check kali linux repository already exist or not
@@ -5668,8 +5666,7 @@ else:
 
         the_end()
 
-    def case_default():
-        print("Invalid option")
+    def no_case():
         banner = pyfiglet.figlet_format("Kali Repo Not Comment Yet")
         print(colr().hex("#ff0000", banner, rgb_mode=True))
 
@@ -5687,11 +5684,11 @@ else:
         "Y": comment_repo,
         "yes": comment_repo,
         "YES": comment_repo,
-        "NO": the_end,
-        "n": the_end,
-        "no": the_end,
-        "N": the_end,
+        "NO": no_case,
+        "n": no_case,
+        "no": no_case,
+        "N": no_case,
     }
 
-    switch_case = switch.get(str(answer), case_default)
+    switch_case = switch.get(str(answer), Operators.case_default)
     switch_case()
