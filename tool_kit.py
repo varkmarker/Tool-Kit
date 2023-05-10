@@ -218,7 +218,7 @@ else:
                 " \n If this script saves you time. You can give a star on GitHub"
             )
             Colors.rose(
-                " \n If any error you can post the issue on the GitHub page: https://github.com/varkmarker/Hack_Jet/issues"
+                " \n If any error you can post the issue on the GitHub page: https://github.com/varkmarker/Tool-Kit/issues"
             )
 
             Colors.light_blue(" \n AUTHOR: VARKMARKER \n")
