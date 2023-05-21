@@ -17,7 +17,7 @@ Step to run this script
 
   Change the directory to the Tool-Kit folder:
 
-   cd Tool-kit
+   cd Tool-Kit
 
  Third step :
 
