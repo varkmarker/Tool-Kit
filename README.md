@@ -11,7 +11,7 @@ Step to run this script
 
   Clone the tool folder by using the below command :
 
-   git clone https://github.com/varkmarker/Tool-Kite.git
+   git clone https://github.com/varkmarker/Tool-Kit.git
 
  Second step :
 
