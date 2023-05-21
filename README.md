@@ -3,7 +3,7 @@ It is a script that installs all kali linux tool
 
 #  REQURIMENT
 
-1, Python3
+> Python3
 
 Step to run this script
 
