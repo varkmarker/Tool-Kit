@@ -3471,6 +3471,7 @@ else:
                 "wifi-honey",
                 "wireshark",
                 "yersinia",
+                "bind9-dnsutils"
             ]
             for tool in tools:
                 os.system(f"sudo apt install -y {tool}")
