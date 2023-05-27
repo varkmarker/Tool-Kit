@@ -3348,6 +3348,10 @@ else:
             os.system("sudo apt install -y driftnet")
             sniffing_spoofing_tools()
 
+        def nslookup():
+            os.system("sudo apt-get install -y bind9-dnsutils")
+            sniffing_spoofing_tools()
+
         def ferret_sidejack():
             os.system("sudo apt install -y ferret-sidejack")
             sniffing_spoofing_tools()
@@ -5471,19 +5475,19 @@ else:
         Colors.sky_blue(" \n       [1]  Fiked                      [2]   Dsniff  ")
         Colors.sky_blue("       [3]  Sslsplit                   [4]   Rebind ")
         Colors.sky_blue("       [5]  Driftnet                   [6]   Dnschef")
-        Colors.sky_blue("       [7]  Hexinject                  [8]   Yersinia   ")
-        Colors.sky_blue("       [9]  Responder                  [10]  Sslsniff   ")
+        Colors.sky_blue("       [7]  Nslookup                   [8]   Yersinia   ")
+        Colors.sky_blue("       [9]  Hexinject                  [10]  Sslsniff   ")
         Colors.sky_blue("       [11] Mitmproxy                  [12]  Darkstat    ")
         Colors.sky_blue("       [13] Wireshark                  [14]  Tcpflow")
-        Colors.sky_blue("       [15] Wifi-honey                 [16]  Bettercap")
-        Colors.sky_blue("       [17] Netsniff-ng                [18]  Sniffjoke ")
-        Colors.sky_blue("       [19] Isr-evilgrade              [20]  Tcpreplay  ")
-        Colors.sky_blue("       [21] Ettercap-tools             [22]  Macchanger   ")
+        Colors.sky_blue("       [15] Responder                  [16]  Bettercap")
+        Colors.sky_blue("       [17] Wifi-honey                 [18]  Sniffjoke ")
+        Colors.sky_blue("       [19] Netsniff-ng                [20]  Tcpreplay  ")
+        Colors.sky_blue("       [21] Isr-evilgrade              [22]  Macchanger   ")
         Colors.sky_blue(
-            "       [23] Hamster-sidejack           [24]  Ferret-sidejack  "
+            "       [23] Ettercap-tools             [24]  Ferret-sidejack  "
         )
-        Colors.sky_blue("       [25] All                        [26]  Back ")
-        Colors.sky_blue("       [27] Exit  ")
+        Colors.sky_blue("       [25] Hamster-sidejack           [26]  Back ")
+        Colors.sky_blue("       [27] All                        [28]  Exit  ")
 
         Colors.light_blue("\nEnter The Tool Number To  install ??")
         choice = input(colr().hex("#6666ff", "> ", rgb_mode=True))
@@ -5495,27 +5499,28 @@ else:
             4: SniffingSpoofing.rebind,
             5: SniffingSpoofing.driftnet,
             6: SniffingSpoofing.dnschef,
-            7: SniffingSpoofing.hexinject,
+            7: SniffingSpoofing.nslookup,
             8: SniffingSpoofing.yersinia,
-            9: SniffingSpoofing.responder,
+            9: SniffingSpoofing.hexinject,
             10: SniffingSpoofing.sslsniff,
             11: SniffingSpoofing.mitmproxy,
             12: SniffingSpoofing.darkstat,
             13: SniffingSpoofing.wireshark,
             14: SniffingSpoofing.tcpflow,
-            15: SniffingSpoofing.wifi_honey,
+            15: SniffingSpoofing.responder,
             16: SniffingSpoofing.bettercap,
-            17: SniffingSpoofing.netsniff_ng,
+            17: SniffingSpoofing.wifi_honey,
             18: SniffingSpoofing.sniffjoke,
-            19: SniffingSpoofing.isr_evilgrade,
+            19: SniffingSpoofing.netsniff_ng,
             20: SniffingSpoofing.tcpreplay,
-            21: SniffingSpoofing.ettercap_tools,
+            21: SniffingSpoofing.isr_evilgrade,
             22: SniffingSpoofing.macchanger,
-            23: SniffingSpoofing.hamster_sidejack,
+            23: SniffingSpoofing.ettercap_tools,
             24: SniffingSpoofing.ferret_sidejack,
-            25: SniffingSpoofing.sniffing_spoofing_tools,
+            25: SniffingSpoofing.hamster_sidejack,
             26: Operators.back,
-            27: Operators.exit,
+            27: SniffingSpoofing.sniffing_spoofing_tools,
+            28: Operators.exit,
         }
         try:
             switch_case = switch.get(int(choice), Operators.case_default)
