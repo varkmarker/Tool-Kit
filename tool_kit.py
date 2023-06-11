@@ -5679,7 +5679,7 @@ else:
         the_end()
 
     def no_case():
-        banner = pyfiglet.figlet_format("Kali Repo Not Comment Yet")
+        banner = "\n Kali Repo Not Comment Yet \n"
         print(colr().hex("#ff0000", banner, rgb_mode=True))
 
     answer = input(
