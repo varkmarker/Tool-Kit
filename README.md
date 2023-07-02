@@ -24,3 +24,6 @@ Step to run this script
   Run the Python tool:
 
    sudo python3 tool_kit.py
+# REFERENCE VIDEO
+
+LINK: https://youtu.be/ohf6cs8bT-g
