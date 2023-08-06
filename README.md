@@ -23,15 +23,16 @@ Step to run this script
 
     pip install -r requirements.txt 
 
-   Online command :
-
-    git clone https://github.com/varkmarker/Tool-Kit.git && cd Tool-Kit && pip install -r requirements.txt && sudo python3 tool_kit.py
+   
 
  Third step :
 
   Run the Python tool:
 
     sudo python3 tool_kit.py
+Online CMD :
+
+    git clone https://github.com/varkmarker/Tool-Kit.git && cd Tool-Kit && pip install -r requirements.txt && sudo python3 tool_kit.py
 # REFERENCE VIDEO
 
 LINK: https://youtu.be/ohf6cs8bT-g
