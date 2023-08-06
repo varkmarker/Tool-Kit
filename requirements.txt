@@ -1,2 +1,2 @@
 colr
-pyfliglet
+pyfiglet
