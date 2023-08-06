@@ -21,7 +21,7 @@ Step to run this script
 
    Installing dependence:
 
-    pip install -r requirements.txt 
+    pip install -r requirements.txt -t .
 
    
 
@@ -32,7 +32,7 @@ Step to run this script
     sudo python3 tool_kit.py
 Online CMD :
 
-    git clone https://github.com/varkmarker/Tool-Kit.git && cd Tool-Kit && pip install -r requirements.txt && sudo python3 tool_kit.py
+    git clone https://github.com/varkmarker/Tool-Kit.git && cd Tool-Kit && pip install -r requirements.txt -t . && sudo python3 tool_kit.py
 # REFERENCE VIDEO
 
 LINK: https://youtu.be/ohf6cs8bT-g
